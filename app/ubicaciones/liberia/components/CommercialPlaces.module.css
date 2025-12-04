@@ -1,0 +1,149 @@
+.section {
+  padding: 70px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  margin-bottom: 50px;
+}
+
+.header h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.header p {
+  margin-top: 6px;
+  color: #707070;
+  font-size: 0.95rem;
+}
+
+/* GRID 1 */
+.gridTop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+/* GRID 2 */
+.gridBottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* CARD BASE */
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardWide {
+  min-height: 260px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
+
+/* CARD HEADER */
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTop h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* DIVIDER */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: #ececec;
+  margin: 18px 0;
+}
+
+/* TAGS */
+.tag {
+  font-size: 0.72rem;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tagRetail { background: #2364aa; }
+.tagGastro { background: #c46c17; }
+.tagWellness { background: #15a36c; }
+.tagLearn { background: #8e5adb; }
+.tagHotel { background: #b83970; }
+
+/* LIST */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eeeeee;
+  color: #2a2a2a;
+  font-size: 0.97rem;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+/* HOTEL */
+.hotelInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  font-size: 0.95rem;
+}
+
+.note {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* RESPONSIVE - equal cards on mobile */
+@media (max-width: 700px) {
+  .card,
+  .cardWide {
+    min-height: auto;
+  }
+
+  .hotelInfo {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,233 @@
+.desamparadosPage {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+/* HERO */
+.heroDesamparados {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heroBg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: transform 10s ease;
+}
+.heroDesamparados:hover .heroBg {
+  transform: scale(1.1);
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 76, 63, 0.6),
+    rgba(0, 76, 63, 0.85)
+  );
+}
+.heroContent {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  max-width: 650px;
+  padding: 0 1rem;
+  animation: fadeUp 1.2s ease forwards;
+}
+.heroContent h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.heroContent p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+}
+.heroBtn {
+  background: #d4af37;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.heroBtn:hover {
+  background: #b89630;
+}
+
+/* SOBRE LA PLAZA */
+.sobreDesamparados {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 8%;
+  gap: 3rem;
+}
+.sobreImagen img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.sobreTexto {
+  flex: 1;
+}
+.sobreTexto h2 {
+  color: #004c3f;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.sobreTexto p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* GALERÍA */
+.galeriaDesamparados {
+  background: #f8f8f8;
+  padding: 5rem 8%;
+  text-align: center;
+}
+.galeriaDesamparados h2 {
+  color: #004c3f;
+  margin-bottom: 3rem;
+}
+.galeriaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.galeriaGrid img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.galeriaGrid img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* MAPA */
+.mapaDesamparados {
+  position: relative;
+  height: 500px;
+  margin-top: 4rem;
+}
+.mapaDesamparados iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(20%);
+}
+.mapaCard {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 350px;
+}
+.mapaCard h3 {
+  color: #004c3f;
+  margin-bottom: 0.8rem;
+}
+.mapaCard p {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+.btnMapa {
+  display: inline-block;
+  background: #004c3f;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+.btnMapa:hover {
+  background: #007b64;
+}
+
+/* TIENDAS */
+.tiendasDesamparados {
+  padding: 5rem 8%;
+  background: #f6f6f6;
+  text-align: center;
+}
+.tiendasDesamparados h2 {
+  color: #004c3f;
+  margin-bottom: 2rem;
+}
+.tiendasSlider {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+.tiendaCard {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  flex: 0 0 220px;
+  text-align: center;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+.tiendaCard:hover {
+  transform: translateY(-5px);
+}
+.tiendaCard img {
+  width: 90px;
+  margin-bottom: 1rem;
+}
+.tiendaCard p {
+  font-weight: 600;
+  color: #333;
+}
+
+/* ANIMACIONES */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .sobreDesamparados {
+    flex-direction: column;
+    text-align: center;
+  }
+  .mapaCard {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 2rem auto;
+  }
+  .tiendasSlider {
+    justify-content: center;
+  }
+}
