@@ -12,6 +12,7 @@ export default function About() {
     <section id="sobre-nosotros" className={styles.about}>
       <div className="container">
         <div className={styles.aboutGrid}>
+          
           {/* Columna izquierda */}
           <div className="scroll-fade-left">
             <div className={styles.aboutEyebrow}>Sobre Nosotros</div>
@@ -55,17 +56,62 @@ export default function About() {
               </div>
             </div>
           </div>
+{/* Columna derecha */}
+<div className={`scroll-fade-right ${styles.aboutMediaClean}`}>
+  <div className={styles.mapWrapper}>
+<Image
+  src="/mapa.png"
+  alt="Mapa de Costa Rica"
+  className={styles.mapImage}
+  draggable={false}
+  width={1200}
+  height={800}
+  priority
+/>
 
-          {/* Columna derecha */}
-          <div className={`scroll-fade-right ${styles.aboutMedia}`}>
-            <Image
-              src="/sansebas/sansebas5.jpeg"
-              alt="Ventu Plaza Costa Rica"
-              width={1600}
-              height={900}
-              priority
-            />
-          </div>
+{/* Liberia */}
+<div className={`${styles.pin} ${styles["pin--liberia"]}`}>
+  <Image
+    src="/pinb.png"
+    alt="Pin de ubicación"
+    width={26}
+    height={26}
+    className={styles.pinIcon}
+    draggable={false}
+  />
+  <span className={styles.pinLabel}>Liberia</span>
+</div>
+
+{/* Desamparados */}
+<div className={`${styles.pin} ${styles["pin--desamparados"]}`}>
+  <Image
+    src="/pinb.png"
+    alt="Pin de ubicación"
+    width={26}
+    height={26}
+    className={styles.pinIcon}
+    draggable={false}
+  />
+  <span className={styles.pinLabel}>Desamparados</span>
+</div>
+
+{/* San Sebastián */}
+<div className={`${styles.pin} ${styles["pin--sansebastian"]}`}>
+  <Image
+    src="/pinb.png"
+    alt="Pin de ubicación"
+    width={26}
+    height={26}
+    className={styles.pinIcon}
+    draggable={false}
+  />
+  <span className={styles.pinLabel}>San Sebastián</span>
+</div>
+
+  </div>
+</div>
+
+
         </div>
       </div>
     </section>

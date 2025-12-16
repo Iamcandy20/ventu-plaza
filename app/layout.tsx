@@ -1,6 +1,8 @@
-// app/layout.tsx
 import './globals.css';
 import type { ReactNode } from 'react';
+
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 
 export const metadata = {
   title: 'Ventu Plaza',
@@ -10,7 +12,15 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        
+        <main>
+          {children}
+        </main>
+
+        <Footer />
+      </body>
     </html>
   );
 }

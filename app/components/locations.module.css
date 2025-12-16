@@ -49,6 +49,7 @@
   max-width: 60ch;
 }
 
+
 .locGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -122,6 +123,8 @@
   font-size: 1rem;
   line-height: 1.5;
   flex-grow: 1;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* === Meta info === */

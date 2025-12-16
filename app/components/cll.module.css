@@ -53,6 +53,8 @@
   line-height: 1.7;
   margin-bottom: 40px;
   max-width: 60ch;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* === CARDS GLASS === */
@@ -94,7 +96,7 @@
 
 .card p {
   color: #475569;
-  font-size: 0.95rem;
+  font-size: 0.90rem;
 }
 
 .emphasis {

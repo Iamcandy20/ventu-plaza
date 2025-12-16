@@ -81,7 +81,7 @@ export default function AboutSection() {
           ))}
         </div>
 
-        {/* 📝 LADO DERECHO */}
+        {/* LADO DERECHO */}
         <div className={styles.textContent}>
           <span className={styles.eyebrow}>INNOVACIÓN Y DESARROLLO</span>
           <h2>Esto es Ventu Plaza Liberia</h2>

@@ -35,7 +35,7 @@
 }
 
 .aboutTitle {
-  font-size: clamp(32px, 4.5vw, 48px);
+  font-size: clamp(22px, 2.5vw, 48px);
   line-height: 1.1;
   color: #0f172a;
   margin-bottom: 18px;
@@ -47,6 +47,7 @@
   line-height: 1.6;
   margin-bottom: 24px;
   max-width: 60ch;
+ text-align: justify;
 }
 
 .aboutHighlights {
@@ -145,4 +146,319 @@
   .statCard {
     flex: 1 1 100%;
   }
+}
+
+/* ---------------------------------------
+   MAPA PNG + PINES (Sin recortes ni bordes)
+   --------------------------------------- */
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px; /* tamaño final del mapa */
+  aspect-ratio: 1 / 1; /* el PNG es 1024x1024, mantiene proporción */
+  overflow: visible;
+  background: transparent;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* NO corta nada */
+  display: block;
+  border-radius: 0; /* SIN bordes */
+  box-shadow: none; /* SIN sombra */
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Pin base */
+.pin {
+  --pin-size: 22px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: var(--pin-size);
+  height: var(--pin-size);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Punto circular */
+.pinDot {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 4px solid #008B92;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+}
+
+/* Tooltip */
+.pinTooltip {
+  position: absolute;
+  left: 50%;
+  top: -12px;
+  transform: translate(-50%, -100%);
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.pin:hover .pinTooltip {
+  opacity: 1;
+}
+
+/* ---------------------------------------
+   POSICIONES EXACTAS (para 480×480)
+   --------------------------------------- */
+
+/* Liberia */
+.pin--liberia {
+  left: 28%;
+  top: 21%;
+}
+
+/* Desamparados */
+.pin--desamparados {
+  left: 48%;
+  top: 46%;
+}
+
+/* San Sebastián */
+.pin--sansebastian {
+  left: 56%;
+  top: 63%;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .mapWrapper {
+    max-width: 360px;
+  }
+  .pin {
+    --pin-size: 18px;
+  }
+  .pinTooltip {
+    display: none;
+  }
+}
+/* Contenedor limpio sin bordes ni sombra */
+.aboutMediaClean {
+  position: relative;
+  overflow: visible;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0; 
+}
+
+/* El mapa se muestra libre */
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  overflow: visible;
+  background: transparent;
+}
+
+/* Imagen del mapa tal cual */
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* -------------------------
+   PINES ESTILO GOOGLE MAPS
+   ------------------------- */
+
+.pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.pinInner {
+  width: 100%;
+  height: 100%;
+  background: #E63946; /* Rojo Ventu */
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+/* Punto blanco interno */
+.pinInner::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animación suave */
+.pin:hover {
+  transform: translate(-50%, -100%) scale(1.1);
+  transition: 0.15s ease-in-out;
+}
+
+/* ----------- POSICIONES GEO ----------- */
+
+.pin--liberia {
+  left: 30%;
+  top: 28%;
+}
+
+.pin--desamparados {
+  left: 53%;
+  top: 52%;
+}
+
+.pin--sansebastian {
+  left: 56%;
+  top: 58%;
+}
+/* ================================
+   CONTENEDOR LIMPIO DEL MAPA
+================================ */
+
+.aboutMediaClean {
+  position: relative;
+  overflow: visible;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  padding: 0;
+}
+
+.mapWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1/1;
+  overflow: visible;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+
+/* ================================
+   PIN — MARCADOR GOOGLE MAPS REAL
+================================ */
+
+.pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.pinInner {
+  width: 26px;
+  height: 26px;
+  background: #e63946;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* punto blanco interno */
+.pinInner::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 52%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+
+/* Texto del lugar */
+.pinLabel {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f172a;
+  transform: translateY(-4px);
+}
+
+
+/* ================================
+   PINES USANDO IMAGEN PNG
+================================ */
+
+.pin {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transform: translate(-50%, -100%);
+  z-index: 20;
+}
+
+.pinIcon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+.pinLabel {
+  font-size: 15px;
+  font-weight: 500;
+  color: #0f172a;
+  white-space: nowrap; /* IMPORTANTE: evita que "San Sebastián" se parta */
+}
+
+/* ================================
+   POSICIONES GEO EXACTAS
+================================ */
+
+.pin--liberia {
+  left: 30%;
+  top: 28%;
+}
+
+.pin--desamparados {
+  left: 53%;
+  top: 52%;
+}
+
+.pin--sansebastian {
+  left: 56%;
+  top: 58%;
 }

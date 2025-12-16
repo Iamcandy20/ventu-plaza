@@ -40,19 +40,19 @@ export default function AchievementsSection() {
           <h3>141</h3>
           <p>Puntos de Venta</p>
         </div>
-        <div className={`${styles.card} scroll-zoom`}>
+        <div className={`${styles.card} ${styles.emphasis} scroll-zoom`}>
           <h3>6</h3>
           <p>Divisiones Estratégicas</p>
         </div>
-        <div className={`${styles.card} ${styles.emphasis} scroll-zoom`}>
+        <div className={`${styles.card} scroll-zoom`}>
           <h3>25</h3>
           <p>Ciudades</p>
         </div>
-        <div className={`${styles.card} scroll-zoom`}>
+        <div className={`${styles.card}  scroll-zoom`}>
           <h3>4</h3>
           <p>Paises</p>
         </div>
-        <div className={`${styles.card} scroll-zoom`}>
+        <div className={`${styles.card} ${styles.emphasis}  scroll-zoom`}>
            <h3>54</h3>
           <p>Años de Trayectoria</p>
         </div>
