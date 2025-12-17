@@ -6,7 +6,7 @@
 .heroSurface {
   position: relative;
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  overflow: hidden; 
   min-height: calc(100vh - var(--header-h));
   display: grid;
   align-items: center;
@@ -15,7 +15,6 @@
   isolation: isolate;
 }
 
-/* --- Fondo dinámico con transiciones cruzadas --- */
 .heroBgWrapper {
   position: absolute;
   inset: 0;
@@ -260,22 +259,73 @@
   background: #01839d;
 }
 
-/* --- Responsive --- */
-@media (max-width: 900px) {
-  .iconWrap {
-    right: 50%;
-    top: auto;
-    bottom: 120px;
-    transform: translateX(50%);
+@media (max-width: 768px) {
+
+@media (max-width: 768px) {
+  .heroSurface {
+    min-height: auto;
+    padding-top: 48px;
+    padding-bottom: 20px;
+    align-items: flex-start;
   }
 
-  .infoCard {
-    right: 50%;
-    transform: translateX(50%);
-    bottom: 20px;
+  .heroBg {
+    background-size: cover;         
+    background-position: center; 
+    background-repeat: no-repeat;
   }
+}
 
+  /* CONTENIDO */
   .heroInner {
-    text-align: center;
+    text-align: left; /* 🔑 alineado a la izquierda */
+  }
+
+  .heroCopy {
+    padding: 0;
+  }
+
+  /* TEXTO */
+  .eyebrow {
+    font-size: 10px;
+    margin-bottom: 4px;
+    letter-spacing: .16em;
+  }
+
+  .title {
+    font-size: 24px; /* 🔑 más compacto */
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+
+  /* OCULTAR SUBTITLE */
+  .subtitle {
+    display: none;
+  }
+
+  /* OCULTAR BOTÓN */
+  .ctaRow {
+    display: none;
+  }
+
+  /* OCULTAR CARD */
+  .infoCard {
+    display: none;
+  }
+
+  /* DOTS */
+  .navDots {
+    position: relative;
+    inset: auto;
+    margin-top: 18px;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .dotBtn {
+    width: 10px;
+    height: 10px;
   }
 }

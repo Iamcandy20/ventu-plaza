@@ -56,6 +56,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          
 {/* Columna derecha */}
 <div className={`scroll-fade-right ${styles.aboutMediaClean}`}>
   <div className={styles.mapWrapper}>

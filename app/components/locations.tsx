@@ -3,6 +3,7 @@
 import styles from "./locations.module.css";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Locations() {
   useScrollAnimation();
@@ -52,7 +53,14 @@ export default function Locations() {
               style={{ transitionDelay: `${i * 0.3}s` }}
             >
               <div className={styles.locMedia}>
-                <img src={loc.img} alt={`Ventu Plaza ${loc.name}`} />
+                <Image
+                  src={loc.img}
+                  alt={`Ventu Plaza ${loc.name}`}
+                  width={800}
+                  height={500}
+                  className={styles.locImage}
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
               </div>
 
               <div className={styles.locBody}>

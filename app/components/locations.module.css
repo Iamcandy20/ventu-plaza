@@ -1,8 +1,8 @@
 .locations {
   background: linear-gradient(180deg, #ffffff 0%, #f7f9f9 100%);
-  padding-top: clamp(40px, 5vw, 70px); /* 🔹 Más cerca de la sección anterior */
+  padding-top: clamp(40px, 5vw, 70px); 
   padding-bottom: clamp(60px, 7vw, 100px);
-  margin-top: -20px; /* 🔹 Reduce aún más la separación visual */
+  margin-top: -20px; 
   position: relative;
   overflow: hidden;
 }
@@ -58,7 +58,6 @@
   z-index: 2;
 }
 
-/* === Card moderna con animación de entrada === */
 .locCard {
   position: relative;
   background: #fff;
@@ -174,7 +173,7 @@
   transform: translateY(-2px);
 }
 
-/* === Responsivo === */
+/* === Responsive === */
 @media (max-width: 900px) {
   .locationsHead {
     margin-bottom: 36px;

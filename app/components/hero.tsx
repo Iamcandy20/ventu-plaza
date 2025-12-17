@@ -48,14 +48,14 @@ export default function Hero() {
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
-  // Cambio automático cada 6 s
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(true);
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % slides.length);
         setFade(false);
-      }, 700); // sincronizado con la animación CSS
+      }, 700); 
     }, 6000);
 
     return () => clearInterval(interval);
@@ -66,7 +66,7 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.heroSurface}>
-        {/* Contenedor de imagen con transición cruzada */}
+       
         <div className={styles.heroBgWrapper}>
           <div
             key={index}

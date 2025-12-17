@@ -1,30 +1,29 @@
+/* ================== CONTENEDOR PRINCIPAL ================== */
 .achievementsSection {
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   position: relative;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
-  gap: clamp(40px, 6vw, 70px);
-  
-
- 
+  gap: clamp(40px, 6vw, 70px); 
   padding-block: clamp(60px, 8vw, 100px);
-  padding-inline: clamp(80px, 10vw, 140px); 
-
+  padding-inline: clamp(80px, 10vw, 140px);
   overflow: hidden;
   isolation: isolate;
 }
 
-/* LUZ DE FONDO ELEGANTE */
+/* Luz de fondo */
 .achievementsSection::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(0, 139, 146, 0.06), transparent 70%),
-              radial-gradient(circle at 80% 80%, rgba(0, 139, 146, 0.05), transparent 60%);
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0, 139, 146, 0.06), transparent 70%),
+    radial-gradient(circle at 80% 80%, rgba(0, 139, 146, 0.05), transparent 60%);
   z-index: 0;
 }
 
+/* ================== TEXTO ================== */
 .textContent {
   position: relative;
   z-index: 2;
@@ -54,10 +53,9 @@
   margin-bottom: 40px;
   max-width: 60ch;
   text-align: justify;
-  text-justify: inter-word;
 }
 
-/* === CARDS GLASS === */
+/* ================== CARDS ================== */
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -96,7 +94,7 @@
 
 .card p {
   color: #475569;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
 }
 
 .emphasis {
@@ -110,61 +108,56 @@
   color: #fff;
 }
 
-/* === IMAGEN Y FIGURA === */
+/* ================== LOGO CIRCULAR (CORREGIDO) ================== */
 .imageContainer {
-  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: linear-gradient(270deg, #0e8f9f, #17b3bd, #0e8f9f);
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite, pulseBorder 6s ease-in-out infinite;
+  box-shadow:
+    0 0 90px rgba(14, 143, 159, 0.33),
+    0 0 50px rgba(23, 179, 189, 0.55);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
-}
-
-.shapeBehind {
-  position: absolute;
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 40%, #00959c 25%, #00b0b5 95%);
-  animation: morph 8s ease-in-out infinite alternate;
-  filter: drop-shadow(0 0 25px rgba(0, 139, 146, 0.35));
-  z-index: 1;
-  opacity: 0.9;
-}
-
-.glow {
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  background: radial-gradient(circle at center, rgba(0, 139, 146, 0.1), transparent 70%);
-  filter: blur(40px);
-  z-index: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .image {
-  position: relative;
-  z-index: 2;
-  width: 260px;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
+  width: 68%;
+  height: auto;
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.75));
+  user-select: none;
 }
 
-/* Animación orgánica */
-@keyframes morph {
-  0% {
+/* ================== ANIMACIONES ================== */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
     transform: scale(1);
-    border-radius: 50% 45% 55% 50% / 55% 50% 45% 50%;
+    box-shadow:
+      0 0 90px rgba(14, 143, 159, 0.33),
+      0 0 50px rgba(23, 179, 189, 0.55);
   }
   50% {
-    transform: scale(1.05) translateY(-10px);
-    border-radius: 48% 52% 50% 50% / 50% 48% 52% 50%;
-  }
-  100% {
-    transform: scale(1);
-    border-radius: 52% 48% 50% 50% / 50% 52% 48% 50%;
+    transform: scale(1.03);
+    box-shadow:
+      0 0 110px rgba(14, 143, 159, 0.45),
+      0 0 70px rgba(23, 179, 189, 0.75);
   }
 }
 
-/* === RESPONSIVIDAD === */
+/* ================== RESPONSIVE ================== */
+
+/* Tablet */
 @media (max-width: 980px) {
   .achievementsSection {
     grid-template-columns: 1fr;
@@ -173,46 +166,59 @@
   }
 
   .imageContainer {
-    margin-top: 50px;
-  }
-
-  .shapeBehind {
-    width: 300px;
-    height: 300px;
-  }
-
-  .image {
-    width: 200px;
+    margin: 0 auto;
   }
 }
+
+/* Mobile */
 @media (max-width: 640px) {
   .achievementsSection {
-    gap: 40px;
+    padding-inline: 20px;
     padding-block: 50px;
+    gap: 28px;
   }
+
+  /* Orden correcto */
+  .textContent { order: 1; }
+  .imageContainer { order: 2; margin: 10px auto; }
 
   .title {
     font-size: 2rem;
   }
 
-  /* ✅ Ahora las cards se muestran de 2 en 2 */
+  .description {
+    max-width: 100%;
+    margin-bottom: 28px;
+  }
+
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    justify-content: center;
   }
 
   .card {
     padding: 20px 16px;
   }
 
-  .shapeBehind {
-    width: 220px;
-    height: 220px;
+  .imageContainer {
+    width: 260px;
+    height: 260px;
+    box-shadow:
+      0 0 55px rgba(14, 143, 159, 0.25),
+      0 0 35px rgba(23, 179, 189, 0.45);
   }
 
   .image {
-    width: 160px;
+    width: 60%;
   }
 }
+/* Desktop */
+@media (min-width: 1024px) {
+  .achievementsSection {
+    gap: clamp(40px, 6vw, 70px); 
+  }
 
+  .imageContainer {
+    margin-left: 90px; 
+  }
+}

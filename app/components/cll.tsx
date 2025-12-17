@@ -58,7 +58,6 @@ export default function AchievementsSection() {
         </div>
       </div>
     </div>
-
     {/* === Columna derecha === */}
     <div className={`scroll-fade-right ${styles.imageContainer}`}>
       <div className={styles.glow}></div>

@@ -1,193 +1,174 @@
 .footer {
   position: relative;
-  background: linear-gradient(to top, #007f8b 0%, #009e9c 100%);
-  color: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  background: linear-gradient(90deg, #008b8f, #31d6d0);
+  color: #ffffff;
   overflow: hidden;
-  padding-top: 120px;
+  padding-top: 130px; 
 }
 
-/* 🔹 Curva superior */
-.curve {
+/* ===== CURVA SUPERIOR ===== */
+.footer::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  border-bottom-left-radius: 50% 80px;
-  border-bottom-right-radius: 50% 80px;
+  top: -120px;           
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;             
+  height: 220px;       
+  background: #ffffff;
+  border-bottom-left-radius: 50% 100%;
+  border-bottom-right-radius: 50% 100%;
+  z-index: 0;
 }
 
-/* 🔹 Contenedor principal con dos columnas */
-.content {
+/* ===== CONTENIDO ===== */
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 60px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 60px 20px;
+  gap: 80px;
   position: relative;
   z-index: 1;
 }
 
-/* ========================
-   Columna Izquierda
-========================= */
-.leftColumn {
+/* ===== MARCAS ===== */
+.brands {
+  display: flex;
+  align-items: flex-start;
+  gap: 70px;
+}
+
+.brand {
   display: flex;
   flex-direction: column;
-  align-items: center; /* ✅ centramos logo y redes */
-  text-align: center;
-  gap: 25px;
+  align-items: center;
+  gap: 8px;
 }
 
-
-.logoWrapper {
-  position: relative;
-  width: 300px; 
-  height: 120px; 
+/* Texto "Una marca de:" */
+.brandLabel {
+  font-size: 0.85rem;
+  margin-bottom: 2px;
+  opacity: 0.9;
 }
 
-.logo {
-  object-fit: contain;
+/* ===== LOGOS===== */
+.brand img {
+  max-width: 110px; /* Ventu */
+}
+
+.brand:last-child img {
+  max-width: 140px; /* Lady Lee */
 }
 
 .socials {
   display: flex;
-  gap: 20px;
+  gap: 8px;
+  margin-top: 6px;
 }
 
-.socials a {
-  background: #ffffff;
-  color: #007f8b;
-  font-size: 1.5rem;
+.socials svg {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
   border-radius: 50%;
-  width: 46px;
-  height: 46px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
+  background: #ffffff;
+  color: #008b8f;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-.socials a:hover {
-  background: #00a884;
-  color: #fff;
-  transform: scale(1.1);
+.socials svg:hover {
+  background: #00cba9;
+  color: #ffffff;
 }
 
-/* ========================
-   Columna Derecha
-========================= */
-.rightColumn {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 420px;
-  gap: 12px;
+/* ===== NEWSLETTER ===== */
+.newsletter {
+  max-width: 460px;
 }
 
 .newsletterTitle {
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #d2f4f2;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
 }
 
 .newsletterText {
-  color: #e9e9e9;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .form {
   display: flex;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.18);
   border-radius: 40px;
   overflow: hidden;
-  width: 100%;
-  margin-top: 10px;
 }
 
-.input {
+.form input {
   flex: 1;
-  padding: 12px 18px;
+  padding: 14px 18px;
   border: none;
-  outline: none;
   background: transparent;
   color: #ffffff;
-  font-size: 0.95rem;
+  outline: none;
 }
 
-.input::placeholder {
-  color: #d4d4d4;
+.form input::placeholder {
+  color: #e6e6e6;
 }
 
-.button {
-  background: linear-gradient(90deg, #00a884, #00d1b2);
-  color: #ffffff;
+.form button {
+  background: #00cba9;
   border: none;
-  font-size: 0.95rem;
+  padding: 0 28px;
   font-weight: 600;
-  padding: 12px 22px;
-  border-radius: 40px;
+  color: #ffffff;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
-.button:hover {
-  background: linear-gradient(90deg, #00d1b2, #00a884);
-  transform: translateY(-2px);
+/* ===== POLÍTICAS ===== */
+.policies {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 22px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 0.9rem;
 }
 
-/* ========================
-   Derechos Reservados
-========================= */
+.policies a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ===== DERECHOS ===== */
 .bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  margin-top: 50px;
-  padding: 20px 0;
   text-align: center;
-  font-size: 1.0rem;
-  color: #ffffff !important; 
-}
-.text1 {
-  font-size: 1.2rem;
-  color: #ffffff !important;
+  padding: 14px 16px 22px;
+  font-size: 0.85rem;
+  opacity: 0.85;
 }
 
-
-/* ========================
-   Responsive
-========================= */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .content {
+  .main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 50px;
+  }
+  .brands {
+    flex-direction: row;
+    gap: 40px;
   }
 
-  .leftColumn,
-  .rightColumn {
-    align-items: center;
-  }
-
-  .logoWrapper {
-    width: 200px;
-    height: 80px;
-  }
-
-  .socials {
-    justify-content: center;
-  }
-
-  .socials a {
-    width: 42px;
-    height: 42px;
-    font-size: 1.3rem;
+  .policies {
+    flex-direction: column;
+    gap: 12px;
   }
 }
