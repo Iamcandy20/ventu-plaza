@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Ventu Plaza */}
           <div className={styles.brand}>
             <Image
-              src="/logob.png"
+              src="/logob.webp"
               alt="Ventu Plaza"
               width={110}
               height={60}

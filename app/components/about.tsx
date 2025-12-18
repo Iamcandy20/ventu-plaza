@@ -61,7 +61,7 @@ export default function About() {
 <div className={`scroll-fade-right ${styles.aboutMediaClean}`}>
   <div className={styles.mapWrapper}>
 <Image
-  src="/mapa.png"
+  src="/mapa.webp"
   alt="Mapa de Costa Rica"
   className={styles.mapImage}
   draggable={false}
@@ -73,7 +73,7 @@ export default function About() {
 {/* Liberia */}
 <div className={`${styles.pin} ${styles["pin--liberia"]}`}>
   <Image
-    src="/pinb.png"
+    src="/pinb.webp"
     alt="Pin de ubicación"
     width={26}
     height={26}
@@ -86,7 +86,7 @@ export default function About() {
 {/* Desamparados */}
 <div className={`${styles.pin} ${styles["pin--desamparados"]}`}>
   <Image
-    src="/pinb.png"
+    src="/pinb.webp"
     alt="Pin de ubicación"
     width={26}
     height={26}
@@ -99,7 +99,7 @@ export default function About() {
 {/* San Sebastián */}
 <div className={`${styles.pin} ${styles["pin--sansebastian"]}`}>
   <Image
-    src="/pinb.png"
+    src="/pinb.webp"
     alt="Pin de ubicación"
     width={26}
     height={26}

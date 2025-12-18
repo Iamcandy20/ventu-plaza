@@ -53,33 +53,33 @@ export default function CommercialSpaces() {
       <div className={styles.grid}>
 
         <div className={`${styles.card} ${styles.cardLarge}`}>
-          <Image src="/liberia/tiendasv.png" alt="Tiendas" width={48} height={48} />
+          <Image src="/liberia/tiendas.webp" alt="Tiendas" width={48} height={48} />
           <span>+33 Tiendas</span>
         </div>
 
         <div className={styles.card}>
-          <Image src="/liberia/kioskosv.png" alt="Kioskos" width={42} height={42} />
+          <Image src="/liberia/kioskos.webp" alt="Kioskos" width={42} height={42} />
           <span>Kioskos</span>
         </div>
 
         <div className={styles.card}>
-          <Image src="/liberia/restaurantev.png" alt="Restaurantes" width={42} height={42} />
+          <Image src="/liberia/restaurante.webp" alt="Restaurantes" width={42} height={42} />
           <span>Restaurantes</span>
         </div>
 
         <div className={styles.card}>
-          <Image src="/liberia/comidav.png" alt="Plaza de comidas" width={42} height={42} />
+          <Image src="/liberia/comida.webp" alt="Plaza de comidas" width={42} height={42} />
           <span>Plaza de comidas</span>
         </div>
 
         <div className={styles.card}>
-          <Image src="/liberia/baresv.png" alt="Bares" width={42} height={42} />
+          <Image src="/liberia/baresv.webp" alt="Bares" width={42} height={42} />
           <span>Bares</span>
         </div>
 
         {/* NUEVA CARD — SALA DE DESCANSO */}
         <div className={styles.card}>
-          <Image src="/liberia/descansov.png" alt="Sala de descanso" width={42} height={42} />
+          <Image src="/liberia/descansov.webp" alt="Sala de descanso" width={42} height={42} />
           <span>Sala de descanso</span>
         </div>
 

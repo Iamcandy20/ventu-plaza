@@ -19,14 +19,14 @@ export default function Locations() {
     {
       name: "Liberia",
       desc: "Con un hotel AC Marriott de 140 habitaciones y un moderno centro de convenciones, Ventu Plaza Liberia se posiciona como el nuevo epicentro comercial y corporativo del norte del país.",
-      img: "/liberia/liberia6.png",
+      img: "/liberia/liberia6.webp",
       place: "Liberia",
       status: "En desarrollo",
     },
     {
       name: "San Sebastián",
       desc: "Un espacio pensado para el día a día, con tiendas, restaurantes y áreas verdes que impulsan la convivencia y el bienestar de las familias josefinas.",
-      img: "/sansebas/sansebas4.jpeg",
+      img: "/sansebas/sansebas4.webp",
       place: "San Sebastián",
       status: "Próximamente",
     },

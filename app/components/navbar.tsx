@@ -62,7 +62,7 @@ export default function Navbar() {
         {/* Marca */}
         <div className={styles.brand}>
           <Image
-            src="/Logo-navbar.png"
+            src="/Logo-navbar.webp"
             alt="Ventu Plaza logo"
             width={120}
             height={40}

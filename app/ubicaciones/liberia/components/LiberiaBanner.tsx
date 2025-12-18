@@ -4,42 +4,16 @@ import styles from "./LiberiaBanner.module.css";
 
 const slides = [
   {
-    eyebrow: "Ventu Plaza Liberia",
-   title: (
-      <>
-       <br />
-      </>
-    ),
-    subtitle:
-      "",
-    cta: "",
     image:
       "/desamparados/desamparados1.webp",
   },
-  {
-    eyebrow: "Ventu Plaza Liberia",
-    title: (
-      <>
-     <br />
-      </>
-    ),
-    subtitle:
-      "",
-    cta: "",
+   {
     image:
-      "/liberia/liberia7.png",
+      "/desamparados/desamparados1.webp",
   },
-  {
-    eyebrow: "Ventu Plaza Liberia",
-    title: (
-      <>
-        <br />
-      </>
-    ),
-    subtitle:
-      "",
+   {
     image:
-      "/sansebas/sansebas5.jpeg",
+      "/desamparados/desamparados1.webp",
   },
 ];
 
@@ -82,13 +56,7 @@ export default function Hero() {
         {/* Contenido del slide */}
         <div className={styles.heroInner}>
           <div className={`${styles.heroCopy} ${fade ? styles.textFadeOut : styles.textFadeIn}`}>
-            <div className={styles.eyebrow}>{slide.eyebrow}</div>
-            <h1 className={styles.title}>{slide.title}</h1>
-            <p className={styles.subtitle}>{slide.subtitle}</p>
             <div className={styles.ctaRow}>
-              <button className={`${styles.btn} ${styles.btnPrimary}`}>
-                {slide.cta}
-              </button>
             </div>
           </div>
         </div>

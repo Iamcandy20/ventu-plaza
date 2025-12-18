@@ -10,10 +10,10 @@
 .footer::before {
   content: "";
   position: absolute;
-  top: -120px;           
+  top: -120px;
   left: 50%;
   transform: translateX(-50%);
-  width: 150%;             
+  width: 150%;
   height: 220px;       
   background: #ffffff;
   border-bottom-left-radius: 50% 100%;
@@ -95,12 +95,14 @@
   font-size: 0.85rem;
   letter-spacing: 2px;
   margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .newsletterText {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 16px;
+  color: #ffffff;
 }
 
 .form {

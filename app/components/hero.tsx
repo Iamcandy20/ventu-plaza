@@ -27,7 +27,7 @@ const slides = [
       "Con un hotel AC Marriott de 140 habitaciones y un moderno centro de convenciones, Ventu Plaza Liberia se posiciona como el nuevo epicentro comercial y corporativo del norte del país.",
     cta: "Explora Liberia",
     image:
-      "/liberia/liberia7.png",
+      "/liberia/liberia7.webp",
   },
   {
     eyebrow: "Ventu Plaza San Sebastián",

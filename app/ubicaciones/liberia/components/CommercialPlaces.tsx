@@ -38,7 +38,7 @@ export default function CommercialPlaces() {
         <div className={styles.card}>
           <div className={styles.cardTop}>
             <div className={styles.topLeft}>
-              <Image src="/icons/tiendas.png" width={34} height={34} alt="" />
+              <Image src="/icons/tiendas.webp" width={34} height={34} alt="" />
               <h3>Tiendas</h3>
             </div>
             <span className={`${styles.tag} ${styles.tagRetail}`}>Retail</span>
@@ -48,15 +48,15 @@ export default function CommercialPlaces() {
 
           <ul className={styles.list}>
             <li>
-              <Image src="/icons/item-moda.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-moda.webp" width={22} height={22} alt="" />
               Moda y accesorios
             </li>
             <li>
-              <Image src="/icons/item-belleza.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-belleza.webp" width={22} height={22} alt="" />
               Belleza y cuidado
             </li>
             <li>
-              <Image src="/icons/item-gadgets.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-gadgets.webp" width={22} height={22} alt="" />
               Tecnología y gadgets
             </li>
           </ul>
@@ -66,7 +66,7 @@ export default function CommercialPlaces() {
         <div className={styles.card}>
           <div className={styles.cardTop}>
             <div className={styles.topLeft}>
-              <Image src="/icons/restaurantes.png" width={34} height={34} alt="" />
+              <Image src="/icons/restaurantes.webp" width={34} height={34} alt="" />
               <h3>Restaurantes</h3>
             </div>
             <span className={`${styles.tag} ${styles.tagGastro}`}>Gastronomía</span>
@@ -76,15 +76,15 @@ export default function CommercialPlaces() {
 
           <ul className={styles.list}>
             <li>
-              <Image src="/icons/item-cafe.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-cafe.webp" width={22} height={22} alt="" />
               Bistrós y cafeterías
             </li>
             <li>
-              <Image src="/icons/item-fastfood.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-fastfood.webp" width={22} height={22} alt="" />
               Comida rápida premium
             </li>
             <li>
-              <Image src="/icons/item-postres.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-postres.webp" width={22} height={22} alt="" />
               Bebidas y postres
             </li>
           </ul>
@@ -94,7 +94,7 @@ export default function CommercialPlaces() {
         <div className={styles.card}>
           <div className={styles.cardTop}>
             <div className={styles.topLeft}>
-              <Image src="/icons/deporte.png" width={34} height={34} alt="" />
+              <Image src="/icons/deporte.webp" width={34} height={34} alt="" />
               <h3>Deporte</h3>
             </div>
             <span className={`${styles.tag} ${styles.tagWellness}`}>Bienestar</span>
@@ -104,15 +104,15 @@ export default function CommercialPlaces() {
 
           <ul className={styles.list}>
             <li>
-              <Image src="/icons/item-gym.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-gym.webp" width={22} height={22} alt="" />
               Gimnasio y fitness
             </li>
             <li>
-              <Image src="/icons/item-bike.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-bike.webp" width={22} height={22} alt="" />
               Estudio de ciclismo
             </li>
             <li>
-              <Image src="/icons/item-clinica.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-clinica.webp" width={22} height={22} alt="" />
               Clínica deportiva
             </li>
           </ul>
@@ -127,7 +127,7 @@ export default function CommercialPlaces() {
         <div className={`${styles.card} ${styles.cardWide}`}>
           <div className={styles.cardTop}>
             <div className={styles.topLeft}>
-              <Image src="/icons/cultura.png" width={34} height={34} alt="" />
+              <Image src="/icons/cultura.webp" width={34} height={34} alt="" />
               <h3>Cultura</h3>
             </div>
             <span className={`${styles.tag} ${styles.tagLearn}`}>Aprendizaje</span>
@@ -137,15 +137,15 @@ export default function CommercialPlaces() {
 
           <ul className={styles.list}>
             <li>
-              <Image src="/icons/item-biblioteca.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-biblioteca.webp" width={22} height={22} alt="" />
               Biblioteca
             </li>
             <li>
-              <Image src="/icons/item-sala.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-sala.webp" width={22} height={22} alt="" />
               Sala de reuniones 1
             </li>
             <li>
-              <Image src="/icons/item-sala.png" width={22} height={22} alt="" />
+              <Image src="/icons/item-sala.webp" width={22} height={22} alt="" />
               Sala de reuniones 2
             </li>
           </ul>
@@ -155,7 +155,7 @@ export default function CommercialPlaces() {
         <div className={`${styles.card} ${styles.cardWide}`}>
           <div className={styles.cardTop}>
             <div className={styles.topLeft}>
-              <Image src="/icons/hotel.png" width={34} height={34} alt="" />
+              <Image src="/icons/hotel.webp" width={34} height={34} alt="" />
               <h3>Hotel</h3>
             </div>
 

@@ -15,25 +15,25 @@ const puntos: Punto[] = [
     id: "ruta1",
     title: "Conexión con Ruta 1",
     description: "La ruta más importante de Costa Rica.",
-    icon: "/liberia/carretera.png",
+    icon: "/liberia/carretera.webp",
   },
   {
     id: "cantonc",
     title: "20 min del Cantón Central",
     description: "Cercanía directa al corazón de Liberia.",
-    icon: "/liberia/canton.png",
+    icon: "/liberia/canton.webp",
   },
   {
     id: "aeropuerto",
     title: "Frente al Aeropuerto",
     description: "Aeropuerto Internacional Daniel Oduber.",
-    icon: "/liberia/avion.png",
+    icon: "/liberia/avion.webp",
   },
   {
     id: "turistica",
     title: "Cercanía Turística",
     description: "Zonas de centros turísticos de alta calidad.",
-    icon: "/liberia/turismo.png",
+    icon: "/liberia/turismo.webp",
   },
 ];
 

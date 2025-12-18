@@ -12,8 +12,8 @@ export default function AboutSection() {
   // Lista de imágenes
   const images = [
     "/liberia/liberia11.webp",
-    "/liberia/liberia2.png",
-    "/liberia/liberia1.png",
+    "/liberia/liberia2.webp",
+    "/liberia/liberia1.webp",
   ];
 
   useEffect(() => {
