@@ -6,7 +6,7 @@ const slides = [
   {
     title: (
       <>
-        Desamparados<br />
+        Desamparados<br/>
       </>
     ),
     image:
@@ -45,7 +45,7 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.heroSurface}>
         {/* Contenedor de imagen con transición cruzada */}
-        <div className={styles.heroBgWrapper}>
+        <div className={styles.heroBgWrappebr}>
           <div
             key={index}
             className={`${styles.heroBg} ${fade ? styles.fadeOut : styles.fadeIn}`}

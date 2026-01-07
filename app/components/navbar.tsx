@@ -102,9 +102,9 @@ export default function Navbar() {
                 submenuOpen ? styles.dropdownMenuOpen : ""
               }`}
             >
-              <Link href="/ubicaciones/desamparados">Desamparados</Link>
-              <Link href="/ubicaciones/liberia">Liberia</Link>
-              <Link href="#">San Sebastián</Link>
+              <Link href="/ubicaciones/desamparados" prefetch= {false}>Desamparados</Link>
+              <Link href="/ubicaciones/liberia"prefetch= {false}>Liberia</Link>
+              <Link href="#"prefetch= {false}>San Sebastián</Link>
             </div>
           </div>
 

@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 import { MapPin, X } from "lucide-react";
@@ -17,7 +16,7 @@ export default function AboutSection() {
   ];
 
   useEffect(() => {
-    const elements = document.querySelectorAll(`.${styles.imageBox}, .${styles.textContent}`);
+    const elements = document.querySelectorAll(`.${styles.imageBox}, .${styles.textContent}`); 
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -46,7 +45,7 @@ export default function AboutSection() {
     [isOpen, images.length]
   );
 
-  useEffect(() => {
+  useEffect(() => { 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [onKeyDown]);
@@ -77,6 +76,7 @@ export default function AboutSection() {
                 height={300}
                 className={styles.image}
               />
+              
             </div>
           ))}
         </div>

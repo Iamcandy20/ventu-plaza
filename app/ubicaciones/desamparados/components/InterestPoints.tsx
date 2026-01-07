@@ -22,7 +22,7 @@ const puntos: Punto[] = [
     title: "20 min del Cantón Central",
     description: "Cercanía directa al corazón de Liberia.",
     icon: "/liberia/canton.webp",
-  },
+  }, 
   {
     id: "aeropuerto",
     title: "Frente al Aeropuerto",

@@ -68,6 +68,7 @@ export default function About() {
   width={1200}
   height={800}
   priority
+  unoptimized={false}
 />
 
 {/* Liberia */}
@@ -79,6 +80,7 @@ export default function About() {
     height={26}
     className={styles.pinIcon}
     draggable={false}
+    unoptimized={false}
   />
   <span className={styles.pinLabel}>Liberia</span>
 </div>
@@ -92,6 +94,7 @@ export default function About() {
     height={26}
     className={styles.pinIcon}
     draggable={false}
+    unoptimized={false}
   />
   <span className={styles.pinLabel}>Desamparados</span>
 </div>
@@ -105,6 +108,7 @@ export default function About() {
     height={26}
     className={styles.pinIcon}
     draggable={false}
+    unoptimized={false}
   />
   <span className={styles.pinLabel}>San Sebastián</span>
 </div>
