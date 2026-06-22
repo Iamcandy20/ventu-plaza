@@ -4,16 +4,16 @@ import styles from "./LiberiaBanner.module.css";
 
 const slides = [
   {
-    image:
-      "/desamparados/desamparados1.webp",
+    title: <>Liberia</>,
+    image: "/liberia/liberia10.webp",
   },
-   {
-    image:
-      "/desamparados/desamparados1.webp",
+  {
+   
+    image: "/liberia/liberia6.webp",
   },
-   {
-    image:
-      "/desamparados/desamparados1.webp",
+  {
+   
+    image: "/liberia/liberia4.webp",
   },
 ];
 
@@ -54,12 +54,15 @@ export default function Hero() {
         </div>
 
         {/* Contenido del slide */}
-        <div className={styles.heroInner}>
-          <div className={`${styles.heroCopy} ${fade ? styles.textFadeOut : styles.textFadeIn}`}>
-            <div className={styles.ctaRow}>
-            </div>
-          </div>
-        </div>
+       <div className={styles.heroInner}>
+  <h1
+    className={`${styles.title} ${
+      fade ? styles.textFadeOut : styles.textFadeIn
+    }`}
+  >
+    {slide.title}
+  </h1>
+</div>
         
         {/* Tarjeta inferior estática 
         <div className={styles.infoCard}>

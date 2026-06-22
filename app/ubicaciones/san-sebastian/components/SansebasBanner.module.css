@@ -279,3 +279,91 @@
     text-align: center;
   }
 }
+/* ========================= */
+/* MOBILE RESPONSIVE BANNER */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 12px 8px;
+  }
+
+  .heroSurface {
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 16 / 7;
+    border-radius: 18px;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+  }
+
+  .heroBgWrapper {
+    position: absolute;
+    inset: 0;
+  }
+
+  .heroBg {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .heroInner {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    margin: 0;
+    padding: 18px 16px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .title {
+    max-width: 180px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.05;
+  }
+
+  .heroCopy,
+  .subtitle,
+  .ctaRow,
+  .infoCard,
+  .iconWrap {
+    display: none;
+  }
+
+  .navDots {
+    position: absolute;
+    left: 50%;
+    top: auto;
+    bottom: 7px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+  }
+
+  .dotBtn {
+    width: 5px;
+    height: 5px;
+    border-width: 1px;
+  }
+}
+
+@media (max-width: 420px) {
+  .heroSurface {
+    aspect-ratio: 16 / 7;
+    border-radius: 16px;
+  }
+
+  .heroInner {
+    padding: 16px 14px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+}
