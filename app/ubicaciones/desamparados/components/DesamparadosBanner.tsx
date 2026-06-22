@@ -60,6 +60,7 @@ export default function Hero() {
         </div>
 
         <div className={styles.navDots}>
+          
           {slides.map((_, i) => (
             <button
               key={i}
