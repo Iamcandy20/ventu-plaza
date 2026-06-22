@@ -1,3 +1,4 @@
+/* ================= HEADER ================= */
 .header {
   position: sticky;
   top: 0;
@@ -6,17 +7,23 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(15, 23, 42, 0.06);
-  transition: transform 0.4s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  will-change: transform, opacity;
 }
 
 .visible {
+  opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .hidden {
-  transform: translateY(-100%);
+  opacity: 0;
+  transform: translateY(-110%);
+  pointer-events: none;
 }
 
+/* ================= NAV ================= */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -24,6 +31,7 @@
   padding: 14px 0;
 }
 
+/* ================= BRAND ================= */
 .brand {
   display: flex;
   align-items: center;
@@ -31,6 +39,17 @@
   font-weight: 700;
   font-size: 18px;
   color: #0f172a;
+  text-decoration: none;
+}
+
+.brand span {
+  text-decoration: none;
+}
+
+.brand:hover,
+.brand:focus,
+.brand:active {
+  text-decoration: none;
 }
 
 .logo {
@@ -40,15 +59,16 @@
   object-fit: contain;
 }
 
-/* Enlaces */
+/* ================= LINKS ================= */
 .links {
   display: flex;
   gap: 26px;
   align-items: center;
 }
 
-.links a,
-.dropdownToggle {
+.navLink,
+.dropdownToggle,
+.links a {
   text-decoration: none;
   color: #334155;
   font-weight: 500;
@@ -60,12 +80,17 @@
   transition: color 0.3s ease;
 }
 
-.links a:hover,
-.dropdownToggle:hover {
+.navLink:hover,
+.dropdownToggle:hover,
+.links a:hover {
   color: #008b92;
 }
 
-/* Botón principal */
+.linkActive {
+  color: #008b92;
+}
+
+/* ================= CTA ================= */
 .bookNow {
   background: #008b92;
   color: #fff;
@@ -74,14 +99,20 @@
   border: none;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .bookNow:hover {
   background: #00767b;
 }
 
-/* Dropdown */
+.linkActiveButton {
+  background: #00767b;
+}
+
+/* ================= DROPDOWN ================= */
 .dropdown {
   position: relative;
 }
@@ -100,6 +131,7 @@
   transform: translateY(-10px);
   pointer-events: none;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .dropdownMenuOpen {
@@ -120,7 +152,7 @@
   color: #008b92;
 }
 
-/* Hamburguesa */
+/* ================= HAMBURGER ================= */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -141,19 +173,19 @@
   transition: 0.3s;
 }
 
-.hamburger.active span:nth-child(1) {
+.hamburgerActive span:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
 
-.hamburger.active span:nth-child(2) {
+.hamburgerActive span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+.hamburgerActive span:nth-child(3) {
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 980px) {
   .links {
     display: none;
@@ -168,52 +200,64 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   }
 
-  .links.open {
+  .menuOpen {
     display: flex;
   }
 
   .links a,
+  .navLink,
   .dropdownToggle {
     color: #0f172a;
     font-size: 16px;
-    text-align: left;
+    text-align: center;
   }
 
   .bookNow {
-    display: none;
+    display: inline-flex;
+    margin-top: 12px;
+    align-self: center;
+    justify-content: center;
   }
 
   .hamburger {
     display: flex;
   }
-  /* Submenú en móvil (click para abrir) */
-.dropdownMenu {
-  position: static;
-  box-shadow: none;
-  background: transparent;
-  overflow: hidden;
-  max-height: 0;                /* evita el espacio en blanco */
-  opacity: 0;
-  transform: translateY(-6px);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  padding-left: 16px;           /* solo visible cuando se abre */
-}
 
-.dropdownMenuOpen {
-  max-height: 200px;            /* altura suficiente para los 3 links */
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+  .dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.dropdownMenu a {
-  padding: 6px 0;
-  color: #475569;
-  transition: color 0.2s ease;
-}
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    padding-left: 0;
+    align-items: center;
+  }
 
-.dropdownMenu a:hover {
-  color: #008b92;
+  .dropdownMenuOpen {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .dropdownMenu a {
+    padding: 6px 0;
+    color: #475569;
+    text-align: center;
+  }
+
+  .dropdownMenu a:hover {
+    color: #008b92;
+    background: transparent;
+  }
 }
-  }  

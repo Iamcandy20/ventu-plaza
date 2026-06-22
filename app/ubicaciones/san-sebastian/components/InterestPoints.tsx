@@ -13,28 +13,27 @@ type Punto = {
 
 const puntos: Punto[] = [
   {
-    id: "parque",
-    title: "Parque La Paz",
-    description: "Gran parque para paseos en familia",
-    icon: "/desamparados/7.webp",
+    id: "parque", title: "Parque La Libertad",
+    description: "Centro y cultura recreativo",
+    icon: "/sansebas/Icons-02.png",
   },
   {
     id: "museo",
-    title: "Museo de los Niños",
-    description: "Atracción educativa y cultural para los niños.",
-    icon: "/desamparados/8.webp",
+    title: "Iglesia de los Desamparados",
+    description: "Punto Religioso y tradicional",
+    icon: "/sansebas/Icons-07.png",
   }, 
   {
     id: "estadio",
-    title: "Estadio Nacional",
+    title: "Polideportivo ",
     description: "Cercania a eventos deportivos masivos",
-    icon: "/desamparados/7.webp",
+    icon: "/sansebas/Icons-06.png",
   },
   {
     id: "turistica",
-    title: "Cercanía Turística",
-    description: "Zonas de centros turísticos de alta calidad.",
-    icon: "/desamparados/7.webp",
+    title: "Cerros de la Carpintera",
+    description: "Area natural para senderismo y ciclismo ",
+    icon: "/sansebas/Icons-05.png",
   },
 ];
 
@@ -42,9 +41,8 @@ export default function InterestPoints() {
 
   const sectionRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); 
 
-  /* Animación al hacer scroll */
 useEffect(() => {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -66,7 +64,6 @@ useEffect(() => {
   };
 }, []);
 
-  /* Detecta qué card está centrada en móvil */
   const handleScroll = () => {
     if (!carouselRef.current) return;
 
@@ -74,7 +71,7 @@ useEffect(() => {
     const width = carouselRef.current.offsetWidth;
 
     const index = Math.round(scrollLeft / width);
-    setActiveIndex(index);
+    setActiveIndex(index); 
   };
 
   const scrollToIndex = (index: number) => {
@@ -136,7 +133,7 @@ useEffect(() => {
           ))}
         </div>
 
-        {/* INDICADORES (DOTS) */}
+
         <div className={styles.dots}>
           {puntos.map((_, i) => (
             <span

@@ -1,0 +1,109 @@
+.why {
+  background: transparent;
+  padding: 25px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.whyHead {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 28px;
+}
+
+
+.whyEyebrow {
+  color: #008b92;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.whyTitle {
+  font-size: clamp(22px, 2.5vw, 48px);
+  margin: 6px 0 14px;
+  line-height: 1.1;
+  color: #0f172a;
+}
+
+.whyText {
+  color: #555;
+  font-size: 1.05rem;
+  margin: 0 auto;
+  max-width: 60ch;
+}
+
+/* === Cards Grid === */
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(24px, 4vw, 36px);
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* === Card === */
+.whyCard {
+  background: #fff;
+  border-radius: 18px;
+  padding: 38px 30px;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.whyCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 139, 146, 0.25);
+}
+
+/* === Icon === */
+.iconWrap {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: rgba(0, 139, 146, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrap img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* === Card text === */
+.whyCard h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.whyCard p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .whyHead {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .whyCard {
+    padding: 30px 24px;
+  }
+}

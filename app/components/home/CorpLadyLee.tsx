@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./cll.module.css";
+import styles from "./corpLadyLee.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -63,7 +63,7 @@ export default function AchievementsSection() {
       <div className={styles.glow}></div>
       <div className={styles.shapeBehind}></div>
       <Image
-        src="https://corporacionladylee.com/wp-content/uploads/2025/05/logo-padding-1.png"
+        src="/Logo-CLL.webp"
         alt="Corporación Lady Lee"
         width={420}
         height={420}

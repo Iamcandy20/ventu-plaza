@@ -3,7 +3,7 @@
   background: linear-gradient(90deg, #008b8f, #31d6d0);
   color: #ffffff;
   overflow: hidden;
-  padding-top: 130px; 
+  padding-top: 130px;
 }
 
 /* ===== CURVA SUPERIOR ===== */
@@ -14,7 +14,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 150%;
-  height: 220px;       
+  height: 220px;
   background: #ffffff;
   border-bottom-left-radius: 50% 100%;
   border-bottom-right-radius: 50% 100%;
@@ -48,20 +48,19 @@
   gap: 8px;
 }
 
-/* Texto "Una marca de:" */
 .brandLabel {
   font-size: 0.85rem;
   margin-bottom: 2px;
   opacity: 0.9;
 }
 
-/* ===== LOGOS===== */
+/* ===== LOGOS ===== */
 .brand img {
-  max-width: 110px; /* Ventu */
+  max-width: 110px;
 }
 
 .brand:last-child img {
-  max-width: 140px; /* Lady Lee */
+  max-width: 140px;
 }
 
 .socials {
@@ -70,7 +69,14 @@
   margin-top: 6px;
 }
 
-.socials svg {
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.socialLink svg {
   width: 36px;
   height: 36px;
   padding: 8px;
@@ -81,7 +87,7 @@
   transition: all 0.25s ease;
 }
 
-.socials svg:hover {
+.socialLink:hover svg {
   background: #00cba9;
   color: #ffffff;
 }
@@ -164,6 +170,7 @@
     align-items: center;
     text-align: center;
   }
+
   .brands {
     flex-direction: row;
     gap: 40px;

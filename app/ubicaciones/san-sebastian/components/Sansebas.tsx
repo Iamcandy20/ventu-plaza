@@ -1,24 +1,24 @@
 "use client";
 import { useState, useEffect } from "react";
-import styles from "./DesamparadosBanner.module.css";
+import styles from "./SansebasBanner.module.css";
 
 const slides = [
   {
     title: (
       <>
-        Desamparados<br/>
+        San Sebastian<br/>
       </>
     ),
     image:
-      "/desamparados/desamparados1.webp",
+      "/sansebas/sansebas1.webp",
   },
    {
     image:
-      "/desamparados/desamparados2.webp",
+      "/sansebas/sansebas2.webp",
   },
    {
     image:
-      "/desamparados/desamparados3.webp",
+      "/sansebas/sansebas3.webp",
   },
 ];
 

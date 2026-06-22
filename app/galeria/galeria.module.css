@@ -1,0 +1,277 @@
+.section {
+  padding: 80px 6%;
+}
+
+.title {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* =========================
+   FILTERS
+========================= */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: 2px solid #00a6b2;
+  background: #fff;
+  color: #00a6b2;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease,
+    color 0.25s ease;
+}
+
+.filterBtn:hover {
+  background: #e8f7f9;
+  transform: translateY(-2px);
+}
+
+.active {
+  background: #00a6b2;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 166, 178, 0.3);
+}
+
+/* =========================
+   GRID
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* =========================
+   CARD (ahora es BUTTON)
+========================= */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  height: 230px;
+
+  /* reset button*/
+  border: 0;
+  padding: 0;
+  background: transparent;
+  text-align: left;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.card:focus-visible {
+  box-shadow: 0 0 0 4px rgba(0, 166, 178, 0.35);
+}
+
+.image {
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.city {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  color: #fff;
+}
+
+.overlay h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 6px 0 0;
+}
+
+/* =========================
+   LIGHTBOX (PRO)
+========================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
+}
+
+.lightboxContent {
+  position: relative;
+  width: min(1100px, 92vw);
+  height: min(78vh, 720px);
+
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: rgba(10, 10, 10, 0.35);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+.lightboxImage {
+  object-fit: contain;
+}
+
+.arrowLeft,
+.arrowRight,
+.close {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+
+  border-radius: 999px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover,
+.close:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-50%) scale(1.03);
+}
+
+.arrowLeft,
+.arrowRight {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  font-size: 40px;
+  display: grid;
+  place-items: center;
+  user-select: none;
+}
+
+.arrowLeft {
+  left: 18px;
+}
+
+.arrowRight {
+  right: 18px;
+}
+
+.close {
+  top: 18px;
+  right: 18px;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  display: grid;
+  place-items: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 64px 5%;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 28px;
+  }
+
+  .filters {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    gap: 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filterBtn {
+    white-space: nowrap;
+  }
+
+  /* Mobile: carrusel horizontal PRO */
+  .grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 86%;
+    gap: 16px;
+
+    overflow-x: auto;
+    padding: 4px 2px 14px;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 2px;
+
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  /* scrollbar más limpio (sin desaparecerlo del todo) */
+  .grid::-webkit-scrollbar {
+    height: 10px;
+  }
+  .grid::-webkit-scrollbar-thumb {
+    background: rgba(0, 166, 178, 0.28);
+    border-radius: 999px;
+  }
+  .grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .card {
+    height: 220px;
+    scroll-snap-align: center;
+  }
+
+  /* botones del lightbox más cómodos en móvil */
+  .arrowLeft,
+  .arrowRight {
+    width: 52px;
+    height: 52px;
+    font-size: 38px;
+  }
+}
+

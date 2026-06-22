@@ -1,0 +1,32 @@
+.scrollTop {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background-color: #008b92; 
+  color: #fff;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+
+.scrollTop:hover {
+  background-color: #008b92;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}

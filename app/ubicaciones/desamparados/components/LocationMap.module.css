@@ -1,0 +1,114 @@
+.location {
+  background: #0c8f94;
+  padding: clamp(60px, 8vw, 100px) 24px;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 6vw, 64px);
+  align-items: center;
+}
+
+/* === Info === */
+.info {
+  max-width: 520px;
+}
+
+.eyebrow {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.title {
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 28px;
+}
+
+/* === Points === */
+.points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.points li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.points img {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.points span {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.points strong {
+  font-weight: 700;
+}
+
+/* === Button === */
+.button {
+  display: inline-block;
+  background: #ffffff;
+  color: #0c8f94;
+  padding: 12px 26px;
+  border-radius: 14px; /* 🔹 más redondeado */
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* === Map === */
+.map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.mapImage {
+  object-fit: cover;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    max-width: 100%;
+  }
+}
