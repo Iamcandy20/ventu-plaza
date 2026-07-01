@@ -28,7 +28,6 @@ const slides = [
     href: "/ubicaciones/liberia",
     image: "/liberia/solarium-6.jpg",
   },
- 
   {
     eyebrow: "Ventu Plaza San Sebastián",
     title: (
@@ -66,29 +65,42 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.slider}>
-    {slides.map((item, i) => (
-  <Image
-    key={`${item.image}-${i}`}
-    src={item.image}
-    alt={`Imagen ${i + 1} de Ventu Plaza`}
-    fill
-    priority={i === current}
-    sizes="100vw"
-    className={`${styles.image} ${
-      i === current ? styles.activeImage : ""
-    }`}
-  />
-))}
+        {slides.map((item, i) => (
+          <Image
+            key={`${item.image}-${i}`}
+            src={item.image}
+            alt={`Imagen ${i + 1} de Ventu Plaza`}
+            fill
+            priority={i === current}
+            sizes="100vw"
+            className={`${styles.image} ${
+              i === current ? styles.activeImage : ""
+            }`}
+          />
+        ))}
 
         <div className={styles.overlay} />
 
         <div className={styles.content}>
           <div className={styles.copy}>
             <span className={styles.eyebrow}>{slide.eyebrow}</span>
-            <h1 className={styles.title}>{slide.title}</h1>
-<Link href={slide.href} className={styles.btnPrimary}>
-  {slide.cta}
-</Link>
+
+            <h1
+              className={styles.title}
+              style={{
+                fontSize: "50px",
+                lineHeight: "1.15",
+                fontWeight: 700,
+                letterSpacing: "-0.01em",
+                margin: "0 0 14px",
+              }}
+            >
+              {slide.title}
+            </h1>
+
+            <Link href={slide.href} className={styles.btnPrimary}>
+              {slide.cta}
+            </Link>
           </div>
         </div>
 
@@ -110,7 +122,6 @@ export default function Hero() {
           ›
         </button>
 
-        
         <div className={styles.dots}>
           {slides.map((_, i) => (
             <button

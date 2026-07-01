@@ -59,7 +59,7 @@
 }
 
 .copy {
-  max-width: 620px;
+  max-width: 520px;
   color: #ffffff;
   animation: fadeText 0.7s ease;
 }
@@ -78,31 +78,35 @@
 
 .eyebrow {
   display: block;
-  margin-bottom: 16px;
-  font-size: clamp(11px, 1vw, 14px);
+  margin-bottom: 12px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .title {
-  margin: 0 0 26px;
-  font-size: clamp(36px, 5.6vw, 82px);
-  line-height: 0.98;
-  font-weight: 800;
-  letter-spacing: -0.045em;
+  margin: 0 0 20px;
+  font-size: clamp(50px, 6vw, 66px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: #ffffff;
 }
 
 .btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   border: none;
   cursor: pointer;
   border-radius: 999px;
-  padding: 14px 24px;
+  padding: 12px 22px;
   background: #008b92;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   box-shadow: 0 14px 30px rgba(0, 139, 146, 0.32);
   transition: background 0.25s ease, transform 0.25s ease;
@@ -265,7 +269,8 @@
   }
 
   .title {
-    font-size: clamp(34px, 6vw, 62px);
+    font-size: 24px;
+    line-height: 1.12;
   }
 
   .arrow {
@@ -326,9 +331,10 @@
   }
 
   .title {
-    margin-bottom: 14px;
-    font-size: clamp(24px, 7vw, 38px);
-    line-height: 1;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
   }
 
   .btnPrimary {
@@ -369,18 +375,11 @@
   }
 
   .title {
-    font-size: 25px;
+    font-size: 17px;
   }
 
   .btnPrimary {
     padding: 9px 13px;
     font-size: 11px;
   }
-}
-.btnPrimary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: #ffffff;
 }
