@@ -30,25 +30,6 @@
   opacity: 1;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(5, 10, 25, 0.68) 0%,
-      rgba(5, 10, 25, 0.42) 38%,
-      rgba(5, 10, 25, 0.12) 68%,
-      rgba(5, 10, 25, 0.18) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(5, 10, 25, 0.12) 0%,
-      rgba(5, 10, 25, 0.24) 100%
-    );
-}
-
 .content {
   position: absolute;
   inset: 0;
@@ -184,16 +165,6 @@
     aspect-ratio: 1920 / 972;
     max-height: none;
     border-radius: 18px;
-  }
-
-  .overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(5, 10, 25, 0.62) 0%,
-        rgba(5, 10, 25, 0.34) 58%,
-        rgba(5, 10, 25, 0.18) 100%
-      );
   }
 
   .content {

@@ -20,17 +20,24 @@ const galeriaData: GaleriaItem[] = [
   { id: 9, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-2.jpg" },
   { id: 10, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-3.jpg" },
   { id: 11, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-4.jpg" },
+  { id: 12, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-5.jpg" },
+  { id: 13, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-6.jpg" },
+  { id: 14, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-7.jpg" },
+  { id: 15, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-8.jpg" },
+  { id: 16, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-9.jpg" },
+  { id: 17, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-10.jpg" },
+  { id: 18, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-11.jpg" },
   
 
-  { id: 12, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas1.webp" },
-  { id: 13, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas2.webp" },
-  { id: 14, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas3.webp" },
-  { id: 15, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas4.webp" },
-  { id: 16, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas5.webp" },
-  { id: 17, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas6.webp" },
-  { id: 18, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas7.webp" },
-  { id: 19, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas8.webp" },
-  { id: 20, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas9.webp" },
+  { id: 19, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas1.webp" },
+  { id: 20, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas2.webp" },
+  { id: 21, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas3.webp" },
+  { id: 22, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas4.webp" },
+  { id: 23, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas5.webp" },
+  { id: 24, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas6.webp" },
+  { id: 25, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas7.webp" },
+  { id: 26, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas8.webp" },
+  { id: 27, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas9.webp" },
 ];
 
 export default function GaleriaPage() {

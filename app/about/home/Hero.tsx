@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import styles from "./hero.module.css";
 
 const slides = [
@@ -32,15 +33,19 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.slider}>
         {slides.map((slide, i) => (
-          <img
-            key={slide.image}
-            src={slide.image}
-            alt=""
-            className={`${styles.image} ${
-              i === current ? styles.active : ""
-            }`}
-          />
-        ))}
+  <Image
+    key={`${slide.image}-${i}`}
+    src={slide.image}
+    alt={`Imagen ${i + 1}`}
+    fill
+    priority={i === current}
+    sizes="100vw"
+    className={`${styles.image} ${
+      i === current ? styles.active : ""
+    }`}
+  />
+))}
+      
 
         <button
           type="button"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import styles from "./hero.module.css";
 
 const slides = [
@@ -22,7 +23,7 @@ const slides = [
       </>
     ),
     cta: "Explora Liberia",
-    image: "/liberia/liberia7.webp",
+    image: "/liberia/solarium-6.jpg",
   },
   {
     eyebrow: "Ventu Plaza San Sebastián",
@@ -60,16 +61,19 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.slider}>
-        {slides.map((item, i) => (
-          <img
-            key={item.image}
-            src={item.image}
-            alt={item.eyebrow}
-            className={`${styles.image} ${
-              i === current ? styles.activeImage : ""
-            }`}
-          />
-        ))}
+    {slides.map((item, i) => (
+  <Image
+    key={`${item.image}-${i}`}
+    src={item.image}
+    alt={`Imagen ${i + 1} de Ventu Plaza`}
+    fill
+    priority={i === current}
+    sizes="100vw"
+    className={`${styles.image} ${
+      i === current ? styles.activeImage : ""
+    }`}
+  />
+))}
 
         <div className={styles.overlay} />
 

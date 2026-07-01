@@ -12,7 +12,7 @@ export default function AboutSection() {
   // Lista de imágenes
   const images = [
     "/liberia/solarium-1.jpg",
-    "/liberia/solarium-2.jpg",
+    "/liberia/solarium-9.jpg",
     "/liberia/solarium-3.jpg",
   ];
 
