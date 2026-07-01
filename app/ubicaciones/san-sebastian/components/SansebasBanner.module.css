@@ -155,7 +155,7 @@
   }
 
   .title {
-    font-size: clamp(36px, 7vw, 68px);
+    font-size: clamp(28px, 6vw, 50px);
   }
 
   .arrow {

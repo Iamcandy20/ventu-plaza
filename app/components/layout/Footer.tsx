@@ -31,7 +31,7 @@ type Brand = {
 const brands: Brand[] = [
   {
     name: "Ventu Plaza",
-    logoSrc: "/logob.webp",
+    logoSrc: "/Logob.png",
     logoAlt: "Ventu Plaza",
     width: 110,
     height: 60,

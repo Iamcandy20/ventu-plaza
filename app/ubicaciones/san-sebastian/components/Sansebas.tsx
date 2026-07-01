@@ -9,11 +9,9 @@ const slides = [
     image: "/sansebas/sansebas1.webp",
   },
   {
-    title: "San Sebastian",
     image: "/sansebas/sansebas2.webp",
   },
   {
-    title: "San Sebastian",
     image: "/sansebas/sansebas3.webp",
   },
 ];
