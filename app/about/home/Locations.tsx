@@ -18,7 +18,7 @@ export default function Locations() {
     {
       name: "Solarium Liberia",
       desc: "Con un hotel AC Marriott de 140 habitaciones,  y casi 40 comercios, Ventu Plaza Solarium se posiciona como el nuevo epicentro comercial y corporativo de Liberia.",
-      img: "/liberia/liberia6.webp",
+      img: "/liberia/solarium-10.jpg",
       place: "Liberia",
       status: "En desarrollo",
     },

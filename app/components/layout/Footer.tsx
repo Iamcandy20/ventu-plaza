@@ -1,15 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import type { FormEvent, ReactNode } from "react";
 import styles from "./Footer.module.css";
 import {
   FaFacebookF,
-  FaLinkedinIn,
   FaInstagram,
+  FaTiktok,
   FaGlobe,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 
 type SocialLink = {
   label: string;
@@ -17,75 +16,27 @@ type SocialLink = {
   icon: ReactNode;
 };
 
-type Brand = {
-  name: string;
-  logoSrc: string;
-  logoAlt: string;
-  width: number;
-  height: number;
-  priority?: boolean;
-  unoptimized?: boolean;
-  socials: SocialLink[];
-};
-
-const brands: Brand[] = [
+const socials: SocialLink[] = [
   {
-    name: "Ventu Plaza",
-    logoSrc: "/Logob.png",
-    logoAlt: "Ventu Plaza",
-    width: 110,
-    height: 60,
-    priority: true,
-    socials: [
-      {
-        label: "Facebook de Ventu Plaza",
-        href: "#",
-        icon: <FaFacebookF />,
-      },
-      {
-        label: "LinkedIn de Ventu Plaza",
-        href: "#",
-        icon: <FaLinkedinIn />,
-      },
-      {
-        label: "Instagram de Ventu Plaza",
-        href: "#",
-        icon: <FaInstagram />,
-      },
-    ],
+    label: "Facebook de Ventu Plaza",
+    href: "#",
+    icon: <FaFacebookF />,
   },
   {
-    name: "Corporación Lady Lee",
-    logoSrc:
-      "https://corporacionladylee.com/wp-content/uploads/2025/05/logo-padding-1.png",
-    logoAlt: "Corporación Lady Lee",
-    width: 180,
-    height: 70,
-    unoptimized: true,
-    socials: [
-      {
-        label: "Facebook de Corporación Lady Lee",
-        href: "#",
-        icon: <FaFacebookF />,
-      },
-      {
-        label: "Instagram de Corporación Lady Lee",
-        href: "#",
-        icon: <FaInstagram />,
-      },
-      {
-        label: "Sitio web de Corporación Lady Lee",
-        href: "#",
-        icon: <FaGlobe />,
-      },
-    ],
+    label: "Instagram de Ventu Plaza",
+    href: "#",
+    icon: <FaInstagram />,
   },
-];
-
-const policyLinks = [
-  { label: "Términos y condiciones", href: "#" },
-  { label: "Política de privacidad", href: "#" },
-  { label: "Política de cookies", href: "#" },
+  {
+    label: "TikTok de Ventu Plaza",
+    href: "#",
+    icon: <FaTiktok />,
+  },
+  {
+    label: "Sitio web Corporación Lady Lee",
+    href: "https://corporacionladylee.com/",
+    icon: <FaGlobe />,
+  },
 ];
 
 export default function Footer() {
@@ -98,61 +49,68 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.main}>
-        <div className={styles.brands}>
-          {brands.map((brand) => (
-            <div key={brand.name} className={styles.brand}>
-              <Image
-                src={brand.logoSrc}
-                alt={brand.logoAlt}
-                width={brand.width}
-                height={brand.height}
-                style={{ height: "auto" }}
-                priority={brand.priority}
-                unoptimized={brand.unoptimized}
-              />
-
-              <div className={styles.socials} aria-label={`Redes de ${brand.name}`}>
-                {brand.socials.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.socialLink}
-                  >
-                    {social.icon}
-                  </a>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
         <div className={styles.newsletter}>
-          <h4 className={styles.newsletterTitle}>BOLETÍN</h4>
-          <p className={styles.newsletterText}>
-            Recibe novedades, rutas y ofertas exclusivas directo en tu correo.
-          </p>
+          <h4 className={styles.newsletterTitle}>SUSCRÍBETE</h4>
 
           <form className={styles.form} onSubmit={handleSubmit}>
             <input
               type="email"
               placeholder="Tu correo electrónico"
               aria-label="Tu correo electrónico"
+              required
             />
-            <button type="submit">Suscribirme</button>
+            <button type="submit">Enviar</button>
           </form>
         </div>
-      </div>
 
-      <nav className={styles.policies} aria-label="Políticas del sitio">
-        {policyLinks.map((link) => (
-          <Link key={link.label} href={link.href}>
-            {link.label}
-          </Link>
-        ))}
-      </nav>
+        <div className={styles.center}>
+          <div className={styles.logos}>
+            <Image
+              src="/Logob.png"
+              alt="Ventu Plaza"
+              width={95}
+              height={52}
+              priority
+              className={styles.ventuLogo}
+            />
+
+            <span className={styles.divider} />
+
+            <Image
+              src="https://corporacionladylee.com/wp-content/uploads/2025/05/logo-padding-1.png"
+              alt="Corporación Lady Lee"
+              width={135}
+              height={55}
+              unoptimized
+              className={styles.ladyLeeLogo}
+            />
+          </div>
+
+          <a
+            href="https://corporacionladylee.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.website}
+          >
+            www.corporacionladylee.com
+          </a>
+        </div>
+
+        <div className={styles.socials} aria-label="Redes sociales de Ventu Plaza">
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              aria-label={social.label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+            >
+              {social.icon}
+            </a>
+          ))}
+        </div>
+      </div>
 
       <div className={styles.bottom}>
         © {currentYear} Ventu Plaza. Todos los derechos reservados.

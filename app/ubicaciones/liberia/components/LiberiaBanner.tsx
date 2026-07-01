@@ -7,11 +7,11 @@ import styles from "./LiberiaBanner.module.css";
 const slides = [
   {
   
-    image: "/liberia/solarium-5.jpg",
+    image: "/liberia/solarium-2.jpg",
   },
   {
   
-    image: "/liberia/solarium-2.jpg",
+    image: "/liberia/solarium-5.jpg",
   },
   {
   
@@ -21,6 +21,11 @@ const slides = [
   
     image: "/liberia/solarium-10.jpg",
   },
+   {
+  
+    image: "/liberia/solarium-4.jpg",
+  },
+
 ];
 
 export default function Hero() {

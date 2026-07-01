@@ -25,6 +25,21 @@ const slides = [
     cta: "Explora Liberia",
     image: "/liberia/solarium-6.jpg",
   },
+   {
+    eyebrow: "Ventu Plaza Liberia",
+    cta: "Explora Liberia",
+    image: "/liberia/solarium-1.jpg",
+  },
+   {
+    eyebrow: "Ventu Plaza Liberia",
+    cta: "Explora Liberia",
+    image: "/liberia/solarium-9.jpg",
+  },
+   {
+    eyebrow: "Ventu Plaza Liberia",
+    cta: "Explora Liberia",
+    image: "/liberia/solarium-5.jpg",
+  },
   {
     eyebrow: "Ventu Plaza San Sebastián",
     title: (
