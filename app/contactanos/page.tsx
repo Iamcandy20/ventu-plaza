@@ -6,7 +6,6 @@ import {
   FaXTwitter,
   FaLocationDot,
   FaEnvelope,
-  FaPhone,
 } from "react-icons/fa6";
 
 export default function Contactanos() {

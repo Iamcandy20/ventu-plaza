@@ -20,7 +20,7 @@ export default function About() {
               Creamos espacios que inspiran comunidad y bienestar
             </h2>
             <p className={`scroll-fade ${styles.aboutText}`}>
-               Ventu Plaza es la nueva marca de centros comerciales de Corporación Lady Lee, enfocada en ofrecer experiencias de compra y entretenimiento en formatos de comercios al aire libre en Costa Rica. Actualmente, se están desarrollando las primeras tres plazas en Desamparados, Liberia y San Sebastián. Cada una de estas plazas está diseñada para integrarse armoniosamente con su entorno, proporcionando espacios abiertos que invitan a la comunidad a disfrutar de una variedad de tiendas, restaurantes y actividades culturales.
+               Ventu Plaza es la nueva marca de centros comerciales de Corporación Lady Lee, enfocada en ofrecer experiencias de compra y entretenimiento en formatos de centro comercial abierto en Costa Rica. Actualmente, se están desarrollando las primeras tres plazas en Desamparados, Liberia y San Sebastián. Cada una de estas plazas está diseñada para integrarse armoniosamente con su entorno, proporcionando espacios abiertos que invitan a la comunidad a disfrutar de una variedad de tiendas, restaurantes y actividades culturales.
 
 La ubicación de Ventu Plaza en Liberia se distingue por contar con un hotel AC Marriott de 140 habitaciones, posicionándose como un destino clave para el turismo de negocios y eventos en la región.
 
