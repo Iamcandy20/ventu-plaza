@@ -10,9 +10,9 @@ export default function LiberiaPage() {
   return (
     <>
       <LiberiaBanner/>
-      <InterestPoints/>
       <AboutSection/>
       <WhyChooseUs />
+      <InterestPoints/>
     </>
   );
 }

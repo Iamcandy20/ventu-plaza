@@ -200,14 +200,14 @@ export default function Navbar() {
       <div className={`${styles.nav} container`}>
         <Link href="/" className={styles.brand} onClick={closeMenus}>
           <Image
-            src="/Logo-navbar.webp"
-            alt="Ventu Plaza logo"
-            width={120}
-            height={40}
-            className={styles.logo}
-            priority
-          />
-          <span>Ventu Plaza</span>
+  src="/Logov.jpg"
+  alt="Ventu Plaza logo"
+  width={160}
+  height={68}
+  className={styles.logo}
+  priority
+/>
+          
         </Link>
 
         <nav
@@ -221,8 +221,17 @@ export default function Navbar() {
               handleSectionNavigation(event, "sobre-nosotros")
             }
           >
-            Quienes Somos
+            INICIO
           </Link>
+         <Link
+  href="/about"
+  className={`${styles.navLink} ${
+    pathname === "/about" ? styles.linkActive : ""
+  }`}
+  onClick={closeMenus}
+>
+  QUIENES SOMOS
+</Link>
 
           <div
             className={styles.dropdown}
@@ -238,7 +247,7 @@ export default function Navbar() {
               aria-expanded={submenuOpen}
               aria-controls="ubicaciones-submenu"
             >
-              Nuestras Ubicaciones ▾
+              NUESTRAS UBICACIONES ▾
             </button>
 
             <div
@@ -256,21 +265,13 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/#negocios"
-            className={`${styles.navLink} ${isHomeRoute ? styles.linkActive : ""}`}
-            onClick={(event) => handleSectionNavigation(event, "negocios")}
-          >
-            Negocios
-          </Link>
-
-          <Link
             href="/galeria"
             className={`${styles.navLink} ${
               isGalleryRoute ? styles.linkActive : ""
             }`}
             onClick={closeMenus}
           >
-            Galería
+            GALERIA
           </Link>
 
           {isMobile && (

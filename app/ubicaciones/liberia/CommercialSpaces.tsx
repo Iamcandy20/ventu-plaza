@@ -38,7 +38,7 @@ export default function CommercialSpaces() {
 
         <p className={styles.description}>
           Ventu Plaza ofrece una variedad de espacios comerciales creados para brindar
-          comodidad, entretenimiento y experiencias únicas. Con más de 33 tiendas,
+          comodidad, entretenimiento y experiencias únicas. Con casi 40 locales comerciales,
           restaurantes, kioskos y áreas de descanso, cada visitante disfruta un entorno
           moderno, accesible y vibrante.
         </p>
@@ -52,35 +52,25 @@ export default function CommercialSpaces() {
       {/* GRID CREATIVO */}
       <div className={styles.grid}>
 
-        <div className={`${styles.card} ${styles.cardLarge}`}>
+        <div className={styles.card}>
           <Image src="/liberia/tiendas.webp" alt="Tiendas" width={48} height={48} />
-          <span>+33 Tiendas</span>
+          <span>Casi 40 locales</span>
         </div>
 
         <div className={styles.card}>
           <Image src="/liberia/kioskos.webp" alt="Kioskos" width={42} height={42} />
-          <span>Kioskos</span>
+          <span>1 Hotel AC Marriott</span>
         </div>
 
-        <div className={styles.card}>
-          <Image src="/liberia/restaurante.webp" alt="Restaurantes" width={42} height={42} />
-          <span>Restaurantes</span>
-        </div>
 
         <div className={styles.card}>
           <Image src="/liberia/comida.webp" alt="Plaza de comidas" width={42} height={42} />
-          <span>Plaza de comidas</span>
+          <span>Zona Gastronómica</span>
         </div>
 
         <div className={styles.card}>
           <Image src="/liberia/baresv.webp" alt="Bares" width={42} height={42} />
-          <span>Bares</span>
-        </div>
-
-        {/* NUEVA CARD — SALA DE DESCANSO */}
-        <div className={styles.card}>
-          <Image src="/liberia/descansov.webp" alt="Sala de descanso" width={42} height={42} />
-          <span>Sala de descanso</span>
+          <span>Servicios Varios</span>
         </div>
 
       </div>

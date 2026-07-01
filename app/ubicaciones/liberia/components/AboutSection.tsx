@@ -11,9 +11,9 @@ export default function AboutSection() {
   
   // Lista de imágenes
   const images = [
-    "/liberia/liberia11.webp",
-    "/liberia/liberia2.webp",
-    "/liberia/liberia1.webp",
+    "/liberia/solarium-1.jpg",
+    "/liberia/solarium-2.jpg",
+    "/liberia/solarium-3.jpg",
   ];
 
   useEffect(() => {
@@ -84,7 +84,7 @@ export default function AboutSection() {
         {/* LADO DERECHO */}
         <div className={styles.textContent}>
           <span className={styles.eyebrow}>INNOVACIÓN Y DESARROLLO</span>
-          <h2>Esto es Ventu Plaza Liberia</h2>
+          <h2>Esto es Ventu Plaza Solarium</h2>
           <div className={styles.line}></div>
 
           <blockquote className={styles.quote}>
@@ -92,8 +92,8 @@ export default function AboutSection() {
           </blockquote>
 
           <p>
-            Ventu Plaza Liberia será un proyecto de uso mixto y moderno de la región de Guanacaste.
-            Cuenta con un inmejorable desarrollo comercial, hotelero, gastronómico, de oficinas, entre otros,
+            Ventu Plaza Solarium será un proyecto de uso mixto y moderno de la región de Guanacaste.
+            Cuenta con un inmejorable desarrollo comercial, hotelero, gastronómico y de servicios, entre otros,
             lo cual permite que las empresas dentro y fuera del proyecto aprovechen uno de los mejores entornos
             de negocios en Centroamérica.
           </p>

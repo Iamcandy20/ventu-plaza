@@ -53,12 +53,11 @@
 }
 
 .logo {
+  width: 90px;
   height: auto;
-  width: auto;
-  max-height: 42px;
+  max-height: none;
   object-fit: contain;
 }
-
 /* ================= LINKS ================= */
 .links {
   display: flex;

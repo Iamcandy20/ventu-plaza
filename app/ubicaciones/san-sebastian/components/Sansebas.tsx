@@ -1,103 +1,92 @@
 "use client";
-import { useState, useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import styles from "./SansebasBanner.module.css";
 
 const slides = [
   {
-    title: (
-      <>
-        San Sebastian<br/>
-      </>
-    ),
-    image:
-      "/sansebas/sansebas1.webp",
+    title: "San Sebastian",
+    image: "/sansebas/sansebas1.webp",
   },
-   {
-    image:
-      "/sansebas/sansebas2.webp",
+  {
+    title: "San Sebastian",
+    image: "/sansebas/sansebas2.webp",
   },
-   {
-    image:
-      "/sansebas/sansebas3.webp",
+  {
+    title: "San Sebastian",
+    image: "/sansebas/sansebas3.webp",
   },
 ];
 
 export default function Hero() {
-  const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(false);
+  const [current, setCurrent] = useState(0);
 
-  
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(true);
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % slides.length);
-        setFade(false);
-      }, 700); 
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
     }, 6000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, []);
 
-  const slide = slides[index];
+  const next = () => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
+  const prev = () => {
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
 
   return (
     <section className={styles.hero}>
-      <div className={styles.heroSurface}>
-        {/* Contenedor de imagen con transición cruzada */}
-        <div className={styles.heroBgWrappebr}>
-          <div
-            key={index}
-            className={`${styles.heroBg} ${fade ? styles.fadeOut : styles.fadeIn}`}
-            style={{
-              backgroundImage: `
-                linear-gradient(180deg, rgba(10,15,30,.35), rgba(10,15,30,.55)),
-                url(${slide.image})
-              `,
-            }}
+      <div className={styles.slider}>
+        {slides.map((slide, i) => (
+          <img
+            key={slide.image}
+            src={slide.image}
+            alt={slide.title}
+            className={`${styles.image} ${
+              i === current ? styles.activeImage : ""
+            }`}
           />
+        ))}
+
+        <div className={styles.overlay} />
+
+        <div className={styles.content}>
+          <h1 key={current} className={styles.title}>
+            {slides[current].title}
+          </h1>
         </div>
 
-        {/* Contenido del slide */}
-        <div className={styles.heroInner}>
-          <h1 className={styles.title}>{slide.title}</h1>
-          <div className={`${styles.heroCopy} ${fade ? styles.textFadeOut : styles.textFadeIn}`}>
-            <div className={styles.ctaRow}>
-            </div>
-          </div>
-        </div>
-        
-        {/* Tarjeta inferior estática 
-        <div className={styles.infoCard}>
-          <h4>UN PROYECTO DE</h4>
-          <div className={styles.infoRow}>
-            <div className={styles.profile}>
-              <div className={styles.avatar}></div>
-              <div className={styles.name}>
-                <strong>Corporación Lady Lee</strong>
-                <span>54 años de trayectoria</span>
-              </div>
-            </div>
-           <button
-  className={styles.btnMini}
-  onClick={() => {
-    const section = document.getElementById("AchievementsSection");
-    section?.scrollIntoView({ behavior: "smooth" });
-  }}
->
-  Ver más
-</button>
+        <button
+          type="button"
+          className={`${styles.arrow} ${styles.left}`}
+          onClick={prev}
+          aria-label="Imagen anterior"
+        >
+          ‹
+        </button>
 
-          </div>
-        </div>
-*/}
-        {/* Puntos de navegación */}
-        <div className={styles.navDots}>
+        <button
+          type="button"
+          className={`${styles.arrow} ${styles.right}`}
+          onClick={next}
+          aria-label="Imagen siguiente"
+        >
+          ›
+        </button>
+
+        <div className={styles.dots}>
           {slides.map((_, i) => (
             <button
               key={i}
-              onClick={() => setIndex(i)}
-              className={`${styles.dotBtn} ${i === index ? styles.active : ""}`}
+              type="button"
+              onClick={() => setCurrent(i)}
+              className={`${styles.dot} ${
+                current === i ? styles.activeDot : ""
+              }`}
+              aria-label={`Ver imagen ${i + 1}`}
             />
           ))}
         </div>

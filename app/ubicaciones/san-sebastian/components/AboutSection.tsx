@@ -10,9 +10,9 @@ export default function AboutSection() {
   
   // Lista de imágenes
   const images = [
-    "/desamparados/desamparados1.webp",
-    "/desamparados/desamparados2.webp",
-    "/desamparados/desamparados3.webp",
+    "/sansebas/sansebas1.webp",
+    "/sansebas/sansebas2.webp",
+    "/sansebas/sansebas3.webp",
   ];
 
   useEffect(() => {
@@ -83,7 +83,7 @@ export default function AboutSection() {
 
         <div className={styles.textContent}>
           <span className={styles.eyebrow}>ACCESIBILIDAD Y DESARROLLO</span>
-          <h2>Esto es Ventu Plaza Desamparados</h2>
+          <h2>Esto es Ventu Plaza San Sebastian</h2>
           <div className={styles.line}></div>
 
           <blockquote className={styles.quote}>

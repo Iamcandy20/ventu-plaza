@@ -1,209 +1,194 @@
 .hero {
   width: 100%;
   margin: 0;
+  padding: 18px;
 }
 
-.heroSurface {
+.slider {
   position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden; 
-  min-height: calc(100vh - var(--header-h));
-  display: grid;
-  align-items: center;
-  padding: clamp(20px, 4vw, 36px);
-  background: #0b1020;
-  isolation: isolate;
-}
-
-.heroBgWrapper {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
+  width: 100%;
+  aspect-ratio: 1920 / 972;
+  max-height: calc(100vh - var(--header-h) - 36px);
+  border-radius: 28px;
   overflow: hidden;
+  background: #0b1020;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
 }
 
-.heroBg {
+.image {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center 40%;
-  filter: brightness(0.9);
-  transition: opacity 1s ease, transform 2s ease, filter 1.5s ease;
-}
-
-.fadeIn {
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0px);
-  animation: fadeInBg 1s ease forwards;
-}
-
-.fadeOut {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   opacity: 0;
-  transform: scale(1.05);
-  filter: blur(8px);
-  animation: fadeOutBg 1s ease forwards;
+  transition: opacity 0.9s ease;
 }
 
-@keyframes fadeInBg {
-  from { opacity: 0; transform: scale(1.05); filter: blur(8px); }
-  to { opacity: 1; transform: scale(1); filter: blur(0); }
+.activeImage {
+  opacity: 1;
 }
 
-@keyframes fadeOutBg {
-  from { opacity: 1; transform: scale(1); filter: blur(0); }
-  to { opacity: 0; transform: scale(1.05); filter: blur(8px); }
-}
-
-/* --- Contenido principal --- */
-.heroInner {
-  width: min(100% - 32px, var(--maxw));
-  margin-inline: auto;
+.overlay {
+  position: absolute;
+  inset: 0;
   z-index: 2;
-  position: relative;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 10, 25, 0.68) 0%,
+      rgba(5, 10, 25, 0.42) 38%,
+      rgba(5, 10, 25, 0.12) 68%,
+      rgba(5, 10, 25, 0.18) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5, 10, 25, 0.18) 0%,
+      rgba(5, 10, 25, 0.18) 100%
+    );
 }
 
-.heroCopy {
-  color: #fff;
-  position: relative;
-  padding: clamp(8px, 1vw, 16px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+.content {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  padding-inline: clamp(28px, 9vw, 150px);
 }
 
-.textFadeIn {
-  opacity: 1;
-  transform: translateY(0);
+.copy {
+  max-width: 620px;
+  color: #ffffff;
+  animation: fadeText 0.7s ease;
 }
 
-.textFadeOut {
-  opacity: 0;
-  transform: translateY(20px);
+@keyframes fadeText {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .eyebrow {
-  font-size: 12px;
-  letter-spacing: .18em;
+  display: block;
+  margin-bottom: 16px;
+  font-size: clamp(11px, 1vw, 14px);
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  opacity: .9;
-  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .title {
+  margin: 0 0 26px;
+  font-size: clamp(36px, 5.6vw, 82px);
+  line-height: 0.98;
   font-weight: 800;
-  line-height: 1.05;
-  font-size: clamp(30px, 5vw, 64px);
-  margin: 0 0 14px 0;
+  letter-spacing: -0.045em;
   color: #ffffff;
-}
-
-.subtitle {
-  color: #ffffff;
-  max-width: 48ch;
-  margin: 0 0 22px 0;
-  font-size: clamp(14px, 1.2vw, 16px);
-}
-
-.ctaRow {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.btn {
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 999px;
-  padding: 12px 18px;
 }
 
 .btnPrimary {
-  background: #008B92;
-  color: #fff;
-  box-shadow: var(--ring);
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 14px 24px;
+  background: #008b92;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 14px 30px rgba(0, 139, 146, 0.32);
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .btnPrimary:hover {
-  background: var(--primary-600);
+  background: #00767b;
+  transform: translateY(-2px);
 }
 
-/* --- Puntos de navegación --- */
-.navDots {
+.arrow {
   position: absolute;
-  left: clamp(10px, 2vw, 18px);
   top: 50%;
+  z-index: 10;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 1;
+  cursor: pointer;
   transform: translateY(-50%);
-  display: grid;
-  gap: 12px;
-  z-index: 3;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-.dotBtn {
-  width: 14px;
-  height: 14px;
+.arrow:hover {
+  background: #ffffff;
+  color: #111827;
+  transform: translateY(-50%) scale(1.04);
+}
+
+.left {
+  left: 28px;
+}
+
+.right {
+  right: 28px;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  z-index: 12;
+  display: flex;
+  gap: 12px;
+  transform: translateX(-50%);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
   border-radius: 50%;
-  border: 2px solid #ffffff99;
+  border: 2px solid #ffffff;
   background: transparent;
   cursor: pointer;
-  outline: none;
-  transition: transform .15s ease, background .2s ease, border-color .2s ease;
+  transition: width 0.25s ease, background 0.25s ease;
 }
 
-.dotBtn:hover {
-  transform: scale(1.08);
+.activeDot {
+  width: 36px;
+  border-radius: 999px;
+  background: #ffffff;
 }
 
-.active {
-  background: #fff;
-  border-color: #fff;
-}
-
-/* --- Icono flotante--- */
-.iconWrap {
-  position: absolute;
-  right: clamp(10%, 8vw, 14%);
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 4;
-}
-
-.iconBadge {
-  width: clamp(180px, 28vw, 320px);
-  height: clamp(180px, 28vw, 320px);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(255, 255, 255, 0);
-  box-shadow: none;
-  backdrop-filter: blur(8px);
-}
-
-.iconBadge img {
-  width: 62%;
-  height: 62%;
-  object-fit: contain;
-}
-
-/* --- Tarjeta inferior --- */
 .infoCard {
   position: absolute;
-  right: 18px;
-  bottom: 18px;
-  background: #ffffffee;
-  color: #0f172a;
-  padding: 16px;
-  border-radius: 16px 16px 22px 22px;
-  box-shadow: 0 18px 40px rgba(0,0,0,.18);
-  display: grid;
-  gap: 10px;
-  width: clamp(240px, 28vw, 320px);
-  z-index: 5;
+  right: clamp(18px, 3vw, 34px);
+  bottom: clamp(24px, 4vw, 42px);
+  z-index: 8;
+  width: clamp(260px, 29vw, 390px);
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
 
 .infoCard h4 {
-  margin: 0;
+  margin: 0 0 12px;
   font-size: 14px;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #334155;
 }
@@ -212,7 +197,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 14px;
 }
 
 .profile {
@@ -222,11 +207,11 @@
 }
 
 .avatar {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
   border-radius: 50%;
-  background: url("/avatar.jpg")
-    center/cover no-repeat;
+  background: url("/avatar.jpg") center / cover no-repeat;
 }
 
 .name {
@@ -237,95 +222,158 @@
 
 .name strong {
   font-size: 14px;
+  color: #0f172a;
 }
 
 .name span {
+  margin-top: 3px;
   font-size: 12px;
   color: #64748b;
 }
 
 .btnMini {
-  background: #02d1fa;
-  color: #fff;
   border: none;
-  border-radius: 999px;
-  padding: 8px 12px;
-  font-size: 12px;
-  font-weight: 600;
   cursor: pointer;
+  border-radius: 999px;
+  padding: 9px 14px;
+  background: #02c7e8;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .btnMini:hover {
-  background: #01839d;
+  background: #008b92;
+  transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
-
-@media (max-width: 768px) {
-  .heroSurface {
-    min-height: auto;
-    padding-top: 48px;
-    padding-bottom: 20px;
-    align-items: flex-start;
+@media (max-width: 1024px) {
+  .hero {
+    padding: 14px;
   }
 
-  .heroBg {
-    background-size: cover;         
-    background-position: center; 
-    background-repeat: no-repeat;
-  }
-}
-
-  /* CONTENIDO */
-  .heroInner {
-    text-align: left; /* 🔑 alineado a la izquierda */
+  .slider {
+    aspect-ratio: 1920 / 972;
+    max-height: none;
+    border-radius: 24px;
   }
 
-  .heroCopy {
-    padding: 0;
-  }
-
-  /* TEXTO */
-  .eyebrow {
-    font-size: 10px;
-    margin-bottom: 4px;
-    letter-spacing: .16em;
+  .content {
+    padding-inline: clamp(34px, 8vw, 90px);
   }
 
   .title {
-    font-size: 24px; /* 🔑 más compacto */
-    line-height: 1.15;
-    margin-bottom: 10px;
+    font-size: clamp(34px, 6vw, 62px);
   }
 
-  /* OCULTAR SUBTITLE */
-  .subtitle {
+  .arrow {
+    width: 52px;
+    height: 52px;
+    font-size: 34px;
+  }
+
+  .left {
+    left: 20px;
+  }
+
+  .right {
+    right: 20px;
+  }
+
+  .infoCard {
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 10px;
+  }
+
+  .slider {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1920 / 972;
+    max-height: none;
+    border-radius: 18px;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 10, 25, 0.62) 0%,
+        rgba(5, 10, 25, 0.35) 58%,
+        rgba(5, 10, 25, 0.18) 100%
+      );
+  }
+
+  .content {
+    padding-inline: 24px;
+    align-items: center;
+  }
+
+  .copy {
+    max-width: 70%;
+  }
+
+  .eyebrow {
+    margin-bottom: 8px;
+    font-size: 9px;
+    letter-spacing: 0.14em;
+  }
+
+  .title {
+    margin-bottom: 14px;
+    font-size: clamp(24px, 7vw, 38px);
+    line-height: 1;
+  }
+
+  .btnPrimary {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .arrow {
     display: none;
   }
 
-  /* OCULTAR BOTÓN */
-  .ctaRow {
-    display: none;
-  }
-
-  /* OCULTAR CARD */
   .infoCard {
     display: none;
   }
 
-  /* DOTS */
-  .navDots {
-    position: relative;
-    inset: auto;
-    margin-top: 18px;
-    transform: none;
-    display: flex;
-    justify-content: center;
+  .dots {
+    bottom: 14px;
     gap: 8px;
   }
 
-  .dotBtn {
-    width: 10px;
-    height: 10px;
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .activeDot {
+    width: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding-inline: 18px;
+  }
+
+  .copy {
+    max-width: 76%;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .btnPrimary {
+    padding: 9px 13px;
+    font-size: 11px;
   }
 }

@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <About />
+
       <Locations />
-      <CorpLadyLee />
+     
 
       {/* Botón volver arriba */}
       <ScrollToTop />

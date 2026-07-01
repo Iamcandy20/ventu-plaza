@@ -1,21 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "./LiberiaBanner.module.css";
+import styles from "./hero.module.css";
 
 const slides = [
-  {
-    title: "Liberia",
-    image: "/liberia/solarium-1.jpg",
-  },
-  {
-    title: "Liberia",
-    image: "/liberia/solarium-2.jpg",
-  },
-  {
-    title: "Liberia",
-    image: "/liberia/solarium-3.jpg",
-  },
+  { image: "/desamparados/desamparados1.webp" },
+  { image: "/liberia/liberia7.webp" },
+  { image: "/sansebas/sansebas5.jpeg" },
 ];
 
 export default function Hero() {
@@ -44,20 +35,12 @@ export default function Hero() {
           <img
             key={slide.image}
             src={slide.image}
-            alt={slide.title}
+            alt=""
             className={`${styles.image} ${
-              i === current ? styles.activeImage : ""
+              i === current ? styles.active : ""
             }`}
           />
         ))}
-
-        <div className={styles.overlay} />
-
-        <div className={styles.content}>
-          <h1 key={current} className={styles.title}>
-            {slides[current].title}
-          </h1>
-        </div>
 
         <button
           type="button"
