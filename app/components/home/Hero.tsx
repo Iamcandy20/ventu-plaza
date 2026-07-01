@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./hero.module.css";
 
 const slides = [
@@ -13,6 +14,7 @@ const slides = [
       </>
     ),
     cta: "Descubre más",
+    href: "/ubicaciones/desamparados",
     image: "/desamparados/desamparados1.webp",
   },
   {
@@ -23,21 +25,25 @@ const slides = [
       </>
     ),
     cta: "Explora Liberia",
+    href: "/ubicaciones/liberia",
     image: "/liberia/solarium-6.jpg",
   },
-   {
-    eyebrow: "Ventu Plaza Liberia",
+  {
+    eyebrow: "Ventu Plaza Solarium Liberia",
     cta: "Explora Liberia",
+    href: "/ubicaciones/liberia",
     image: "/liberia/solarium-1.jpg",
   },
-   {
-    eyebrow: "Ventu Plaza Liberia",
+  {
+    eyebrow: "Ventu Plaza Solarium Liberia",
     cta: "Explora Liberia",
+    href: "/ubicaciones/liberia",
     image: "/liberia/solarium-9.jpg",
   },
-   {
-    eyebrow: "Ventu Plaza Liberia",
+  {
+    eyebrow: "Ventu Plaza Solarium Liberia",
     cta: "Explora Liberia",
+    href: "/ubicaciones/liberia",
     image: "/liberia/solarium-5.jpg",
   },
   {
@@ -48,6 +54,7 @@ const slides = [
       </>
     ),
     cta: "Conoce más",
+    href: "/ubicaciones/san-sebastian",
     image: "/sansebas/sansebas5.jpeg",
   },
 ];
@@ -96,10 +103,9 @@ export default function Hero() {
           <div className={styles.copy}>
             <span className={styles.eyebrow}>{slide.eyebrow}</span>
             <h1 className={styles.title}>{slide.title}</h1>
-
-            <button type="button" className={styles.btnPrimary}>
-              {slide.cta}
-            </button>
+<Link href={slide.href} className={styles.btnPrimary}>
+  {slide.cta}
+</Link>
           </div>
         </div>
 

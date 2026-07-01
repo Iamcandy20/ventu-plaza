@@ -10,7 +10,7 @@ const MOBILE_BREAKPOINT = 980;
 
 const locationLinks = [
   { label: "Desamparados", href: "/ubicaciones/desamparados" },
-  { label: "Liberia", href: "/ubicaciones/liberia" },
+  { label: "Solarium Liberia", href: "/ubicaciones/liberia" },
   { label: "San Sebastián", href: "/ubicaciones/san-sebastian" },
 ];
 

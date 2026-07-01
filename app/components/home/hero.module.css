@@ -377,3 +377,10 @@
     font-size: 11px;
   }
 }
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+}
