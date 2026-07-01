@@ -8,26 +8,27 @@ import GaleriaGrid from "./gallerygrid";
 import GalleryLightbox from "./gallerylightbox";
 
 const galeriaData: GaleriaItem[] = [
-  { id: 1, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados1.webp" },
-  { id: 2, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados2.webp" },
-  { id: 3, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados3.webp" },
-  { id: 4, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados4.webp" },
-  { id: 5, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados5.webp" },
-  { id: 6, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados6.webp" },
-  { id: 7, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados7.webp" },
-
-  { id: 8, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-1.jpg" },
-  { id: 9, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-2.jpg" },
-  { id: 10, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-3.jpg" },
-  { id: 11, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-4.jpg" },
-  { id: 12, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-5.jpg" },
-  { id: 13, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-6.jpg" },
-  { id: 14, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-7.jpg" },
-  { id: 15, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-8.jpg" },
-  { id: 16, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-9.jpg" },
-  { id: 17, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-10.jpg" },
-  { id: 18, city: "Liberia", title: "Ventu Plaza Liberia", image: "/liberia/solarium-11.jpg" },
   
+
+  { id: 1, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-1.jpg" },
+  { id: 2, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-2.jpg" },
+  { id: 3, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-3.jpg" },
+  { id: 4, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-4.jpg" },
+  { id: 5, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-5.jpg" },
+  { id: 6, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-6.jpg" },
+  { id: 7, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-7.jpg" },
+  { id: 8, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-8.jpg" },
+  { id: 9, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-9.jpg" },
+  { id: 10, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-10.jpg" },
+  { id: 11, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-11.jpg" },
+  
+  { id: 12, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados1.webp" },
+  { id: 13, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados2.webp" },
+  { id: 14, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados3.webp" },
+  { id: 15, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados4.webp" },
+  { id: 16, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados5.webp" },
+  { id: 17, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados6.webp" },
+  { id: 18, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados7.webp" },
 
   { id: 19, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas1.webp" },
   { id: 20, city: "San Sebastian", title: "Ventu Plaza San Sebastian", image: "/sansebas/sansebas2.webp" },

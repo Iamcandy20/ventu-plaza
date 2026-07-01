@@ -28,18 +28,8 @@ Con Ventu Plaza, Corporación Lady Lee reafirma su compromiso con el desarrollo 
             </p>
 
             <div className={styles.aboutHighlights}>
-              <div className={`scroll-fade-left ${styles.aboutHighlight}`}>
-                <CheckCircle size={22} />
-                <span>Diseños arquitectónicos abiertos e integrados al entorno.</span>
-              </div>
-              <div className={`scroll-fade-left ${styles.aboutHighlight}`}>
-                <CheckCircle size={22} />
-                <span>Tiendas, restaurantes y áreas verdes para toda la familia.</span>
-              </div>
-              <div className={`scroll-fade-left ${styles.aboutHighlight}`}>
-                <CheckCircle size={22} />
-                <span>Compromiso con el desarrollo sostenible.</span>
-              </div>
+              
+              
             </div>
 
             <div className={`scroll-zoom ${styles.statsRow}`}>

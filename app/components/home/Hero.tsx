@@ -28,24 +28,7 @@ const slides = [
     href: "/ubicaciones/liberia",
     image: "/liberia/solarium-6.jpg",
   },
-  {
-    eyebrow: "Ventu Plaza Solarium Liberia",
-    cta: "Explora Liberia",
-    href: "/ubicaciones/liberia",
-    image: "/liberia/solarium-1.jpg",
-  },
-  {
-    eyebrow: "Ventu Plaza Solarium Liberia",
-    cta: "Explora Liberia",
-    href: "/ubicaciones/liberia",
-    image: "/liberia/solarium-9.jpg",
-  },
-  {
-    eyebrow: "Ventu Plaza Solarium Liberia",
-    cta: "Explora Liberia",
-    href: "/ubicaciones/liberia",
-    image: "/liberia/solarium-5.jpg",
-  },
+ 
   {
     eyebrow: "Ventu Plaza San Sebastián",
     title: (

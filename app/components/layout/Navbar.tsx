@@ -9,8 +9,8 @@ import styles from "./Navbar.module.css";
 const MOBILE_BREAKPOINT = 980;
 
 const locationLinks = [
-  { label: "Desamparados", href: "/ubicaciones/desamparados" },
   { label: "Solarium Liberia", href: "/ubicaciones/liberia" },
+  { label: "Desamparados", href: "/ubicaciones/desamparados" },
   { label: "San Sebastián", href: "/ubicaciones/san-sebastian" },
 ];
 

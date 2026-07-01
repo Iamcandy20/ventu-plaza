@@ -17,7 +17,7 @@ export default function Locations() {
     },
     {
       name: "Solarium Liberia",
-      desc: "Con un hotel AC Marriott de 140 habitaciones, y casi 40 comercios, Ventu Plaza Solarium se posiciona como el nuevo epicentro comercial y corporativo de Liberia.",
+      desc: "Con un hotel AC Marriott de 140 habitaciones y casi 40  se posiciona como el nuevo epicentro comercial y corporativo de Liberia.",
       img: "/liberia/solarium-5.jpg",
       place: "Liberia",
       status: "En desarrollo",
@@ -35,12 +35,7 @@ export default function Locations() {
       <div className="container">
         <header className={`scroll-fade ${styles.locationsHead}`}>
           <p className={styles.locationsEyebrow}>Nuestras Ubicaciones</p>
-          <h2 className={styles.locationsTitle}>
-            Descubre las Plazas Ventu en Costa Rica
-          </h2>
-          <p className={styles.locationsText}>
-            Cada ubicación ofrece una experiencia única, pensada para disfrutar en espacios abiertos.
-          </p>
+
         </header>
 
         <div className={styles.locGrid}>

@@ -1,6 +1,6 @@
 export type GaleriaItem = {
   id: number;
-  city: "Desamparados" | "Liberia" | "San Sebastian";
+  city: "Solarium Liberia" | "Desamparados" | "San Sebastian";
   title: string;
   image: string;
 };

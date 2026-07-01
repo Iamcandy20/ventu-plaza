@@ -7,8 +7,8 @@ type Props = {
 };
 
 const filters: Props["active"][] = [
+  "Solarium Liberia",
   "Desamparados",
-  "Liberia",
   "San Sebastian",
   "Todas",
 ];
@@ -16,7 +16,7 @@ const filters: Props["active"][] = [
 export default function GaleriaFilters({ active, onChange }: Props) {
   return (
     <div className={styles.filters}>
-      {filters.map(filter => (
+      {filters.map((filter) => (
         <button
           key={filter}
           onClick={() => onChange(filter)}
