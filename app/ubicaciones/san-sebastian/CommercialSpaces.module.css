@@ -1,4 +1,3 @@
-/* --- ANIMACIÓN --- */
 .hidden {
   opacity: 0;
   transform: translateY(40px);
@@ -10,25 +9,22 @@
   transform: translateY(0);
 }
 
-/* --- LAYOUT --- */
 .section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 40px; /* bajado un poco */
+  padding: 60px 40px;
   display: flex;
-  gap: 70px;
-  align-items: center; /* centra verticalmente left y grid */
+  gap: 50px;
+  align-items: center;
 }
 
-/* IZQUIERDA */
 .left {
   width: 40%;
-  padding-top: 40px; /* baja el contenido como en tu ejemplo */
+  padding-top: 20px;
 }
 
-/* TITULOS */
 .subtitle {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
   color: #00838f;
@@ -37,39 +33,39 @@
 }
 
 .title {
-  font-size: 38px;
+  font-size: 26px;
   font-weight: 700;
   color: #004a75;
+  line-height: 1.2;
 }
 
 .line {
   width: 60px;
   height: 4px;
   background: #00a8b5;
-  margin: 18px 0 25px;
+  margin: 16px 0 22px;
 }
 
-/* TEXTO */
 .description {
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 12px;
+  line-height: 1.7;
   color: #58656c;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   text-align: justify;
 }
 
-/* BOTÓN */
 .button {
-  padding: 14px 28px;
+  padding: 12px 24px;
   background: white;
   border-radius: 30px;
   border: none;
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  font-size: 12px;
   font-weight: 600;
   color: #004a75;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   transition: 0.25s ease;
 }
@@ -78,176 +74,155 @@
   transform: translateY(-4px);
 }
 
-/* GRID CREATIVO */
 .grid {
   width: 60%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 160px;
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(220px, 280px));
+  justify-content: center;
+  gap: 24px;
 }
-/* --- CARD ESTILO PREMIUM --- */
-/* --- CARD ESTILO PROFESIONAL --- */
+
 .card {
   background: #ffffff;
-  border-radius: 26px;
+  border-radius: 22px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 14px;
-  padding: 28px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
+  padding: 24px 18px;
+  min-height: 150px;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 
-/* --- Esquinas suaves estilo referencia --- */
 .card::before,
 .card::after {
   content: "";
   position: absolute;
-  width: 55px;
-  height: 55px;
-  border-radius: 18px;
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
   border: 3px solid transparent;
   pointer-events: none;
 }
 
-/* Esquina superior izquierda */
 .card::before {
   top: 10px;
   left: 10px;
   border-top: 3px solid #00a5a5;
   border-left: 3px solid #00a5a5;
-  border-radius: 18px 0 0 0;
+  border-radius: 16px 0 0 0;
 }
 
-/* Esquina inferior derecha */
 .card::after {
   bottom: 10px;
   right: 10px;
   border-bottom: 3px solid #00a5a5;
   border-right: 3px solid #00a5a5;
-  border-radius: 0 0 18px 0;
+  border-radius: 0 0 16px 0;
 }
 
-/* --- Hover elegante --- */
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Iconos más grandes --- */
-.card img,
-.card svg {
-  width: 60px !important;
-  height: 60px !important;
-  opacity: 0.9;
+.iconWrap {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  color: #00a5a5;
+  transition: all 0.3s ease;
 }
 
-/* --- Texto estilizado --- */
+.customIcon {
+  width: 62px;
+  height: 62px;
+  color: #00a5a5;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .customIcon {
+  color: #008c8c;
+  transform: scale(1.08);
+}
+
 .card span {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: #004a4a;
   letter-spacing: 0.3px;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 220px;
 }
 
-/* --- Card grande --- */
-.cardLarge span {
-  font-size: 22px;
-}
-
-/* --- Movil: ajuste pequeño --- */
 @media (max-width: 900px) {
-  .card::before,
-  .card::after {
-    width: 45px;
-    height: 45px;
-  }
-}
-@media (max-width: 900px) {
-
-  /* Centrar línea */
-  .line {
-    margin: 18px auto 25px;
-  }
-
-  /* Título más pequeño */
-  .title {
-    font-size: 30px;
-    line-height: 1.2;
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-
-  /* CONTENEDOR PRINCIPAL */
   .section {
     flex-direction: column;
     text-align: center;
-    padding-top: 20px; /* antes 50px */
-    gap: 20px; /* antes 40px */
+    padding: 45px 24px;
+    gap: 28px;
   }
 
-  /* TEXTO ARRIBA */
   .left {
     width: 100%;
     padding-top: 0;
-    margin-bottom: 10px; /* más compacto */
   }
 
-  /* GRID debajo del texto */
   .grid {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px; /* más compacto */
-    grid-auto-rows: 150px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
   }
 
-  /* 🔥 CARD GRANDE — siempre la primera */
-  .cardLarge {
-    grid-column: span 2;
-    grid-row: 1 !important;
-    height: 180px; 
+  .line {
+    margin: 16px auto 22px;
   }
 
-  /* ORDEN DEL RESTO DE CARDS — distribución especial */
-  
-  /* (2) Kioskos */
-  .grid > div:nth-child(2) {
-    grid-column: 1;
-    grid-row: 2;
-    margin-top: 35px;  
+  .description {
+    text-align: justify;
   }
 
-  /* (3) Restaurantes — card alta */
-  .grid > div:nth-child(3) {
-    grid-column: 2;
-    grid-row: 2 / span 2;
-    height: 280px;
-    margin-top: 35px;
+  .card {
+    max-width: 100%;
+    min-height: 145px;
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 36px 18px;
   }
 
-  /* (4) Plaza de comidas */
-  .grid > div:nth-child(4) {
-    grid-column: 1;
-    grid-row: 3;
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
-  /* (5) Bares */
-  .grid > div:nth-child(5) {
-    grid-column: 2;
-    grid-row: 4;
+  .card {
+    max-width: 100%;
+    min-height: 135px;
+    padding: 18px 14px;
+    border-radius: 22px;
   }
 
-  /* (6) Sala de descanso */
-  .grid > div:nth-child(6) {
-    grid-column: 1;
-    grid-row: 4;
+  .iconWrap,
+  .customIcon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .card span {
+    font-size: 20px;
+    line-height: 1.3;
   }
 }

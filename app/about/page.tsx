@@ -9,9 +9,6 @@ export default function AboutPage() {
       <Hero />
       <About />
       <Locations />
-      
-
-      {/* Botón volver arriba */}
       <ScrollToTop />
     </>
   );

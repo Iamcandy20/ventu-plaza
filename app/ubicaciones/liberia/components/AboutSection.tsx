@@ -95,7 +95,7 @@ export default function AboutSection() {
             Ventu Plaza Solarium será un proyecto de uso mixto y moderno de la región de Guanacaste.
             Cuenta con un inmejorable desarrollo comercial, hotelero, gastronómico y de servicios, entre otros,
             lo cual permite que las empresas dentro y fuera del proyecto aprovechen uno de los mejores entornos
-            de negocios en Centroamérica.
+            de negocios en la Provincia de Guanacaste.
           </p>
 
           <button className={styles.btn}>

@@ -91,7 +91,7 @@ export default function InterestPoints() {
     <section ref={sectionRef} className={styles.section}>
       <div className={styles.container}>
         
-        <h2 className={styles.title}>Puntos de interés</h2>
+        <h2 className={styles.title}>PUNTOS DE INTERES</h2>
         <p className={styles.subtitle}>
           Ubicación estratégica y accesos que conectan con los principales puntos del cantón y región.
         </p>
