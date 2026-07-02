@@ -58,7 +58,7 @@ export default function Locations() {
 
               <div className={styles.locBody}>
                 <h3>Ventu Plaza {loc.name}</h3>
-                <p className={styles.locDesc}>{loc.desc}</p>
+                <p className={styles.locDescSmall}>{loc.desc}</p>
 
                 <div className={styles.locMeta}>
                   <span>

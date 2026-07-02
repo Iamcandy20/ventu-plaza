@@ -1,6 +1,6 @@
 import Hero from "../about/home/Hero";
 import About from "../about/home/About";
-import Locations from "../about/home/Locations";
+import Locations from "../components/home/Locations";
 import ScrollToTop from "../components/layout/ScrollToTop";
 
 export default function AboutPage() {

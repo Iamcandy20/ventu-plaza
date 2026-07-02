@@ -16,6 +16,14 @@
   z-index: 0;
 }
 
+.aboutHeader {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
 .aboutGrid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -25,29 +33,34 @@
   z-index: 2;
 }
 
+.aboutGrid > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .aboutEyebrow {
   color: #008B92;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .aboutTitle {
-  font-size: clamp(22px, 2.5vw, 48px);
+  font-size: 16px;
   line-height: 1.1;
   color: #0f172a;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .aboutText {
   color: #475569;
-  font-size: 1.05rem;
+  font-size: 12px;
   line-height: 1.6;
   margin-bottom: 24px;
-  max-width: 60ch;
- text-align: justify;
+  text-align: justify;
 }
 
 .aboutHighlights {
@@ -112,7 +125,6 @@
   opacity: 0.9;
 }
 
-/* Imagen */
 .aboutMedia {
   position: relative;
   border-radius: 22px;
@@ -131,25 +143,6 @@
 .aboutMedia:hover img {
   transform: scale(1.06);
 }
-
-/* --- Responsive --- */
-@media (max-width: 900px) {
-  .aboutGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .aboutMedia {
-    order: -1;
-    transform: none;
-  }
-
-  .statCard {
-    flex: 1 1 100%;
-  }
-}
-/* ================================
-   CONTENEDOR LIMPIO DEL MAPA
-================================ */
 
 .aboutMediaClean {
   position: relative;
@@ -176,10 +169,6 @@
   user-select: none;
   -webkit-user-drag: none;
 }
-
-/* ================================
-   PINES
-================================ */
 
 .pin {
   position: absolute;
@@ -212,27 +201,35 @@
   pointer-events: none;
 }
 
-
-/* Liberia ( noroeste) */
 .pin--liberia {
   left: 26%;
   top: 23%;
 }
 
-/* Desamparados (Valle Central, más arriba) */
 .pin--desamparados {
   left: 60%;
   top: 46%;
 }
 
-/* San Sebastián (ligeramente al sur-este de Desamparados) */
 .pin--sansebastian {
   left: 66%;
   top: 52%;
 }
-/* ================================
-   RESPONSIVE
-================================ */
+
+@media (max-width: 900px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutMedia {
+    order: -1;
+    transform: none;
+  }
+
+  .statCard {
+    flex: 1 1 100%;
+  }
+}
 
 @media (max-width: 500px) {
   .mapWrapper {
