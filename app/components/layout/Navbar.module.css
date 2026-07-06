@@ -234,8 +234,10 @@
   }
 
   .links .bookNow {
-    font-size: 12px;
-  }
+  font-size: 12px;
+  background: #008b92 !important;
+  color: #fff !important;
+}
 
   .hamburger {
     display: flex;
