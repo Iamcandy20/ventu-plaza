@@ -11,8 +11,8 @@
   max-height: calc(100vh - var(--header-h, 84px) - 36px);
   border-radius: 28px;
   overflow: hidden;
-  background: #0b1020;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+   background: linear-gradient(180deg, #ffffff 0%, #f7f9f9 100%);
+
 }
 
 .image {
@@ -29,6 +29,8 @@
 .activeImage {
   opacity: 1;
 }
+
+
 
 .content {
   position: absolute;
@@ -166,6 +168,8 @@
     max-height: none;
     border-radius: 18px;
   }
+
+ 
 
   .content {
     padding-inline: 24px;

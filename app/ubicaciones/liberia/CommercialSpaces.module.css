@@ -1,4 +1,3 @@
-/* --- ANIMACIÓN --- */
 .hidden {
   opacity: 0;
   transform: translateY(40px);
@@ -10,23 +9,37 @@
   transform: translateY(0);
 }
 
-/* --- LAYOUT --- */
 .section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 40px;
-  display: flex;
-  gap: 50px;
+  padding: 52px 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 44px;
   align-items: center;
+  background: #fff;
+  position: relative;
+  isolation: isolate;
 }
 
-/* IZQUIERDA */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: -1;
+}
+
 .left {
-  width: 40%;
-  padding-top: 20px;
+  width: auto;
+  max-width: 560px;
+  padding-top: 0;
 }
 
-/* TITULOS */
 .subtitle {
   font-size: 20px;
   font-weight: 700;
@@ -41,25 +54,24 @@
   font-weight: 700;
   color: #004a75;
   line-height: 1.2;
+  margin: 0;
 }
 
 .line {
-  width: 60px;
+  width: 74px;
   height: 4px;
   background: #00a8b5;
-  margin: 16px 0 22px;
+  margin: 14px 0 22px;
 }
 
-/* TEXTO */
 .description {
   font-size: 12px;
   line-height: 1.7;
   color: #58656c;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   text-align: justify;
 }
 
-/* BOTÓN */
 .button {
   padding: 12px 24px;
   background: white;
@@ -80,23 +92,30 @@
   transform: translateY(-4px);
 }
 
-/* ===========================
-   GRID
-=========================== */
-
+/* === BLOQUE DERECHO FLEXIBLE PARA 2, 3 O 4 CARDS === */
 .grid {
-  width: 60%;
+  width: 100%;
+  max-width: 620px;
+  justify-self: end;
   display: grid;
-  grid-template-columns: repeat(2, minmax(240px, 290px));
-  justify-content: center;
-  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding: 22px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, #f8fbfb 0%, #ffffff 100%);
+  box-shadow: 
+    inset 0 0 0 1px rgba(0, 139, 146, 0.08),
+    0 18px 42px rgba(0, 0, 0, 0.06);
 }
 
-/* ===========================
-   CARD
-=========================== */
+/* Si hay 3 cards, la última ocupa todo el ancho */
+.card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
 
 .card {
+  width: 100%;
+  min-height: 132px;
   background: #ffffff;
   border-radius: 22px;
   position: relative;
@@ -104,24 +123,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  padding: 20px 18px;
-  min-height: 140px;
-  width: 100%;
-  max-width: 290px;
-  margin: 0 auto;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  gap: 10px;
+  padding: 22px 18px;
+  margin: 0;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 139, 146, 0.16);
 }
 
 .card::before,
 .card::after {
   content: "";
   position: absolute;
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
   border: 3px solid transparent;
   pointer-events: none;
 }
@@ -131,7 +152,7 @@
   left: 10px;
   border-top: 3px solid #00a5a5;
   border-left: 3px solid #00a5a5;
-  border-radius: 16px 0 0 0;
+  border-radius: 14px 0 0 0;
 }
 
 .card::after {
@@ -139,111 +160,140 @@
   right: 10px;
   border-bottom: 3px solid #00a5a5;
   border-right: 3px solid #00a5a5;
-  border-radius: 0 0 16px 0;
+  border-radius: 0 0 14px 0;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.15);
+.icon {
+  width: 46px;
+  height: 46px;
+  color: #00a5a5;
+  opacity: 0.95;
+  margin-bottom: 2px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-.card img,
-.card svg {
-  width: 56px !important;
-  height: 56px !important;
-  opacity: 0.9;
+.card:hover .icon {
+  color: #008c8c;
+  transform: scale(1.08);
 }
 
 .card span {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: #004a4a;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.25;
+  max-width: 210px;
 }
 
-/* ===========================
-   TABLET
-=========================== */
-
+/* === RESPONSIVE === */
 @media (max-width: 900px) {
   .section {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 45px 24px;
-    gap: 28px;
+    padding: 44px 24px;
+    gap: 32px;
   }
 
   .left {
-    width: 100%;
-    padding-top: 0;
-  }
-
-  .grid {
-    width: 100%;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    max-width: 100%;
   }
 
   .line {
-    margin: 16px auto 22px;
-  }
-
-  .title {
-    font-size: 26px;
+    margin: 14px auto 20px;
   }
 
   .description {
+    max-width: 640px;
+    margin: 0 auto 22px;
     text-align: justify;
   }
 
-  .card {
-    max-width: 100%;
-    min-height: 145px;
-    padding: 20px 16px;
+  .grid {
+    justify-self: center;
+    max-width: 620px;
+    padding: 18px;
+    gap: 16px;
   }
 
-  .card span {
-    font-size: 20px;
+  .card {
+    min-height: 124px;
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding: 36px 18px;
+    gap: 26px;
+  }
+
+  .subtitle {
+    margin-bottom: 4px;
+  }
+
+  .line {
+    margin: 12px auto 16px;
+  }
+
+  .description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 0;
+    gap: 12px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .card {
+    min-height: 105px;
+    padding: 16px 10px;
+    gap: 8px;
+    border-radius: 18px;
+  }
+
+  .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
   .card::before,
   .card::after {
-    width: 45px;
-    height: 45px;
-  }
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media (max-width: 480px) {
-  .section {
-    padding: 36px 18px;
+    width: 28px;
+    height: 28px;
+    border-width: 2px;
   }
 
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
+  .card::before {
+    top: 8px;
+    left: 8px;
+    border-top: 2px solid #00a5a5;
+    border-left: 2px solid #00a5a5;
   }
 
-  .card {
-    max-width: 100%;
-    min-height: 135px;
-    padding: 18px 14px;
-    border-radius: 22px;
+  .card::after {
+    bottom: 8px;
+    right: 8px;
+    border-bottom: 2px solid #00a5a5;
+    border-right: 2px solid #00a5a5;
   }
 
-  .card img,
-  .card svg {
-    width: 48px !important;
-    height: 48px !important;
+  .icon {
+    width: 34px;
+    height: 34px;
   }
 
   .card span {
-    font-size: 20px;
-    line-height: 1.3;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
   }
 }

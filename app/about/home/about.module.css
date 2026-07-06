@@ -1,6 +1,7 @@
 .about {
   background: linear-gradient(180deg, #f9f9f9 0%, #ffffff 100%);
-  padding-block: clamp(60px, 8vw, 100px);
+  padding-block: var(--section-padding-desktop);
+  margin-block: 0;
   position: relative;
   overflow: hidden;
 }
@@ -21,14 +22,14 @@
   justify-content: center;
   position: relative;
   z-index: 2;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .aboutGrid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: clamp(40px, 6vw, 70px);
+  gap: var(--section-grid-gap);
   position: relative;
   z-index: 2;
 }
@@ -52,22 +53,22 @@
   font-size: 18px;
   line-height: 1.1;
   color: #008B92;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .aboutText {
   color: #475569;
   font-size: 12px;
   line-height: 1.6;
-  margin-bottom: 24px;
+  margin-bottom: var(--section-content-gap);
   text-align: justify;
 }
 
 .aboutHighlights {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 40px;
+  gap: 12px;
+  margin-bottom: 28px;
 }
 
 .aboutHighlight {
@@ -95,7 +96,7 @@
 .statsRow {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--section-card-gap);
 }
 
 .statCard {
@@ -103,7 +104,7 @@
   background: #008B92;
   color: #fff;
   border-radius: 16px;
-  padding: 20px 22px;
+  padding: 18px 20px;
   box-shadow: 0 10px 25px rgba(0, 139, 146, 0.3);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -217,8 +218,13 @@
 }
 
 @media (max-width: 900px) {
+  .about {
+    padding-block: var(--section-padding-tablet);
+  }
+
   .aboutGrid {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .aboutMedia {
@@ -232,6 +238,22 @@
 }
 
 @media (max-width: 500px) {
+  .about {
+    padding-block: var(--section-padding-mobile);
+  }
+
+  .aboutHeader {
+    margin-bottom: 14px;
+  }
+
+  .aboutGrid {
+    gap: 28px;
+  }
+
+  .aboutHighlights {
+    margin-bottom: 24px;
+  }
+
   .mapWrapper {
     max-width: 360px;
   }

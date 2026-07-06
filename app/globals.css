@@ -12,6 +12,16 @@
   --maxw: 1200px;
   --header-h: 72px;
 }
+:root {
+  --section-padding-desktop: 72px;
+  --section-padding-tablet: 56px;
+  --section-padding-mobile: 44px;
+
+  --section-grid-gap: clamp(28px, 4vw, 48px);
+  --section-content-gap: 20px;
+  --section-small-gap: 14px;
+  --section-card-gap: 20px;
+}
 
 /* === Reset y tipografía === */
 * {

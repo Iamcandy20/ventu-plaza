@@ -11,8 +11,8 @@
   max-height: calc(100vh - var(--header-h) - 36px);
   border-radius: 28px;
   overflow: hidden;
-  background: #eef2f7;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+   background: linear-gradient(180deg, #ffffff 0%, #f7f9f9 100%);
+  
 }
 
 .image {

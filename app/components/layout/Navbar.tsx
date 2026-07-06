@@ -91,6 +91,7 @@ export default function Navbar() {
   const isHomeRoute = pathname === "/";
   const isGalleryRoute = pathname === "/galeria";
   const isContactRoute = pathname === "/contactanos";
+  const isTiendasRoute = pathname === "/tiendas";
   const isLocationsRoute = pathname.startsWith("/ubicaciones");
 
   useEffect(() => {
@@ -263,6 +264,16 @@ export default function Navbar() {
               ))}
             </div>
           </div>
+
+           <Link
+            href="/tiendas"
+            className={`${styles.navLink} ${
+              isGalleryRoute ? styles.linkActive : ""
+            }`}
+            onClick={closeMenus}
+          >
+            TIENDAS
+          </Link>
 
           <Link
             href="/galeria"

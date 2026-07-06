@@ -1,12 +1,15 @@
 .section {
-  padding: 40px 20px;
-  background: transparent;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  width: 100%;
+  padding: 52px 20px;
+  margin-block: 0;
+  background: #fff;
+  opacity: 1;
+  transform: none;
+  transition: none;
+  overflow: hidden;
 }
 
-.section.visible {
+.section.visible .container {
   opacity: 1;
   transform: translateY(0);
 }
@@ -15,56 +18,81 @@
   max-width: 1140px;
   margin: 0 auto;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .title {
   font-size: 20px;
   font-weight: 700;
-  color: #00A5A5;
+  letter-spacing: 2px;
+  color: #00838f;
   margin-bottom: 6px;
+  text-transform: uppercase;
 }
 
 .subtitle {
   font-size: 12px;
   color: #4b4b4b;
-  margin: 0 auto 32px;
+  margin: 0 auto 26px;
   max-width: 680px;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 230px));
+  grid-template-columns: repeat(4, minmax(0, 210px));
   justify-content: center;
-  gap: 22px;
+  gap: 18px;
 }
 
 .card {
   width: 100%;
-  background: white;
-  border-radius: 24px;
+  background: #fff;
+  border-radius: 22px;
   overflow: hidden;
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  height: 320px;
+  height: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 14px 28px rgba(0, 0, 0, 0.16);
 }
 
 .top {
   background: linear-gradient(180deg, #00A5A5 0%, #00CFCF 100%);
-  height: 55%;
+  height: 53%;
   position: relative;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
   overflow: hidden;
+  isolation: isolate;
+}
+/* Cubre cualquier línea recta que pueda quedar entre el bloque verde y el bloque blanco */
+.top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: #fff;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .iconWrapper {
-  width: 92px;
-  height: 92px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   position: absolute;
-  top: 16%;
+  top: 17%;
   left: 50%;
   transform: translateX(-50%);
   display: grid;
@@ -73,8 +101,8 @@
 }
 
 .customIcon {
-  width: 66px;
-  height: 66px;
+  width: 52px;
+  height: 52px;
   fill: none;
   stroke: #ffffff;
   stroke-width: 6;
@@ -89,36 +117,44 @@
 
 .wave {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   width: 100%;
-  height: 34px;
+  height: 38px;
   display: block;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .wave path {
   fill: #ffffff;
+  stroke: none;
 }
 
 .bottom {
-  padding: 16px;
+  position: relative;
+  z-index: 3;
+  padding: 14px 14px 16px;
   text-align: center;
-  height: 45%;
+  height: 47%;
+  margin-top: -2px;
+  background: #fff;
+  border-top: none;
 }
 
 .cardTitle {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   color: #00A5A5;
-  margin-top: 10px;
+  margin-top: 8px;
   margin-bottom: 6px;
 }
 
 .cardDesc {
   font-size: 12px;
   color: #5f5f5f;
-  max-width: 210px;
+  max-width: 185px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .dots {
@@ -142,23 +178,44 @@
 }
 
 @media (max-width: 1024px) {
+  .section {
+    padding: 44px 20px;
+  }
+
+  .subtitle {
+    margin-bottom: 24px;
+  }
+
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 230px));
-    gap: 22px;
+    grid-template-columns: repeat(2, minmax(0, 210px));
+    gap: 18px;
   }
 
   .card {
-    height: 320px;
+    height: 280px;
   }
 }
 
 @media (max-width: 600px) {
+  .section {
+    padding: 36px 18px;
+  }
+
+  .subtitle {
+    margin-bottom: 22px;
+    line-height: 1.6;
+  }
+
   .grid {
     display: flex;
+    width: 210px;
+    max-width: 100%;
+    margin: 0 auto;
     overflow-x: auto;
-    gap: 18px;
+    gap: 16px;
     padding-bottom: 16px;
     scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
     -webkit-overflow-scrolling: touch;
     justify-content: flex-start;
   }
@@ -168,10 +225,10 @@
   }
 
   .card {
-    min-width: 230px;
-    flex: 0 0 230px;
-    scroll-snap-align: center;
-    height: 320px;
+    min-width: 210px;
+    flex: 0 0 210px;
+    scroll-snap-align: start;
+    height: 280px;
   }
 
   .dots {
