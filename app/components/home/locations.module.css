@@ -1,12 +1,12 @@
 .locations {
   background: linear-gradient(180deg, #ffffff 0%, #f7f9f9 100%);
-  padding-top: 5px;
+  padding-top: 0;
   padding-bottom: var(--section-padding-desktop);
-  margin-block: 0;
+  margin-top: -8px;
+  margin-bottom: 0;
   position: relative;
   overflow: hidden;
 }
-
 .locations::before {
   content: "";
   position: absolute;
@@ -168,8 +168,10 @@
   align-self: flex-start;
   background: #008B92;
   color: #fff;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 8px 14px;
+  border-radius: 7px;
+  font-size: 11px;
+  line-height: 1;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.3s ease;

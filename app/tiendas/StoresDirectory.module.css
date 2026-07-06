@@ -1,8 +1,6 @@
 .section {
-  padding: 80px 20px 100px;
-  background:
-    radial-gradient(circle at top left, rgba(0, 166, 170, 0.09), transparent 34%),
-    linear-gradient(180deg, #ffffff 0%, #f7fbfb 100%);
+  padding: 64px 20px 76px;
+  background: #ffffff;
 }
 
 .container {
@@ -12,7 +10,7 @@
 
 .heading {
   max-width: 720px;
-  margin: 0 auto 36px;
+  margin: 0 auto 34px;
   text-align: center;
 }
 
@@ -21,229 +19,424 @@
   margin-bottom: 10px;
   font-size: 12px;
   font-weight: 800;
-  letter-spacing: 2.6px;
+  letter-spacing: 2.4px;
   text-transform: uppercase;
-  color: #00a5a5;
+  color: #008B92;
 }
 
 .heading h2 {
-  margin: 0 0 14px;
-  font-size: clamp(28px, 4vw, 44px);
-  line-height: 1.1;
+  margin: 0 0 12px;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.12;
   color: #004a75;
   font-weight: 800;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.6px;
 }
 
 .heading p {
   margin: 0;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 12px;
+  line-height: 1.7;
   color: #5f6f75;
 }
+
+/* ===========================
+   LOCATION MENU
+=========================== */
 
 .locationMenu {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 58px;
+  margin-bottom: 34px;
 }
 
 .locationButton {
-  border: 1px solid rgba(0, 131, 143, 0.22);
-  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(0, 139, 146, 0.18);
+  background: #ffffff;
   color: #004a75;
-  padding: 14px 24px;
+  padding: 10px 18px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 12px 30px rgba(0, 74, 117, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 24px rgba(0, 74, 117, 0.08);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 .locationButton:hover {
-  transform: translateY(-3px);
-  border-color: rgba(0, 166, 170, 0.55);
-  box-shadow: 0 18px 42px rgba(0, 131, 143, 0.16);
+  transform: translateY(-2px);
+  background: #008B92;
+  color: #ffffff;
+  border-color: #008B92;
+  box-shadow: 0 14px 34px rgba(0, 139, 146, 0.16);
 }
 
-.locationButton.active {
+.locationButton.active,
+.active {
   color: #ffffff;
-  background: linear-gradient(135deg, #004a75, #00a5a5);
-  border-color: transparent;
-  box-shadow: 0 20px 45px rgba(0, 131, 143, 0.24);
+  background: #008B92;
+  border-color: #008B92;
+  box-shadow: 0 16px 36px rgba(0, 139, 146, 0.22);
 }
+
+/* ===========================
+   CATEGORIES
+=========================== */
 
 .categories {
   display: flex;
   flex-direction: column;
-  gap: 58px;
+  align-items: center;
+  gap: 54px;
 }
 
 .categoryBlock {
-  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .categoryHeader {
+  width: 100%;
   display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 24px;
+  justify-content: center;
+  margin-bottom: 28px;
+  text-align: center;
 }
 
 .categoryHeader span {
-  width: 42px;
-  height: 2px;
-  background: linear-gradient(90deg, #00a5a5, transparent);
+  display: none;
 }
 
 .categoryHeader h3 {
   margin: 0;
-  font-size: 24px;
+  font-size: 20px;
   color: #004a75;
   font-weight: 800;
 }
 
+/* ===========================
+   GRID CENTRADO
+=========================== */
+
 .grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 926px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 22px;
+  margin: 0 auto;
 }
+
+/* ===========================
+   STORE CARD
+=========================== */
 
 .card {
   position: relative;
-  min-height: 190px;
-  padding: 24px 22px;
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(0, 131, 143, 0.12);
-  box-shadow: 0 18px 45px rgba(0, 74, 117, 0.08);
+  width: 215px;
+  min-height: 230px;
+  padding: 0;
+  flex: 0 0 215px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 139, 146, 0.08);
+  box-shadow: 0 14px 36px rgba(0, 74, 117, 0.08);
   overflow: hidden;
-  transition: all 0.35s ease;
+  isolation: isolate;
+  cursor: default;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 166, 170, 0.1), transparent 55%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-}
-
+.card::before,
 .card::after {
-  content: "";
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  right: -34px;
-  bottom: -34px;
-  background: rgba(0, 166, 170, 0.08);
-  border-radius: 50%;
+  content: none;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   transform: translateY(-8px);
-  box-shadow: 0 28px 65px rgba(0, 74, 117, 0.14);
-  border-color: rgba(0, 166, 170, 0.26);
+  border-color: rgba(0, 139, 146, 0.24);
+  box-shadow: 0 24px 56px rgba(0, 74, 117, 0.14);
+  outline: none;
 }
 
-.card:hover::before {
-  opacity: 1;
+.card:focus-visible {
+  outline: 2px solid rgba(0, 139, 146, 0.45);
+  outline-offset: 4px;
 }
 
-.logoBox {
+.cardContent {
   position: relative;
   z-index: 2;
-  height: 92px;
+  min-height: 230px;
+  padding: 28px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease,
+    filter 0.35s ease;
+}
+
+/* ===========================
+   LOGO
+=========================== */
+
+.logoBox {
+  width: 100%;
+  max-width: 190px;
+  height: 132px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  border-radius: 20px;
-  background: linear-gradient(180deg, #ffffff, #f5fbfb);
-  border: 1px solid rgba(0, 131, 143, 0.09);
 }
 
 .logoBox img {
-  max-width: 130px;
-  max-height: 62px;
+  max-width: 180px;
+  max-height: 112px;
   object-fit: contain;
-  filter: grayscale(10%);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-.card:hover .logoBox img {
-  transform: scale(1.04);
-  filter: grayscale(0%);
+.card:hover .logoBox img,
+.card:focus .logoBox img {
+  transform: scale(1.06);
 }
+
+/* ===========================
+   CARD INFO
+=========================== */
 
 .cardInfo {
-  position: relative;
-  z-index: 2;
   text-align: center;
 }
 
 .cardInfo h4 {
-  margin: 0 0 6px;
-  font-size: 16px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.3;
   color: #004a75;
   font-weight: 800;
 }
 
-.cardInfo p {
-  margin: 0;
-  font-size: 12px;
-  color: #00a5a5;
-  font-weight: 700;
-  letter-spacing: 1px;
+/* ===========================
+   SCHEDULE OVERLAY
+=========================== */
+
+.scheduleOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  text-align: center;
+  color: #ffffff;
+  background: rgba(0, 139, 146, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.scheduleOverlay::before {
+  content: "";
+  position: absolute;
+  inset: 13px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.scheduleIcon {
+  position: relative;
+  z-index: 2;
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+}
+
+.scheduleOverlay span {
+  position: relative;
+  z-index: 2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
+.scheduleOverlay strong {
+  position: relative;
+  z-index: 2;
+  max-width: 170px;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.card:hover .scheduleOverlay,
+.card:focus .scheduleOverlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover .cardContent,
+.card:focus .cardContent {
+  transform: scale(0.96);
+  opacity: 0.12;
+  filter: blur(3px);
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
 @media (max-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    max-width: 689px;
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 60px 16px 80px;
+    padding: 56px 16px 68px;
   }
 
-  .locationMenu {
-    gap: 10px;
-    margin-bottom: 42px;
+  .heading {
+    margin-bottom: 28px;
   }
 
-  .locationButton {
-    width: 100%;
-    max-width: 340px;
+  .heading h2 {
+    font-size: 24px;
+  }
+
+  .categories {
+    gap: 42px;
+  }
+
+  .categoryHeader h3 {
+    font-size: 18px;
   }
 
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 426px;
     gap: 16px;
   }
 
   .card {
-    min-height: 175px;
-    padding: 20px 16px;
+    width: 205px;
+    flex-basis: 205px;
+    min-height: 220px;
   }
 
-  .categoryHeader h3 {
-    font-size: 21px;
+  .cardContent {
+    min-height: 220px;
+  }
+
+  .logoBox {
+    height: 124px;
+  }
+
+  .logoBox img {
+    max-width: 165px;
+    max-height: 102px;
   }
 }
 
 @media (max-width: 520px) {
+  .section {
+    padding: 48px 14px 60px;
+  }
+
+  .locationMenu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .locationButton {
+    width: 100%;
+    max-width: 280px;
+  }
+
   .grid {
-    grid-template-columns: 1fr;
+    max-width: 344px;
+    gap: 14px;
+  }
+
+  .card {
+    width: 165px;
+    flex-basis: 165px;
+    min-height: 190px;
+  }
+
+  .cardContent {
+    min-height: 190px;
+    padding: 18px 12px;
   }
 
   .logoBox {
-    height: 86px;
+    height: 106px;
+    margin-bottom: 10px;
+  }
+
+  .logoBox img {
+    max-width: 138px;
+    max-height: 86px;
+  }
+
+  .cardInfo h4 {
+    font-size: 12px;
+  }
+
+  .scheduleOverlay {
+    padding: 16px;
+  }
+
+  .scheduleIcon {
+    width: 19px;
+    height: 19px;
+  }
+
+  .scheduleOverlay span {
+    font-size: 9px;
+  }
+
+  .scheduleOverlay strong {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .grid {
+    max-width: 220px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 220px;
+    flex-basis: 100%;
+    min-height: 190px;
   }
 }

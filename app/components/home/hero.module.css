@@ -316,12 +316,12 @@
 
 @media (max-width: 480px) {
   .eyebrow {
-    font-size: 5px !important;
+    font-size: 7px !important;
     margin-bottom: 3px;
   }
 
   .title {
-    font-size: 11px !important;
+    font-size: 20px !important;
     line-height: 1.05;
     margin-bottom: 5px;
   }

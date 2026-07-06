@@ -49,20 +49,27 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.main}>
-        <div className={styles.newsletter}>
-          <h4 className={styles.newsletterTitle}>SUSCRÍBETE</h4>
 
-          <form className={styles.form} onSubmit={handleSubmit}>
-            <input
-              type="email"
-              placeholder="Tu correo electrónico"
-              aria-label="Tu correo electrónico"
-              required
-            />
-            <button type="submit">Enviar</button>
-          </form>
+        {/* REDES SOCIALES - IZQUIERDA */}
+        <div
+          className={styles.socials}
+          aria-label="Redes sociales de Ventu Plaza"
+        >
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              aria-label={social.label}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
 
+        {/* LOGOS - CENTRO */}
         <div className={styles.center}>
           <div className={styles.logos}>
             <Image
@@ -96,19 +103,19 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className={styles.socials} aria-label="Redes sociales de Ventu Plaza">
-          {socials.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              aria-label={social.label}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialLink}
-            >
-              {social.icon}
-            </a>
-          ))}
+        {/* NEWSLETTER - DERECHA */}
+        <div className={styles.newsletter}>
+          <h4 className={styles.newsletterTitle}>SUSCRÍBETE</h4>
+
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Tu correo electrónico"
+              aria-label="Tu correo electrónico"
+              required
+            />
+            <button type="submit">Enviar</button>
+          </form>
         </div>
       </div>
 
