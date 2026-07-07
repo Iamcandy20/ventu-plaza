@@ -122,79 +122,32 @@ const stores: Record<LocationKey, StoreCategories> = {
   },
 
   desamparados: {
-    Moda: [
-      {
-        name: "Tienda Moda 3",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
-      },
-      {
-        name: "Tienda Moda 4",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
-      },
-    ],
     "Restaurantes y Café": [
       {
-        name: "Restaurante 2",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Popeyes",
+        logo: "/logos/stores/popeyes.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
       {
-        name: "Café 2",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Dominos Pizza",
+        logo: "/logos/stores/dominos.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
-      },
-    ],
-    Servicios: [
-      {
-        name: "Servicio 3",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
-      },
-      {
-        name: "Servicio 4",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
     ],
   },
 
   sanSebastian: {
-    Moda: [
-      {
-        name: "Tienda Moda 5",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
-      },
-      {
-        name: "Tienda Moda 6",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
-      },
-    ],
+   
     "Restaurantes y Café": [
       {
-        name: "Restaurante 3",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Burguer King",
+        logo: "/logos/stores/burguerking.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
       {
-        name: "Café 3",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Dominos Pizza",
+        logo: "/logos/stores/dominos.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
-      },
-    ],
-    Servicios: [
-      {
-        name: "Servicio 5",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
-      },
-      {
-        name: "Servicio 6",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
     ],
   },
