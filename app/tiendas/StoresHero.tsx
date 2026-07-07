@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "./hero.module.css";
+import styles from "./StoresHero.module.css";
 
 const slides = [
   { image: "/liberia/solarium-6.jpg" },
