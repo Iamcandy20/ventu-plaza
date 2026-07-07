@@ -6,6 +6,28 @@ import Link from "next/link";
 import styles from "./hero.module.css";
 
 const slides = [
+   {
+    eyebrow: "Ventu Plaza Liberia",
+    title: (
+      <>
+        Turismo y<br />Negocios
+      </>
+    ),
+    cta: "Explora Liberia",
+    href: "/ubicaciones/liberia",
+    image: "/liberia/solarium-2.jpg",
+  },
+   {
+    eyebrow: "Ventu Plaza Liberia",
+    title: (
+      <>
+        Turismo y<br />Negocios
+      </>
+    ),
+    cta: "Explora Liberia",
+    href: "/ubicaciones/liberia",
+    image: "/liberia/solarium-1.jpg",
+  },
   {
     eyebrow: "Ventu Plaza Desamparados",
     title: (
@@ -16,17 +38,6 @@ const slides = [
     cta: "Descubre más",
     href: "/ubicaciones/desamparados",
     image: "/desamparados/desamparados1.webp",
-  },
-  {
-    eyebrow: "Ventu Plaza Liberia",
-    title: (
-      <>
-        Turismo y<br />Negocios
-      </>
-    ),
-    cta: "Explora Liberia",
-    href: "/ubicaciones/liberia",
-    image: "/liberia/solarium-6.jpg",
   },
   {
     eyebrow: "Ventu Plaza San Sebastián",

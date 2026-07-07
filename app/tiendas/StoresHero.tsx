@@ -2,20 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import styles from "./StoresHero.module.css";
+import styles from "./hero.module.css";
 
 const slides = [
-  {
-    eyebrow: "Directorio Comercial",
-    title: (
-      <>
-        Explora nuestras tiendas <br />por ubicación
-      </>
-    ),
-    image: "/desamparados/desamparados1.webp",
-  },
-
+  { image: "/liberia/solarium-6.jpg" },
+  { image: "/liberia/solarium-8.jpg" },
+  { image: "/liberia/solarium-7.jpg" },
+  { image: "/liberia/solarium-5.jpg" },
+  { image: "/liberia/solarium-10.jpg" },
 ];
+
 export default function Hero() {
   const [current, setCurrent] = useState(0);
 
@@ -35,46 +31,23 @@ export default function Hero() {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
-  const slide = slides[current];
-
   return (
     <section className={styles.hero}>
       <div className={styles.slider}>
-        {slides.map((item, i) => (
-          <Image
-            key={`${item.image}-${i}`}
-            src={item.image}
-            alt={`Imagen ${i + 1} de Ventu Plaza`}
-            fill
-            priority={i === current}
-            sizes="100vw"
-            className={`${styles.image} ${
-              i === current ? styles.activeImage : ""
-            }`}
-          />
-        ))}
-
-        <div className={styles.overlay} />
-
-        <div className={styles.content}>
-          <div className={styles.copy}>
-            <span className={styles.eyebrow}>{slide.eyebrow}</span>
-
-            <h1
-              className={styles.title}
-              style={{
-                fontSize: "50px",
-                lineHeight: "1.15",
-                fontWeight: 700,
-                letterSpacing: "-0.01em",
-                margin: "0 0 14px",
-              }}
-            >
-              {slide.title}
-            </h1>
-
-          </div>
-        </div>
+        {slides.map((slide, i) => (
+  <Image
+    key={`${slide.image}-${i}`}
+    src={slide.image}
+    alt={`Imagen ${i + 1}`}
+    fill
+    priority={i === current}
+    sizes="100vw"
+    className={`${styles.image} ${
+      i === current ? styles.active : ""
+    }`}
+  />
+))}
+      
 
         <button
           type="button"
