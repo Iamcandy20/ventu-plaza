@@ -71,6 +71,12 @@ const stores: Record<LocationKey, StoreCategories> = {
         logo: "/logos/liberia/PANDA.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
+         {
+        name: "Punto Favorito",
+        logo: "/logos/liberia/point.webp",
+        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
+      },
+      
     ],
     "Restaurantes,Café y Heladerías": [
       {
@@ -135,7 +141,7 @@ const stores: Record<LocationKey, StoreCategories> = {
       },
         {
         name: "Libreria Internacional",
-        logo: "/logos/liberia/LIBRERIA INTER.webp",
+        logo: "/logos/liberia/libreria.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
   
@@ -144,6 +150,11 @@ const stores: Record<LocationKey, StoreCategories> = {
       {
         name: "Selther",
         logo: "/logos/liberia/SELTHER.webp",
+        schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
+      },
+      {
+        name: "Mielé",
+        logo: "/logos/liberia/MIELE.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
     ],
