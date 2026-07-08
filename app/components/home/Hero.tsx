@@ -37,16 +37,16 @@ export default function Hero() {
       <div className={styles.slider}>
         {slides.map((item, i) => (
           <Image
-            key={`${item.image}-${i}`}
-            src={item.image}
-            alt={`Imagen ${i + 1} de Ventu Plaza`}
-            fill
-            priority={i === 0}
-            sizes="100vw"
-            className={`${styles.image} ${
-              i === current ? styles.activeImage : ""
-            }`}
-          />
+  key={`${item.image}-${i}`}
+  src={item.image}
+  alt={`Imagen ${i + 1} de Ventu Plaza`}
+  fill
+  priority={i === current}
+  sizes="100vw"
+  className={`${styles.image} ${
+    i === current ? styles.activeImage : ""
+  }`}
+/>
         ))}
 
         <button
