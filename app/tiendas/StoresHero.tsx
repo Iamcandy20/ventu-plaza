@@ -5,11 +5,11 @@ import Image from "next/image";
 import styles from "./StoresHero.module.css";
 
 const slides = [
+  { image: "/liberia/solarium-11.jpg" },
   { image: "/liberia/solarium-6.jpg" },
-  { image: "/liberia/solarium-8.jpg" },
-  { image: "/liberia/solarium-7.jpg" },
-  { image: "/liberia/solarium-5.jpg" },
-  { image: "/liberia/solarium-10.jpg" },
+  { image: "/liberia/solarium-2.jpg" },
+  { image: "/desamparados/desamparados1.webp" },
+  { image: "/sansebas/sansebas5.jpeg" },
 ];
 
 export default function Hero() {

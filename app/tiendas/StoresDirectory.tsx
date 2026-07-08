@@ -30,93 +30,121 @@ const locations = [
 
 const stores: Record<LocationKey, StoreCategories> = {
   liberia: {
-    Moda: [
+  "Moda y Accesorios": [
       {
-        name: "Tienda Moda 1",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Todo Jeans",
+        logo: "/logos/liberia/JEANS.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
       {
-        name: "Tienda Moda 2",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Sportline",
+        logo: "/logos/liberia/SPORLINE.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
       {
-        name: "Tienda Moda 3",
-        logo: "/logos/stores/starbucks.webp",
+        name: "TOUS",
+        logo: "/logos/liberia/TOUS.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
       {
-        name: "Tienda Moda 4",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Van Heusen",
+        logo: "/logos/liberia/VANHEUSEN.webp",
+        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
+      },
+      {
+        name: "Wild West",
+        logo: "/logos/liberia/WILDWEST.webp",
+        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
+      },
+      {
+        name: "Siman",
+        logo: "/logos/liberia/SIMAN.webp",
+        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
+      },
+       {
+        name: "Miniso",
+        logo: "/logos/liberia/MINISO.webp",
+        schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
+      },
+        {
+        name: "Panda",
+        logo: "/logos/liberia/PANDA.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
     ],
     "Restaurantes,Café y Heladerías": [
       {
-        name: "Restaurante 3",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Burguer King",
+        logo: "/logos/liberia/BK.webp",
+        schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
+      },
+        {
+        name: "Posada Real",
+        logo: "/logos/liberia/POSADA REAL.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
       {
-        name: "Café 4",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Popeyes",
+        logo: "/logos/liberia/POPEYES.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
         {
-        name: "Restaurante 1",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Heladisimo",
+        logo: "/logos/liberia/HELADISIMO.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
       {
-        name: "Café 1",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Naans & Curries",
+        logo: "/logos/liberia/NAANS.webp",
+        schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
+      },
+       {
+        name: "Rosso di Roma",
+        logo: "/logos/liberia/ROSSO.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
     ],
     "Salud y Cuidado Personal": 
     [
       {
-        name: "Servicio 1",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Medipiel",
+        logo: "/logos/liberia/MEDIPIEL.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
       {
-        name: "Servicio 2",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Marcias Apothe",
+        logo: "/logos/liberia/MARCIAS APOTHE.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
         {
-        name: "Restaurante 3",
-        logo: "/logos/stores/starbucks.webp",
+        name: "The Factory Salon",
+        logo: "/logos/liberia/FACTORY SALON.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
       {
-        name: "Café 4",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Super Salón",
+        logo: "/logos/liberia/SUPER SALON.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
     ],
-    "Servicios y Otros": [
+    "Entretenimiento": [
       {
-        name: "Servicio 1",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
-      },
-      {
-        name: "Servicio 2",
-        logo: "/logos/stores/starbucks.webp",
+        name: "Videojuegos Coqui",
+        logo: "/logos/liberia/COQUI.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
         {
-        name: "Restaurante 3",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
+        name: "Libreria Internacional",
+        logo: "/logos/liberia/LIBRERIA INTER.webp",
+        schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
+  
+    ],
+     "Hogar": [
       {
-        name: "Café 4",
-        logo: "/logos/stores/starbucks.webp",
-        schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
+        name: "Selther",
+        logo: "/logos/liberia/SELTHER.webp",
+        schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
     ],
   },
