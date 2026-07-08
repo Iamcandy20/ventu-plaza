@@ -2,52 +2,22 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./hero.module.css";
 
 const slides = [
-   {
-    eyebrow: "Ventu Plaza Liberia",
-    title: (
-      <>
-        Turismo y<br />Negocios
-      </>
-    ),
-    cta: "Explora Liberia",
-    href: "/ubicaciones/liberia",
+  {
     image: "/liberia/solarium-2.jpg",
   },
-   {
-    eyebrow: "Ventu Plaza Liberia",
-    title: (
-      <>
-        Turismo y<br />Negocios
-      </>
-    ),
-    cta: "Explora Liberia",
-    href: "/ubicaciones/liberia",
+  {
     image: "/liberia/solarium-1.jpg",
   },
+   {
+    image: "/liberia/solarium-10.jpg",
+  },
   {
-    eyebrow: "Ventu Plaza Desamparados",
-    title: (
-      <>
-        Urbano y<br />Moderno
-      </>
-    ),
-    cta: "Descubre más",
-    href: "/ubicaciones/desamparados",
     image: "/desamparados/desamparados1.webp",
   },
   {
-    eyebrow: "Ventu Plaza San Sebastián",
-    title: (
-      <>
-        Vida, Comercio<br />y Cercanía
-      </>
-    ),
-    cta: "Conoce más",
-    href: "/ubicaciones/san-sebastian",
     image: "/sansebas/sansebas5.jpeg",
   },
 ];
@@ -68,10 +38,10 @@ export default function Hero() {
   };
 
   const prev = () => {
-    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setCurrent((prev) =>
+      prev === 0 ? slides.length - 1 : prev - 1
+    );
   };
-
-  const slide = slides[current];
 
   return (
     <section className={styles.hero}>
@@ -89,31 +59,6 @@ export default function Hero() {
             }`}
           />
         ))}
-
-        <div className={styles.overlay} />
-
-        <div className={styles.content}>
-          <div className={styles.copy}>
-            <span className={styles.eyebrow}>{slide.eyebrow}</span>
-
-            <h1
-              className={styles.title}
-              style={{
-                fontSize: "50px",
-                lineHeight: "1.15",
-                fontWeight: 700,
-                letterSpacing: "-0.01em",
-                margin: "0 0 14px",
-              }}
-            >
-              {slide.title}
-            </h1>
-
-            <Link href={slide.href} className={styles.btnPrimary}>
-              {slide.cta}
-            </Link>
-          </div>
-        </div>
 
         <button
           type="button"
@@ -133,6 +78,7 @@ export default function Hero() {
           ›
         </button>
 
+
         <div className={styles.dots}>
           {slides.map((_, i) => (
             <button
@@ -146,6 +92,7 @@ export default function Hero() {
             />
           ))}
         </div>
+
       </div>
     </section>
   );
