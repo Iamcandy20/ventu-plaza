@@ -164,12 +164,12 @@ const stores: Record<LocationKey, StoreCategories> = {
     "Restaurantes y Café": [
       {
         name: "Popeyes",
-        logo: "/logos/stores/popeyes.webp",
-        schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
+        logo: "/logos/liberia/POPEYES.webp",
+        schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
       {
         name: "Dominos Pizza",
-        logo: "/logos/stores/dominos.webp",
+       logo: "/logos/liberia/dominos.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
     ],
@@ -178,14 +178,14 @@ const stores: Record<LocationKey, StoreCategories> = {
   sanSebastian: {
    
     "Restaurantes y Café": [
-      {
+        {
         name: "Burguer King",
-        logo: "/logos/stores/burguerking.webp",
+        logo: "/logos/liberia/BK.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
-      {
+       {
         name: "Dominos Pizza",
-        logo: "/logos/stores/dominos.webp",
+       logo: "/logos/liberia/dominos.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
     ],
