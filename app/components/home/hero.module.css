@@ -1,40 +1,35 @@
 .hero {
   width: 100%;
-  margin: 0;
   padding: 18px;
 }
-
 
 .slider {
   position: relative;
   width: 100%;
   aspect-ratio: 1920 / 972;
-  max-height: calc(100vh - var(--header-h) - 36px);
-  border-radius: 28px;
   overflow: hidden;
+  border-radius: 28px;
   background: #ffffff;
 }
 
-
+/* Imágenes apiladas una sobre otra */
 .image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
   opacity: 0;
+  z-index: 1;
   transition: opacity 0.9s ease;
 }
 
-
 .activeImage {
   opacity: 1;
+  z-index: 2;
 }
 
-
 /* Flechas */
-
 .arrow {
   position: absolute;
   top: 50%;
@@ -42,20 +37,16 @@
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.45);
-  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(14px);
   color: #ffffff;
   font-size: 38px;
   line-height: 1;
   cursor: pointer;
   transform: translateY(-50%);
-  transition: 
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
-
 
 .arrow:hover {
   background: #ffffff;
@@ -63,20 +54,15 @@
   transform: translateY(-50%) scale(1.04);
 }
 
-
 .left {
   left: 28px;
 }
-
 
 .right {
   right: 28px;
 }
 
-
-
 /* Indicadores */
-
 .dots {
   position: absolute;
   left: 50%;
@@ -87,7 +73,6 @@
   transform: translateX(-50%);
 }
 
-
 .dot {
   width: 12px;
   height: 12px;
@@ -96,11 +81,8 @@
   border: 2px solid #ffffff;
   background: transparent;
   cursor: pointer;
-  transition:
-    width 0.25s ease,
-    background 0.25s ease;
+  transition: width 0.25s ease, background 0.25s ease;
 }
-
 
 .activeDot {
   width: 36px;
@@ -108,48 +90,43 @@
   background: #ffffff;
 }
 
-
-
-/* Responsive */
-
-@media (max-width:1024px) {
-
+/* Tablet */
+@media (max-width: 1024px) {
   .hero {
-    padding:14px;
+    padding: 14px;
+  }
+
+  .arrow {
+    width: 52px;
+    height: 52px;
+    font-size: 34px;
+  }
+
+  .left {
+    left: 20px;
+  }
+
+  .right {
+    right: 20px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .hero {
+    padding: 10px;
   }
 
   .slider {
-    border-radius:24px;
-    max-height:none;
+    aspect-ratio: 4 / 3;
+    border-radius: 20px;
   }
-
 
   .arrow {
-    width:52px;
-    height:52px;
-    font-size:34px;
+    display: none;
   }
 
-
-  .left {
-    left:20px;
+  .dots {
+    bottom: 18px;
   }
-
-
-  .right {
-    right:20px;
-  }
-
-}
-
-
-
-@media (max-width:768px) {
-
-  .arrow,
-  .left,
-  .right {
-    display:none;
-  }
-
 }

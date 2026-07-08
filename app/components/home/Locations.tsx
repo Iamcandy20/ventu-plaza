@@ -2,7 +2,7 @@
 
 import styles from "./locations.module.css";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { FaMapMarkerAlt, FaClock } from "react-icons/fa";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Locations() {
@@ -14,19 +14,22 @@ export default function Locations() {
       desc: "Ubicada en una zona de rápido crecimiento urbano, Ventu Plaza Desamparados ofrece restaurantes y áreas abiertas para toda la familia.",
       img: "/desamparados/desamparados4.webp",
       place: "Desamparados",
+      url: "/ubicaciones/desamparados",
     },
     {
       name: "Solarium Liberia",
-      desc: "Con un hotel AC Marriott de 140 habitaciones y casi 40  se posiciona como el nuevo epicentro comercial y corporativo de Liberia.",
+      desc: "Con un hotel AC Marriott de 140 habitaciones y casi 40 espacios comerciales se posiciona como el nuevo epicentro comercial y corporativo de Liberia.",
       img: "/liberia/solarium-5.jpg",
       place: "Liberia",
       status: "En desarrollo",
+      url: "/ubicaciones/liberia",
     },
     {
       name: "San Sebastián",
       desc: "Ubicada en una zona de rápido crecimiento urbano, Ventu Plaza San Sebastian ofrece restaurantes y áreas abiertas para toda la familia.",
       img: "/sansebas/sansebas4.webp",
       place: "San Sebastián",
+      url: "/ubicaciones/san-sebastian",
     },
   ];
 
@@ -34,8 +37,9 @@ export default function Locations() {
     <section id="ubicaciones" className={styles.locations}>
       <div className="container">
         <header className={`scroll-fade ${styles.locationsHead}`}>
-          <p className={styles.locationsEyebrow}>Nuestras Ubicaciones</p>
-
+          <p className={styles.locationsEyebrow}>
+            Nuestras Ubicaciones
+          </p>
         </header>
 
         <div className={styles.locGrid}>
@@ -58,21 +62,21 @@ export default function Locations() {
 
               <div className={styles.locBody}>
                 <h3>Ventu Plaza {loc.name}</h3>
-                <p className={styles.locDescSmall}>{loc.desc}</p>
+
+                <p className={styles.locDescSmall}>
+                  {loc.desc}
+                </p>
 
                 <div className={styles.locMeta}>
                   <span>
                     <FaMapMarkerAlt className={styles.icon} />
                     {loc.place}
                   </span>
-                 
                 </div>
 
                 <a
-                  href="#"
+                  href={loc.url}
                   className={styles.btnLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Ver más
                 </a>

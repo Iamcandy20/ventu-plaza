@@ -5,21 +5,12 @@ import Image from "next/image";
 import styles from "./hero.module.css";
 
 const slides = [
-  {
-    image: "/liberia/solarium-2.jpg",
-  },
-  {
-    image: "/liberia/solarium-1.jpg",
-  },
-   {
-    image: "/liberia/solarium-10.jpg",
-  },
-  {
-    image: "/desamparados/desamparados1.webp",
-  },
-  {
-    image: "/sansebas/sansebas5.jpeg",
-  },
+  { image: "/liberia/ventu.jpg" },
+  { image: "/liberia/solarium-2.jpg" },
+  { image: "/liberia/solarium-1.jpg" },
+  { image: "/liberia/solarium-10.jpg" },
+  { image: "/desamparados/desamparados1.webp" },
+  { image: "/sansebas/sansebas5.jpeg" },
 ];
 
 export default function Hero() {
@@ -38,9 +29,7 @@ export default function Hero() {
   };
 
   const prev = () => {
-    setCurrent((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
   return (
@@ -52,7 +41,7 @@ export default function Hero() {
             src={item.image}
             alt={`Imagen ${i + 1} de Ventu Plaza`}
             fill
-            priority={i === current}
+            priority={i === 0}
             sizes="100vw"
             className={`${styles.image} ${
               i === current ? styles.activeImage : ""
@@ -78,7 +67,6 @@ export default function Hero() {
           ›
         </button>
 
-
         <div className={styles.dots}>
           {slides.map((_, i) => (
             <button
@@ -92,7 +80,6 @@ export default function Hero() {
             />
           ))}
         </div>
-
       </div>
     </section>
   );

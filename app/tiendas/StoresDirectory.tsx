@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import styles from "./StoresDirectory.module.css";
 
 type LocationKey = "liberia" | "desamparados" | "sanSebastian";
 
 type Store = {
-  name: string;
   logo: string;
   schedule: string;
 };
@@ -32,47 +32,47 @@ const stores: Record<LocationKey, StoreCategories> = {
   liberia: {
   "Moda y Accesorios": [
       {
-        name: "Todo Jeans",
+       
         logo: "/logos/liberia/JEANS.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
       {
-        name: "Sportline",
+       
         logo: "/logos/liberia/SPORLINE.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
       {
-        name: "TOUS",
+       
         logo: "/logos/liberia/TOUS.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
       {
-        name: "Van Heusen",
+       
         logo: "/logos/liberia/VANHEUSEN.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
       {
-        name: "Wild West",
+        
         logo: "/logos/liberia/WILDWEST.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
       {
-        name: "Siman",
+     
         logo: "/logos/liberia/SIMAN.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
        {
-        name: "Miniso",
+       
         logo: "/logos/liberia/MINISO.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
         {
-        name: "Panda",
+       
         logo: "/logos/liberia/PANDA.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
          {
-        name: "Punto Favorito",
+      
         logo: "/logos/liberia/point.webp",
         schedule: "Lun - Dom: 10:00 a.m. - 9:00 p.m.",
       },
@@ -80,32 +80,32 @@ const stores: Record<LocationKey, StoreCategories> = {
     ],
     "Restaurantes,Café y Heladerías": [
       {
-        name: "Burguer King",
+       
         logo: "/logos/liberia/BK.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
         {
-        name: "Posada Real",
+   
         logo: "/logos/liberia/POSADA REAL.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
       {
-        name: "Popeyes",
+      
         logo: "/logos/liberia/POPEYES.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
         {
-        name: "Heladisimo",
+      
         logo: "/logos/liberia/HELADISIMO.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
       {
-        name: "Naans & Curries",
+      
         logo: "/logos/liberia/NAANS.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
        {
-        name: "Rosso di Roma",
+   
         logo: "/logos/liberia/ROSSO.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
@@ -113,34 +113,34 @@ const stores: Record<LocationKey, StoreCategories> = {
     "Salud y Cuidado Personal": 
     [
       {
-        name: "Medipiel",
+     
         logo: "/logos/liberia/MEDIPIEL.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
       {
-        name: "Marcias Apothe",
+    
         logo: "/logos/liberia/MARCIAS APOTHE.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
         {
-        name: "The Factory Salon",
+    
         logo: "/logos/liberia/FACTORY SALON.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
       {
-        name: "Super Salón",
+       
         logo: "/logos/liberia/SUPER SALON.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
     ],
     "Entretenimiento": [
       {
-        name: "Videojuegos Coqui",
+    
         logo: "/logos/liberia/COQUI.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
         {
-        name: "Libreria Internacional",
+      
         logo: "/logos/liberia/libreria.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
@@ -148,12 +148,12 @@ const stores: Record<LocationKey, StoreCategories> = {
     ],
      "Hogar": [
       {
-        name: "Selther",
+       
         logo: "/logos/liberia/SELTHER.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
       {
-        name: "Mielé",
+     
         logo: "/logos/liberia/MIELE.webp",
         schedule: "Lun - Sáb: 9:00 a.m. - 6:00 p.m.",
       },
@@ -163,12 +163,12 @@ const stores: Record<LocationKey, StoreCategories> = {
   desamparados: {
     "Restaurantes y Café": [
       {
-        name: "Popeyes",
+       
         logo: "/logos/liberia/POPEYES.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
       {
-        name: "Dominos Pizza",
+    
        logo: "/logos/liberia/dominos.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
@@ -179,12 +179,12 @@ const stores: Record<LocationKey, StoreCategories> = {
    
     "Restaurantes y Café": [
         {
-        name: "Burguer King",
+     
         logo: "/logos/liberia/BK.webp",
         schedule: "Lun - Dom: 11:00 a.m. - 10:00 p.m.",
       },
        {
-        name: "Dominos Pizza",
+       
        logo: "/logos/liberia/dominos.webp",
         schedule: "Lun - Dom: 8:00 a.m. - 8:00 p.m.",
       },
@@ -235,33 +235,31 @@ export default function StoresDirectory() {
               </div>
 
               <div className={styles.grid}>
-                {items.map((store) => (
-                  <article
-                    key={store.name}
-                    className={styles.card}
-                    tabIndex={0}
-                    aria-label={`${store.name}. Horario: ${store.schedule}`}
-                  >
-                    <div className={styles.cardContent}>
-                      <div className={styles.logoBox}>
-                        <img
-                          src={store.logo}
-                          alt={store.name}
-                          loading="lazy"
-                        />
-                      </div>
+               {items.map((store, index) => (
+  <article
+    key={`${store.logo}-${index}`}
+    className={styles.card}
+    tabIndex={0}
+    aria-label={`Horario: ${store.schedule}`}
+  >
+    <div className={styles.cardContent}>
+      <div className={styles.logoBox}>
+        <Image
+          src={store.logo}
+          alt="Logo de tienda"
+          width={220}
+          height={140}
+          loading="lazy"
+        />
+      </div>
+    </div>
 
-                      <div className={styles.cardInfo}>
-                        <h4>{store.name}</h4>
-                      </div>
-                    </div>
-
-                    <div className={styles.scheduleOverlay}>
-                      <span>Horario</span>
-                      <strong>{store.schedule}</strong>
-                    </div>
-                  </article>
-                ))}
+    <div className={styles.scheduleOverlay}>
+      <span>Horario</span>
+      <strong>{store.schedule}</strong>
+    </div>
+  </article>
+))}
               </div>
             </div>
           ))}

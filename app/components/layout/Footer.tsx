@@ -19,17 +19,17 @@ type SocialLink = {
 const socials: SocialLink[] = [
   {
     label: "Facebook de Ventu Plaza",
-    href: "#",
+    href: "https://www.facebook.com/people/Ventu-Plaza/61556263274822/?rdid=bVq7J8yrhR2H6kuf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Dh8cjphU5%2F",
     icon: <FaFacebookF />,
   },
   {
     label: "Instagram de Ventu Plaza",
-    href: "#",
+    href: "https://www.instagram.com/ventuplazacr?igsh=eWhzcG9yanUzcXVu",
     icon: <FaInstagram />,
   },
   {
     label: "TikTok de Ventu Plaza",
-    href: "#",
+    href: "https://x.com/VentuPlazacr",
     icon: <FaTiktok />,
   },
   {
