@@ -201,6 +201,11 @@ export default function StoresDirectory() {
 
   return (
     <section className={styles.section}>
+       <div className={styles.heading}>
+          
+          <h2>Explora nuestras tiendas por ubicación</h2>
+         
+        </div>
       <div className={styles.container}>
         <div className={styles.locationMenu}>
           {locations.map((location) => (
@@ -217,13 +222,8 @@ export default function StoresDirectory() {
           ))}
         </div>
 
-        <div className={styles.heading}>
+       <div className={styles.heading}>
           <span>Directorio comercial</span>
-          <h2>Explora nuestras tiendas por ubicación</h2>
-          <p>
-            Selecciona una sucursal y descubre las marcas disponibles,
-            organizadas por categoría para una navegación más cómoda.
-          </p>
         </div>
 
         <div className={styles.categories}>
