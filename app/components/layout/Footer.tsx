@@ -32,11 +32,7 @@ const socials: SocialLink[] = [
     href: "https://x.com/VentuPlazacr",
     icon: <FaTiktok />,
   },
-  {
-    label: "Sitio web Corporación Lady Lee",
-    href: "https://corporacionladylee.com/",
-    icon: <FaGlobe />,
-  },
+ 
 ];
 
 export default function Footer() {
