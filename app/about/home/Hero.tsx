@@ -9,7 +9,7 @@ const slides = [
   { image: "/liberia/solarium-6.webp" },
   { image: "/liberia/solarium-2.webp" },
   { image: "/desamparados/desamparados1.webp" },
-  { image: "/sansebas/sansebas5.jpeg" },
+  { image: "/sansebas/sansebas5.webp" },
 ];
 
 export default function Hero() {

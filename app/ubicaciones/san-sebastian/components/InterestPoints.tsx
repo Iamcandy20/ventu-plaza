@@ -21,19 +21,19 @@ const puntos: Punto[] = [
     id: "museo",
     title: "Iglesia de los Desamparados",
     description: "Punto Religioso y tradicional",
-    icon: "/sansebas/Icons-07.png",
+    icon: "/sansebas/church.webp",
   }, 
   {
     id: "estadio",
     title: "Polideportivo ",
     description: "Cercania a eventos deportivos masivos",
-    icon: "/sansebas/Icons-06.png",
+    icon: "/sansebas/stadium.webp",
   },
   {
     id: "turistica",
     title: "Cerros de la Carpintera",
     description: "Area natural para senderismo y ciclismo ",
-    icon: "/sansebas/Icons-05.png",
+    icon: "/sansebas/mountain.webp",
   },
 ];
 
