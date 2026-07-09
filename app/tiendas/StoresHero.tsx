@@ -2,14 +2,25 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { IMAGE_URL } from "@/lib/images";
 import styles from "./StoresHero.module.css";
 
 const slides = [
-  { image: "/liberia/solarium-11.webp" },
-  { image: "/liberia/solarium-6.webp" },
-  { image: "/liberia/solarium-2.webp" },
-  { image: "/desamparados/desamparados1.webp" },
-  { image: "/sansebas/sansebas5.webp" },
+  {
+    image: `${IMAGE_URL}/liberia/solarium-11.webp`,
+  },
+  {
+    image: `${IMAGE_URL}/liberia/solarium-6.webp`,
+  },
+  {
+    image: `${IMAGE_URL}/liberia/solarium-2.webp`,
+  },
+  {
+    image: `${IMAGE_URL}/desamparados/desamparados1.webp`,
+  },
+  {
+    image: `${IMAGE_URL}/sansebas/sansebas5.webp`,
+  },
 ];
 
 export default function Hero() {
@@ -28,26 +39,28 @@ export default function Hero() {
   };
 
   const prev = () => {
-    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setCurrent((prev) =>
+      prev === 0 ? slides.length - 1 : prev - 1
+    );
   };
 
   return (
     <section className={styles.hero}>
       <div className={styles.slider}>
         {slides.map((slide, i) => (
-  <Image
-    key={`${slide.image}-${i}`}
-    src={slide.image}
-    alt={`Imagen ${i + 1}`}
-    fill
-    priority={i === current}
-    sizes="100vw"
-    className={`${styles.image} ${
-      i === current ? styles.active : ""
-    }`}
-  />
-))}
-      
+          <Image
+            key={`${slide.image}-${i}`}
+            src={slide.image}
+            alt={`Imagen ${i + 1} de Ventu Plaza`}
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            unoptimized
+            className={`${styles.image} ${
+              i === current ? styles.active : ""
+            }`}
+          />
+        ))}
 
         <button
           type="button"

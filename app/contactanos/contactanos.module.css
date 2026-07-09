@@ -349,3 +349,11 @@
     font-size: 14px;
   }
 }
+.linkItem {
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkItem:hover {
+  text-decoration: none;
+}

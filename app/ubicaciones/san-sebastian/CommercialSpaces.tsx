@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import styles from "./CommercialSpaces.module.css";
 import {
   CarFront,
@@ -156,7 +157,9 @@ export default function CommercialSpaces() {
           visitante.
         </p>
 
-        <button className={styles.button}>Ver más</button>
+       <Link href="/tiendas" className={styles.button}>
+  Ver más
+</Link>
       </div>
 
       {/* ========= CARDS ========= */}

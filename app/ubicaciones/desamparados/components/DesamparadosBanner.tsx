@@ -2,19 +2,18 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { IMAGE_URL } from "@/lib/images";
 import styles from "./DesamparadosBanner.module.css";
 
 const slides = [
   {
-    image: "/desamparados/desamparados1.webp",
+    image: `${IMAGE_URL}/desamparados/desamparados1.webp`,
   },
   {
-  
-    image: "/desamparados/desamparados2.webp",
+    image: `${IMAGE_URL}/desamparados/desamparados2.webp`,
   },
   {
-  
-    image: "/desamparados/desamparados3.webp",
+    image: `${IMAGE_URL}/desamparados/desamparados3.webp`,
   },
 ];
 
@@ -34,30 +33,32 @@ export default function Hero() {
   };
 
   const prev = () => {
-    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setCurrent((prev) =>
+      prev === 0 ? slides.length - 1 : prev - 1
+    );
   };
 
   return (
     <section className={styles.hero}>
       <div className={styles.slider}>
         {slides.map((slide, i) => (
-  <Image
-    key={`${slide.image}-${i}`}
-    src={slide.image}
-    alt={`Imagen ${i + 1}`}
-    fill
-    priority={i === current}
-    sizes="100vw"
-    className={`${styles.image} ${
-      i === current ? styles.activeImage : ""
-    }`}
-  />
-))}
+          <Image
+            key={`${slide.image}-${i}`}
+            src={slide.image}
+            alt={`Imagen ${i + 1} de Ventu Plaza Desamparados`}
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            unoptimized
+            className={`${styles.image} ${
+              i === current ? styles.activeImage : ""
+            }`}
+          />
+        ))}
 
         <div className={styles.overlay} />
 
-        <div className={styles.content}>
-        </div>
+        <div className={styles.content}></div>
 
         <button
           type="button"

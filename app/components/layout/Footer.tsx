@@ -3,11 +3,12 @@
 import Image from "next/image";
 import type { FormEvent, ReactNode } from "react";
 import styles from "./Footer.module.css";
+import { IMAGE_URL } from "@/lib/images";
 import {
   FaFacebookF,
   FaInstagram,
   FaTiktok,
-  FaGlobe,
+  FaXTwitter,
 } from "react-icons/fa6";
 
 type SocialLink = {
@@ -28,11 +29,15 @@ const socials: SocialLink[] = [
     icon: <FaInstagram />,
   },
   {
-    label: "TikTok de Ventu Plaza",
+    label: "X de Ventu Plaza",
     href: "https://x.com/VentuPlazacr",
+    icon: <FaXTwitter />,
+  },
+  {
+    label: "TikTok de Ventu Plaza",
+    href: "https://www.tiktok.com/@ventuplazacr",
     icon: <FaTiktok />,
   },
- 
 ];
 
 export default function Footer() {
@@ -46,7 +51,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.main}>
 
-        {/* REDES SOCIALES - IZQUIERDA */}
+        {/* REDES SOCIALES */}
         <div
           className={styles.socials}
           aria-label="Redes sociales de Ventu Plaza"
@@ -65,19 +70,24 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* LOGOS - CENTRO */}
+
+        {/* LOGOS */}
         <div className={styles.center}>
           <div className={styles.logos}>
+
             <Image
-              src="/Logob.png"
+              src={`${IMAGE_URL}/global/Logob.webp`}
               alt="Ventu Plaza"
               width={95}
               height={52}
               priority
+              unoptimized
               className={styles.ventuLogo}
             />
 
+
             <span className={styles.divider} />
+
 
             <Image
               src="https://corporacionladylee.com/wp-content/uploads/2025/05/logo-padding-1.png"
@@ -87,7 +97,9 @@ export default function Footer() {
               unoptimized
               className={styles.ladyLeeLogo}
             />
+
           </div>
+
 
           <a
             href="https://corporacionladylee.com/"
@@ -97,27 +109,44 @@ export default function Footer() {
           >
             www.corporacionladylee.com
           </a>
+
         </div>
 
-        {/* NEWSLETTER - DERECHA */}
-        <div className={styles.newsletter}>
-          <h4 className={styles.newsletterTitle}>SUSCRÍBETE</h4>
 
-          <form className={styles.form} onSubmit={handleSubmit}>
+        {/* NEWSLETTER */}
+        <div className={styles.newsletter}>
+
+          <h4 className={styles.newsletterTitle}>
+            SUSCRÍBETE
+          </h4>
+
+
+          <form
+            className={styles.form}
+            onSubmit={handleSubmit}
+          >
             <input
               type="email"
               placeholder="Tu correo electrónico"
               aria-label="Tu correo electrónico"
               required
             />
-            <button type="submit">Enviar</button>
+
+            <button type="submit">
+              Enviar
+            </button>
+
           </form>
+
         </div>
+
       </div>
+
 
       <div className={styles.bottom}>
         © {currentYear} Ventu Plaza. Todos los derechos reservados.
       </div>
+
     </footer>
   );
 }

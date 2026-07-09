@@ -2,30 +2,25 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { IMAGE_URL } from "@/lib/images";
 import styles from "./LiberiaBanner.module.css";
 
 const slides = [
   {
-  
-    image: "/liberia/solarium-2.webp",
+    image: `${IMAGE_URL}/liberia/solarium-2.webp`,
   },
   {
-  
-    image: "/liberia/solarium-5.webp",
+    image: `${IMAGE_URL}/liberia/solarium-5.webp`,
   },
   {
-  
-    image: "/liberia/solarium-3.webp",
+    image: `${IMAGE_URL}/liberia/solarium-3.webp`,
   },
-   {
-  
-    image: "/liberia/solarium-10.webp",
+  {
+    image: `${IMAGE_URL}/liberia/solarium-10.webp`,
   },
-   {
-  
-    image: "/liberia/solarium-4.webp",
+  {
+    image: `${IMAGE_URL}/liberia/solarium-4.webp`,
   },
-
 ];
 
 export default function Hero() {
@@ -44,29 +39,30 @@ export default function Hero() {
   };
 
   const prev = () => {
-    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    setCurrent((prev) =>
+      prev === 0 ? slides.length - 1 : prev - 1
+    );
   };
 
   return (
     <section className={styles.hero}>
       <div className={styles.slider}>
         {slides.map((slide, i) => (
-  <Image
-    key={`${slide.image}-${i}`}
-    src={slide.image}
-    alt=""
-    fill
-    priority={i === current}
-    sizes="100vw"
-    className={`${styles.image} ${
-      i === current ? styles.activeImage : ""
-    }`}
-  />
-))}
+          <Image
+            key={`${slide.image}-${i}`}
+            src={slide.image}
+            alt="Ventu Plaza Solarium Liberia"
+            fill
+            priority={i === 0}
+            sizes="100vw"
+            unoptimized
+            className={`${styles.image} ${
+              i === current ? styles.activeImage : ""
+            }`}
+          />
+        ))}
 
         <div className={styles.overlay} />
-
-       
 
         <button
           type="button"

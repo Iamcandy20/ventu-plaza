@@ -4,6 +4,7 @@ import styles from "./locations.module.css";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import Image from "next/image";
+import { IMAGE_URL } from "@/lib/images";
 
 export default function Locations() {
   useScrollAnimation();
@@ -12,14 +13,14 @@ export default function Locations() {
     {
       name: "Desamparados",
       desc: "Ubicada en una zona de rápido crecimiento urbano, Ventu Plaza Desamparados ofrece restaurantes y áreas abiertas para toda la familia.",
-      img: "/desamparados/desamparados4.webp",
+      img: `${IMAGE_URL}/desamparados/desamparados4.webp`,
       place: "Desamparados",
       url: "/ubicaciones/desamparados",
     },
     {
       name: "Solarium Liberia",
       desc: "Con un hotel AC Marriott de 140 habitaciones y casi 40 espacios comerciales se posiciona como el nuevo epicentro comercial y corporativo de Liberia.",
-      img: "/liberia/solarium-5.webp",
+      img: `${IMAGE_URL}/liberia/solarium-5.webp`,
       place: "Liberia",
       status: "En desarrollo",
       url: "/ubicaciones/liberia",
@@ -27,7 +28,7 @@ export default function Locations() {
     {
       name: "San Sebastián",
       desc: "Ubicada en una zona de rápido crecimiento urbano, Ventu Plaza San Sebastian ofrece restaurantes y áreas abiertas para toda la familia.",
-      img: "/sansebas/sansebas4.webp",
+      img: `${IMAGE_URL}/sansebas/sansebas4.webp`,
       place: "San Sebastián",
       url: "/ubicaciones/san-sebastian",
     },
@@ -57,6 +58,7 @@ export default function Locations() {
                   height={500}
                   className={styles.locImage}
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  unoptimized
                 />
               </div>
 

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import styles from "./CommercialSpaces.module.css";
 
 export default function CommercialSpaces() {
@@ -43,10 +44,10 @@ export default function CommercialSpaces() {
           moderno, accesible y vibrante.
         </p>
 
-        <button className={styles.button}>
-          Ver más
-          <span className={styles.circle}></span>
-        </button>
+       <Link href="/tiendas" className={styles.button}>
+  Ver más
+  <span className={styles.circle}></span>
+</Link>
       </div>
 
       {/* GRID CREATIVO */}

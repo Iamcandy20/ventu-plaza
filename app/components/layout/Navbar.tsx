@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { IMAGE_URL } from "@/lib/images";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
@@ -200,13 +201,14 @@ export default function Navbar() {
     >
       <div className={`${styles.nav} container`}>
         <Link href="/" className={styles.brand} onClick={closeMenus}>
-          <Image
-  src="/Logov.jpg"
+<Image
+  src={`${IMAGE_URL}/global/Logov.webp`}
   alt="Ventu Plaza logo"
   width={160}
   height={68}
   className={styles.logo}
   priority
+  unoptimized
 />
           
         </Link>

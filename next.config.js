@@ -1,10 +1,14 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 60 * 60 * 24 * 30, 
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pub-50cd36f5769045cdb03d5eb965f5c5b6.r2.dev",
+      },
+    ],
   },
-  compress: true,
 };
 
 module.exports = nextConfig;

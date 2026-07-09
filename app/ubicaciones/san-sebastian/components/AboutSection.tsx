@@ -1,89 +1,117 @@
 "use client";
+
 import Image from "next/image";
 import { useEffect, useState, useCallback } from "react";
 import { MapPin, X } from "lucide-react";
+import { IMAGE_URL } from "@/lib/images";
 import styles from "./AboutSection.module.css";
 
 export default function AboutSection() {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
-  // Lista de imágenes
+
   const images = [
-    "/sansebas/sansebas1.webp",
-    "/sansebas/sansebas2.webp",
-    "/sansebas/sansebas3.webp",
+    `${IMAGE_URL}/sansebas/sansebas1.webp`,
+    `${IMAGE_URL}/sansebas/sansebas2.webp`,
+    `${IMAGE_URL}/sansebas/sansebas3.webp`,
   ];
 
   useEffect(() => {
-    const elements = document.querySelectorAll(`.${styles.imageBox}, .${styles.textContent}`); 
+    const elements = document.querySelectorAll(
+      `.${styles.imageBox}, .${styles.textContent}`
+    );
+
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add(styles.visible);
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
         });
       },
       { threshold: 0.2 }
     );
 
     elements.forEach(el => observer.observe(el));
+
     return () => observer.disconnect();
   }, []);
 
-  // Handlers para teclado (Esc y flechas)
   const onKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (!isOpen) return;
+
       if (e.key === "Escape") {
         setIsOpen(false);
       } else if (e.key === "ArrowLeft") {
-        setCurrentIndex(prev => (prev > 0 ? prev - 1 : images.length - 1));
+        setCurrentIndex(prev =>
+          prev > 0 ? prev - 1 : images.length - 1
+        );
       } else if (e.key === "ArrowRight") {
-        setCurrentIndex(prev => (prev < images.length - 1 ? prev + 1 : 0));
+        setCurrentIndex(prev =>
+          prev < images.length - 1 ? prev + 1 : 0
+        );
       }
     },
     [isOpen, images.length]
   );
 
-  useEffect(() => { 
+  useEffect(() => {
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+    };
   }, [onKeyDown]);
 
-  // Navegación botones (wrap)
-  const prev = () => setCurrentIndex(prev => (prev > 0 ? prev - 1 : images.length - 1));
-  const next = () => setCurrentIndex(prev => (prev < images.length - 1 ? prev + 1 : 0));
+  const prev = () =>
+    setCurrentIndex(prev =>
+      prev > 0 ? prev - 1 : images.length - 1
+    );
+
+  const next = () =>
+    setCurrentIndex(prev =>
+      prev < images.length - 1 ? prev + 1 : 0
+    );
 
   return (
     <section className={styles.aboutSection}>
       <div className={styles.container}>
-        {/* Imagenes */}
+
         <div className={styles.imageGrid}>
           {images.map((img, index) => (
             <div
               key={index}
-              className={`${styles.imageBox} ${index === 2 ? styles.wideImage : ""}`}
+              className={`${styles.imageBox} ${
+                index === 2 ? styles.wideImage : ""
+              }`}
               onClick={() => {
-                // Abrir modal en todas las resoluciones
                 setCurrentIndex(index);
                 setIsOpen(true);
               }}
             >
               <Image
                 src={img}
-                alt={`Imagen Ventu Plaza Liberia ${index + 1}`}
+                alt={`Imagen Ventu Plaza San Sebastián ${index + 1}`}
                 width={300}
                 height={300}
                 className={styles.image}
+                unoptimized
               />
-              
             </div>
           ))}
         </div>
 
+
         <div className={styles.textContent}>
-          <span className={styles.eyebrow}>ACCESIBILIDAD Y DESARROLLO</span>
-          <h2>Esto es Ventu Plaza San Sebastian</h2>
+          <span className={styles.eyebrow}>
+            ACCESIBILIDAD Y DESARROLLO
+          </span>
+
+          <h2>
+            Esto es Ventu Plaza San Sebastian
+          </h2>
+
           <div className={styles.line}></div>
 
           <blockquote className={styles.quote}>
@@ -91,7 +119,7 @@ export default function AboutSection() {
           </blockquote>
 
           <p>
-            Esta ubicación en Desamparados ha sido diseñada para ofrecer comodidad, 
+            Esta ubicación en San Sebastián ha sido diseñada para ofrecer comodidad,
             gastronomía y fácil acceso en un solo espacio.
           </p>
 
@@ -100,18 +128,20 @@ export default function AboutSection() {
             Ver ubicación
           </button>
         </div>
+
       </div>
 
-      {/* ===== MODAL (Móvil + PC) ===== */}
+
       {isOpen && (
         <div
           className={styles.modal}
-
           onClick={(e) => {
-            if (e.target === e.currentTarget) setIsOpen(false);
+            if (e.target === e.currentTarget) {
+              setIsOpen(false);
+            }
           }}
         >
-          {/* Botón X */}
+
           <button
             aria-label="Cerrar"
             className={styles.closeButton}
@@ -120,31 +150,50 @@ export default function AboutSection() {
             <X size={26} />
           </button>
 
-          {/* Slider interno*/}
+
           <div
             className={styles.modalSlider}
-            
-            style={{ transform: `translateX(-${currentIndex * 100}vw)` }}
+            style={{
+              transform: `translateX(-${currentIndex * 100}vw)`
+            }}
           >
             {images.map((img, i) => (
-              <div key={i} className={styles.modalImageWrapper}>
+              <div
+                key={i}
+                className={styles.modalImageWrapper}
+              >
                 <Image
                   src={img}
                   alt={`Vista ampliada ${i + 1}`}
                   width={1600}
                   height={900}
                   className={styles.modalImage}
+                  unoptimized
                 />
               </div>
             ))}
           </div>
 
+
           <div className={styles.modalNav}>
-            <button onClick={prev} aria-label="Anterior">◀</button>
-            <button onClick={next} aria-label="Siguiente">▶</button>
+            <button
+              onClick={prev}
+              aria-label="Anterior"
+            >
+              ◀
+            </button>
+
+            <button
+              onClick={next}
+              aria-label="Siguiente"
+            >
+              ▶
+            </button>
           </div>
+
         </div>
       )}
+
     </section>
   );
 }

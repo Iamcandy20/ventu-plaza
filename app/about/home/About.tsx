@@ -3,6 +3,7 @@
 import styles from "./about.module.css";
 import Image from "next/image";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { IMAGE_URL } from "@/lib/images";
 
 export default function About() {
   useScrollAnimation();
@@ -53,51 +54,51 @@ export default function About() {
           <div className={`scroll-fade-right ${styles.aboutMediaClean}`}>
             <div className={styles.mapWrapper}>
               <Image
-                src="/mapa.webp"
+                src={`${IMAGE_URL}/global/mapa.webp`}
                 alt="Mapa de Costa Rica"
                 className={styles.mapImage}
                 draggable={false}
                 width={1200}
                 height={800}
                 priority
-                unoptimized={false}
+                unoptimized
               />
 
               <div className={`${styles.pin} ${styles["pin--liberia"]}`}>
                 <Image
-                  src="/pinb.webp"
+                  src={`${IMAGE_URL}/global/pinb.png`}
                   alt="Pin de ubicación"
                   width={26}
                   height={26}
                   className={styles.pinIcon}
                   draggable={false}
-                  unoptimized={false}
+                  unoptimized
                 />
                 <span className={styles.pinLabel}>Liberia</span>
               </div>
 
               <div className={`${styles.pin} ${styles["pin--desamparados"]}`}>
                 <Image
-                  src="/pinb.webp"
+                  src={`${IMAGE_URL}/global/pinb.png`}
                   alt="Pin de ubicación"
                   width={26}
                   height={26}
                   className={styles.pinIcon}
                   draggable={false}
-                  unoptimized={false}
+                  unoptimized
                 />
                 <span className={styles.pinLabel}>Desamparados</span>
               </div>
 
               <div className={`${styles.pin} ${styles["pin--sansebastian"]}`}>
                 <Image
-                  src="/pinb.webp"
+                  src={`${IMAGE_URL}/global/pinb.png`}
                   alt="Pin de ubicación"
                   width={26}
                   height={26}
                   className={styles.pinIcon}
                   draggable={false}
-                  unoptimized={false}
+                  unoptimized
                 />
                 <span className={styles.pinLabel}>San Sebastián</span>
               </div>

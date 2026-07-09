@@ -1,6 +1,8 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { IMAGE_URL } from "@/lib/images";
 import styles from "./InterestPoints.module.css";
 
 type Punto = {
@@ -15,35 +17,33 @@ const puntos: Punto[] = [
     id: "ruta1",
     title: "Conexión con Ruta 1",
     description: "La ruta más importante de Costa Rica.",
-    icon: "/liberia/carretera.webp",
+    icon: `${IMAGE_URL}/liberia/carretera.webp`,
   },
   {
     id: "cantonc",
     title: "20 min del Cantón Central",
     description: "Cercanía directa al corazón de Liberia.",
-    icon: "/liberia/canton.webp",
+    icon: `${IMAGE_URL}/liberia/canton.webp`,
   },
   {
     id: "aeropuerto",
     title: "Frente al Aeropuerto",
     description: "Aeropuerto Internacional Daniel Oduber.",
-    icon: "/liberia/avion.webp",
+    icon: `${IMAGE_URL}/liberia/avion.webp`,
   },
   {
     id: "turistica",
     title: "Cercanía Turística",
     description: "Zonas de centros turísticos de alta calidad.",
-    icon: "/liberia/turismo.webp",
+    icon: `${IMAGE_URL}/liberia/turismo.webp`,
   },
 ];
 
 export default function InterestPoints() {
-
   const sectionRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  /* Animación al hacer scroll */
   useEffect(() => {
     const observer = new IntersectionObserver(
       entries => {
@@ -56,14 +56,17 @@ export default function InterestPoints() {
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
     };
   }, []);
 
-  /* Detecta qué card está centrada en móvil */
   const handleScroll = () => {
     if (!carouselRef.current) return;
 
@@ -71,6 +74,7 @@ export default function InterestPoints() {
     const width = carouselRef.current.offsetWidth;
 
     const index = Math.round(scrollLeft / width);
+
     setActiveIndex(index);
   };
 
@@ -90,8 +94,11 @@ export default function InterestPoints() {
   return (
     <section ref={sectionRef} className={styles.section}>
       <div className={styles.container}>
-        
-        <h2 className={styles.title}>PUNTOS DE INTERES</h2>
+
+        <h2 className={styles.title}>
+          PUNTOS DE INTERES
+        </h2>
+
         <p className={styles.subtitle}>
           Ubicación estratégica y accesos que conectan con los principales puntos del cantón y región.
         </p>
@@ -103,7 +110,7 @@ export default function InterestPoints() {
         >
           {puntos.map((p) => (
             <div key={p.id} className={styles.card}>
-              
+
               <div className={styles.top}>
                 <div className={styles.iconWrapper}>
                   <Image
@@ -111,6 +118,7 @@ export default function InterestPoints() {
                     alt={p.title}
                     fill
                     className={styles.icon}
+                    unoptimized
                   />
                 </div>
 
@@ -124,15 +132,20 @@ export default function InterestPoints() {
               </div>
 
               <div className={styles.bottom}>
-                <h3 className={styles.cardTitle}>{p.title}</h3>
-                <p className={styles.cardDesc}>{p.description}</p>
+                <h3 className={styles.cardTitle}>
+                  {p.title}
+                </h3>
+
+                <p className={styles.cardDesc}>
+                  {p.description}
+                </p>
               </div>
 
             </div>
           ))}
         </div>
 
-        {/* INDICADORES (DOTS) */}
+
         <div className={styles.dots}>
           {puntos.map((_, i) => (
             <span
