@@ -5,10 +5,10 @@ import Image from "next/image";
 import styles from "./hero.module.css";
 
 const slides = [
-  { image: "/liberia/solariumone.jpg" },
-  { image: "/liberia/solarium-2.jpg" },
-  { image: "/liberia/solarium-1.jpg" },
-  { image: "/liberia/solarium-10.jpg" },
+  { image: "/liberia/solariumone.webp" },
+  { image: "/liberia/solarium-2.webp" },
+  { image: "/liberia/solarium-1.webp" },
+  { image: "/liberia/solarium-10.webp" },
   { image: "/desamparados/desamparados1.webp" },
   { image: "/sansebas/sansebas5.jpeg" },
 ];

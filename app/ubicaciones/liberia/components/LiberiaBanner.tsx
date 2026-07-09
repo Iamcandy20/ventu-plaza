@@ -7,23 +7,23 @@ import styles from "./LiberiaBanner.module.css";
 const slides = [
   {
   
-    image: "/liberia/solarium-2.jpg",
+    image: "/liberia/solarium-2.webp",
   },
   {
   
-    image: "/liberia/solarium-5.jpg",
+    image: "/liberia/solarium-5.webp",
   },
   {
   
-    image: "/liberia/solarium-3.jpg",
+    image: "/liberia/solarium-3.webp",
   },
    {
   
-    image: "/liberia/solarium-10.jpg",
+    image: "/liberia/solarium-10.webp",
   },
    {
   
-    image: "/liberia/solarium-4.jpg",
+    image: "/liberia/solarium-4.webp",
   },
 
 ];

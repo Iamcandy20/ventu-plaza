@@ -11,9 +11,9 @@ export default function AboutSection() {
   
   // Lista de imágenes
   const images = [
-    "/liberia/solarium-1.jpg",
-    "/liberia/solarium-9.jpg",
-    "/liberia/solarium-3.jpg",
+    "/liberia/solarium-1.webp",
+    "/liberia/solarium-9.webp",
+    "/liberia/solarium-3.webp",
   ];
 
   useEffect(() => {

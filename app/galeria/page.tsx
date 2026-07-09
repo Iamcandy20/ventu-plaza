@@ -10,17 +10,17 @@ import GalleryLightbox from "./gallerylightbox";
 const galeriaData: GaleriaItem[] = [
   
 
-  { id: 1, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-1.jpg" },
-  { id: 2, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-2.jpg" },
-  { id: 3, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-3.jpg" },
-  { id: 4, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-4.jpg" },
-  { id: 5, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-5.jpg" },
-  { id: 6, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-6.jpg" },
-  { id: 7, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-7.jpg" },
-  { id: 8, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-8.jpg" },
-  { id: 9, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-9.jpg" },
-  { id: 10, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-10.jpg" },
-  { id: 11, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-11.jpg" },
+  { id: 1, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-1.webp" },
+  { id: 2, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-2.webp" },
+  { id: 3, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-3.webp" },
+  { id: 4, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-4.webp" },
+  { id: 5, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-5.webp" },
+  { id: 6, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-6.webp" },
+  { id: 7, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-7.webp" },
+  { id: 8, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-8.webp" },
+  { id: 9, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-9.webp" },
+  { id: 10, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-10.webp" },
+  { id: 11, city: "Solarium Liberia", title: "Ventu Plaza Solarium Liberia", image: "/liberia/solarium-11.webp" },
   
   { id: 12, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados1.webp" },
   { id: 13, city: "Desamparados", title: "Ventu Plaza Desamparados", image: "/desamparados/desamparados2.webp" },

@@ -5,9 +5,9 @@ import Image from "next/image";
 import styles from "./hero.module.css";
 
 const slides = [
-  { image: "/liberia/solarium-11.jpg" },
-  { image: "/liberia/solarium-6.jpg" },
-  { image: "/liberia/solarium-2.jpg" },
+  { image: "/liberia/solarium-11.webp" },
+  { image: "/liberia/solarium-6.webp" },
+  { image: "/liberia/solarium-2.webp" },
   { image: "/desamparados/desamparados1.webp" },
   { image: "/sansebas/sansebas5.jpeg" },
 ];
