@@ -88,30 +88,28 @@
 }
 
 .iconWrapper {
-  width: 76px;
-  height: 76px;
+  width: 82px;
+  height: 82px;
   border-radius: 50%;
   position: absolute;
-  top: 17%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.18);
+  overflow: hidden;
 }
 
-.customIcon {
-  width: 52px;
-  height: 52px;
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: transform 0.3s ease;
+.icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
 }
 
-.card:hover .customIcon {
+.card:hover .icon {
   transform: scale(1.08);
 }
 

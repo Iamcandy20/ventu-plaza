@@ -1,8 +1,9 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { IMAGE_URL } from "@/lib/images";
 import styles from "./InterestPoints.module.css";
-
 
 type Punto = {
   id: string;
@@ -13,56 +14,56 @@ type Punto = {
 
 const puntos: Punto[] = [
   {
-    id: "parque", title: "Parque La Libertad",
+    id: "parque",
+    title: "Parque La Libertad",
     description: "Centro y cultura recreativo",
-    icon: "/sansebas/Icons-02.png",
+    icon: `${IMAGE_URL}/sansebas/Icons-02.png`,
   },
   {
     id: "museo",
     title: "Iglesia de los Desamparados",
     description: "Punto Religioso y tradicional",
-    icon: "/sansebas/church.webp",
-  }, 
+    icon: `${IMAGE_URL}/sansebas/church.webp`,
+  },
   {
     id: "estadio",
-    title: "Polideportivo ",
-    description: "Cercania a eventos deportivos masivos",
-    icon: "/sansebas/stadium.webp",
+    title: "Polideportivo",
+    description: "Cercanía a eventos deportivos masivos",
+    icon: `${IMAGE_URL}/sansebas/stadium.webp`,
   },
   {
     id: "turistica",
     title: "Cerros de la Carpintera",
-    description: "Area natural para senderismo y ciclismo ",
-    icon: "/sansebas/mountain.webp",
+    description: "Área natural para senderismo y ciclismo",
+    icon: `${IMAGE_URL}/sansebas/mountain.webp`,
   },
 ];
 
 export default function InterestPoints() {
-
   const sectionRef = useRef<HTMLDivElement>(null);
   const carouselRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0); 
+  const [activeIndex, setActiveIndex] = useState(0);
 
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add(styles.visible);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.visible);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
 
-  const sectionEl = sectionRef.current;
+    const sectionEl = sectionRef.current;
 
-  if (sectionEl) observer.observe(sectionEl);
+    if (sectionEl) observer.observe(sectionEl);
 
-  return () => {
-    if (sectionEl) observer.unobserve(sectionEl);
-  };
-}, []);
+    return () => {
+      if (sectionEl) observer.unobserve(sectionEl);
+    };
+  }, []);
 
   const handleScroll = () => {
     if (!carouselRef.current) return;
@@ -71,7 +72,8 @@ useEffect(() => {
     const width = carouselRef.current.offsetWidth;
 
     const index = Math.round(scrollLeft / width);
-    setActiveIndex(index); 
+
+    setActiveIndex(index);
   };
 
   const scrollToIndex = (index: number) => {
@@ -90,13 +92,18 @@ useEffect(() => {
   return (
     <section ref={sectionRef} className={styles.section}>
       <div className={styles.container}>
-        
-        <h2 className={styles.title}>Puntos de interés</h2>
+
+        <h2 className={styles.title}>
+          Puntos de interés
+        </h2>
+
         <p className={styles.subtitle}>
           Ubicación estratégica y accesos que conectan con los principales puntos del cantón y región.
         </p>
-<br/>
-<br/>
+
+        <br />
+        <br />
+
         <div
           ref={carouselRef}
           className={styles.grid}
@@ -104,15 +111,17 @@ useEffect(() => {
         >
           {puntos.map((p) => (
             <div key={p.id} className={styles.card}>
-              
+
               <div className={styles.top}>
                 <div className={styles.iconWrapper}>
-                  <Image
-                    src={p.icon}
-                    alt={p.title}
-                    fill
-                    className={styles.icon}
-                  />
+                 <Image
+  src={p.icon}
+  alt={p.title}
+  width={54}
+  height={54}
+  className={styles.icon}
+  unoptimized
+/>
                 </div>
 
                 <svg
@@ -124,9 +133,15 @@ useEffect(() => {
                 </svg>
               </div>
 
+
               <div className={styles.bottom}>
-                <h3 className={styles.cardTitle}>{p.title}</h3>
-                <p className={styles.cardDesc}>{p.description}</p>
+                <h3 className={styles.cardTitle}>
+                  {p.title}
+                </h3>
+
+                <p className={styles.cardDesc}>
+                  {p.description}
+                </p>
               </div>
 
             </div>
